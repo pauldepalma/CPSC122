@@ -7,7 +7,7 @@ GU Username: depalma
 File Name: ex6.cpp
 Program illustrates parameters to main 
 To Build: g++ ex6.cpp -o example6
-To Execute: ./example6 project1.out hello world 
+To Execute: ./example6 project1.out hello world
 */
 
 #include <iostream>
@@ -17,7 +17,6 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
- ifstream fin;
  ofstream fout;
 
  if (argc != 4)

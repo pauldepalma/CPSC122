@@ -14,7 +14,7 @@ To Execute: ./example4
 using namespace std;
 
 const int SIZE = 10;  //constant declaration
-const int LIMIT = 100; //
+const int LIMIT = 100; 
 
 #include <iostream>
 #include <cstdlib> //for rand and srand
