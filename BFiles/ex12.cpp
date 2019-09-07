@@ -22,6 +22,12 @@ int main(int argc, char* argv[])
  string line;
  ifstream fin;
 
+ if (argc != 2)
+  { 
+   cout << "Incorrect number of command line arguments" << endl;
+   exit(EXIT_FAILURE);
+  }
+
  gfopen(argv[1],fin); //file name is a command line argument 
 
  while (fin.peek() != EOF)
