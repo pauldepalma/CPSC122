@@ -21,7 +21,7 @@ using namespace std;
 int main(int argc, char* argv[])
 {
  ofstream fout;  //declare an output stream. ofstream is a special case
-                 //of fsream.
+                 //of fstream.
 
  fout.open(argv[1]); //link the disk address of a file to a variable
 
