@@ -4,10 +4,10 @@ Paul De Palma
 GU Username: depalma
 Submitted By: Paul De Palma
 GU Username: depalma
-File Name: ex8.cpp
+File Name: Fex11.cpp
 Program illusrates line file i/o  
-To Build: g++ ex8.cpp -o ex8
-To Execute: ./ex8 
+To Build: g++ Fex11.cpp -o Fex11
+To Execute: ./Fex11
 */
 
 
@@ -25,17 +25,14 @@ int main()
  ifstream fin;
  ofstream fout;
 
- fin.open("ex7.in");
- fout.open("ex8.out");         
- int ct = 0;
+ fin.open("Dex9.in");
+ fout.open("Fex11.out");         
  while (fin.peek() != EOF)
  {
   getline(fin,line,'\n'); 
   line = amend(line);
   fout << line << endl;     //there is no putline function
-  ct++;
  }
- cout << ct << endl;
  fin.close();
  fout.close(); 
 

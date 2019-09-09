@@ -4,10 +4,10 @@ Paul De Palma
 GU Username: depalma
 Submitted By: Paul De Palma
 GU Username: depalma
-File Name: ex9.cpp
+File Name: Gex12.cpp
 Program illusrates trapping for file open errors, command line args  
-To Build: g++ ex9.cpp -o ex9
-To Execute: ./ex9 
+To Build: g++ Gex12.cpp -o Gex12
+To Execute: ./Gex12 Dex9.in
 */
 
 #include <iostream>
@@ -43,7 +43,6 @@ int main(int argc, char* argv[])
 
 void gfopen(char fileName[],ifstream& fin)
 {
- 
  fin.open(fileName);
 
  if (!fin) //error condition 

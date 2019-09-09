@@ -5,10 +5,10 @@ Paul De Palma
 GU Username: depalma
 Submitted By: Paul De Palma
 GU Username: depalma
-File Name: ex6.cpp
+File Name: Eex10.cpp
 Program illusrates file i/o with integers
-To Build: g++ ex6.cpp -o ex6
-To Execute: ./ex6 
+To Build: g++ Eex10.cpp -o ex10
+To Execute: ./ex10
 */
 
 
@@ -24,8 +24,9 @@ int main()
  int num, total;
 
 
- fin.open("ex6A.in");
- fout.open("ex6.out");
+ //fin.open("Eex10.in");
+ fin.open("Eex10A.in");
+ fout.open("Eex10.out");
 
  num = 0;
  total = 0;

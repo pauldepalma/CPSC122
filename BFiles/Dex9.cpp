@@ -4,10 +4,10 @@ Paul De Palma
 GU Username: depalma
 Submitted By: Paul De Palma
 GU Username: depalma
-File Name: ex7.cpp
+File Name: Dex9.cpp
 Program illusrates file i/o with characters
-To Build: g++ ex7.cpp -o ex7
-To Execute: ./ex7 
+To Build: g++ Dex9.cpp -o ex9
+To Execute: ./ex9 
 */
 
 #include <iostream>
@@ -21,8 +21,8 @@ int main()
  ifstream fin;
  ofstream fout;
 
- fin.open("ex7.in");
- fout.open("ex7.out");
+ fin.open("Dex9.in");
+ fout.open("Dex9.out");
 
  while(fin.peek() != EOF)
  {

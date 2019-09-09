@@ -8,7 +8,7 @@ GU Username: depalma
 File Name: ex8.cpp
 Illustrates doing arithmetic with command line arguments 
 To Build: g++ ex8.cpp -o input 
-To Execute: ./ex7  
+To Execute: ./ex8 
 */
 
 
