@@ -16,7 +16,6 @@ using namespace std;
 
 int main()
 {
-
  char ch;
  ifstream fin;
  ofstream fout;
@@ -27,7 +26,9 @@ int main()
  while(fin.peek() != EOF)
  {
   ch = fin.get();
-  fout.put(toupper(ch)); 
+  if (isalpha(ch))
+   ch = toupper(ch);
+  fout.put(ch); 
  }
  fout.put('\n'); 
 
