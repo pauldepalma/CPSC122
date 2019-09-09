@@ -7,7 +7,9 @@ GU Username: depalma
 File Name: Gex12.cpp
 Program illusrates trapping for file open errors, command line args  
 To Build: g++ Gex12.cpp -o Gex12
-To Execute: ./Gex12 Dex9.in
+To Execute: ./Gex12 Dex9.in  //correct input
+To Execute: ./Gex12          //incorrect number of command line args
+To Execute: ./Gex12 hello.world //non-existent input file
 */
 
 #include <iostream>
