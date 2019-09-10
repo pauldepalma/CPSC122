@@ -39,9 +39,14 @@ int main()
  return 0;
 } 
 
+/*
+Pre:  line is a C++ variable of type string
+Post: Each lower case character in line is transformed to upper case
+*/
 string amend(string line)
 {
  for (int i = 0; i < line.length(); i++)
-  line[i] = toupper(line[i]);
+  if (isalpha(line[i]))
+   line[i] = toupper(line[i]);
  return line;
 }

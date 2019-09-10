@@ -5,7 +5,10 @@ GU Username: depalma
 Submitted By: Paul De Palma
 GU Username: depalma
 File Name: Gex12.cpp
-Program illusrates trapping for file open errors, command line args  
+Program illusrates:
+  trapping for file open errors
+  passing argv elements to functions
+  passing file stream objects to functions  
 To Build: g++ Gex12.cpp -o Gex12
 To Execute: ./Gex12 Dex9.in  //correct input
 To Execute: ./Gex12          //incorrect number of command line args
@@ -43,6 +46,13 @@ int main(int argc, char* argv[])
  return 0;
 }
 
+/*
+Pre:   fileName holds the value stored in argv[1]. 
+       fin is an input file stream object.  File stream objects may be
+       passed by reference to functions.
+Post:  opens an existing file, displays an error and halts if the file
+       does not exist
+*/
 void gfopen(char fileName[],ifstream& fin)
 {
  fin.open(fileName);
