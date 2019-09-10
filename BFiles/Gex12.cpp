@@ -17,7 +17,7 @@ To Execute: ./Gex12 hello.world //non-existent input file
 
 #include <iostream>
 #include <fstream> 
-#include <cstdlib>
+#include <cstdlib>  //necessary for the constant EXIT_FAILURE
 using namespace std;
 
 void gfopen(char[],ifstream&);
