@@ -20,7 +20,7 @@ To Execute: ./Gex12 hello.world //non-existent input file
 #include <cstdlib>  //necessary for the constant EXIT_FAILURE
 using namespace std;
 
-void gfopen(char[],ifstream&);
+void gfIopen(char[],ifstream&);
 
 int main(int argc, char* argv[])
 {
@@ -33,7 +33,7 @@ int main(int argc, char* argv[])
    exit(EXIT_FAILURE);
   }
 
- gfopen(argv[1],fin); //file name is a command line argument 
+ gfIopen(argv[1],fin); //file name is a command line argument 
 
  while (fin.peek() != EOF)
   {
@@ -53,7 +53,7 @@ Pre:   fileName holds the value stored in argv[1].
 Post:  opens an existing file, displays an error and halts if the file
        does not exist
 */
-void gfopen(char fileName[],ifstream& fin)
+void gfIopen(char fileName[],ifstream& fin)
 {
  fin.open(fileName);
 
