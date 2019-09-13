@@ -9,10 +9,10 @@ Program illusrates:
   trapping for file open errors
   passing argv elements to functions
   passing file stream objects to functions  
-To Build: g++ Gex12.cpp -o Gex12
-To Execute: ./Gex12 Dex9.in  //correct input
-To Execute: ./Gex12          //incorrect number of command line args
-To Execute: ./Gex12 hello.world //non-existent input file
+To Build: g++ ex12.cpp -o ex12
+To Execute: ./ex12 ex9.in  //correct input
+To Execute: ./ex12          //incorrect number of command line args
+To Execute: ./ex12 hello.world //non-existent input file
 */
 
 #include <iostream>
@@ -20,7 +20,7 @@ To Execute: ./Gex12 hello.world //non-existent input file
 #include <cstdlib>  //necessary for the constant EXIT_FAILURE
 using namespace std;
 
-void gfIopen(char[],ifstream&);
+void gfIopen(string, ifstream&);
 
 int main(int argc, char* argv[])
 {
@@ -53,7 +53,8 @@ Pre:   fileName holds the value stored in argv[1].
 Post:  opens an existing file, displays an error and halts if the file
        does not exist
 */
-void gfIopen(char fileName[],ifstream& fin)
+//void gfIopen(char fileName[],ifstream& fin)
+void gfIopen(string fileName,ifstream& fin)
 {
  fin.open(fileName);
 
