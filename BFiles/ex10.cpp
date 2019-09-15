@@ -25,8 +25,8 @@ int main()
 
 
  //fin.open("Eex10.in");
- fin.open("Eex10A.in");
- fout.open("Eex10.out");
+ fin.open("ex10.in");
+ fout.open("ex10.out");
 
  num = 0;
  total = 0;

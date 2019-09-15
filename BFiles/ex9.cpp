@@ -20,8 +20,8 @@ int main()
  ifstream fin;
  ofstream fout;
 
- fin.open("Dex9.in");
- fout.open("Dex9.out");
+ fin.open("ex9.in");
+ fout.open("ex9.out");
 
  while(fin.peek() != EOF)
  {
