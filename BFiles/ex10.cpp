@@ -5,10 +5,10 @@ Paul De Palma
 GU Username: depalma
 Submitted By: Paul De Palma
 GU Username: depalma
-File Name: Eex10.cpp
+File Name: ex10.cpp
 Program illusrates file i/o with integers
-To Build: g++ Eex10.cpp -o ex10
-To Execute: ./ex10
+To Build: g++ Eex10.cpp
+To Execute: ./a.out
 */
 
 
