@@ -4,65 +4,96 @@ Paul De Palma
 GU Username: depalma
 Submitted By: Paul De Palma
 GU Username: depalma
-File Name: Gex12.cpp
-Program illusrates:
-  trapping for file open errors
-  passing argv elements to functions
-  passing file stream objects to functions  
-To Build: g++ ex12.cpp -o ex12
-To Execute: ./ex12 ex9.in  //correct input
-To Execute: ./ex12          //incorrect number of command line args
-To Execute: ./ex12 hello.world //non-existent input file
+File Name: ex13.cpp
+Program reads an inp;ut file into an array
+        exchanges the first two items in the array
+        writes the output to an output file 
+To Build: g++ ex13.cpp
+To Execute: ./ex13 ex12.in out 
 */
 
 #include <iostream>
 #include <fstream> 
-#include <cstdlib>  //necessary for the constant EXIT_FAILURE
+#include <string>
+#include <cstdlib>
 using namespace std;
 
-void gfIopen(string, ifstream&);
-void readFile(string, ifstream&);
+const int SIZE = 9;  //number of lines in the input file
+void fileOpen(fstream&, char[], char);
+void swap(string[], int, int);
 
 int main(int argc, char* argv[])
 {
- ifstream fin;
- ofstream fin;
+ //notice use fstream
+ fstream fin;
+ fstream fout;
+ string line;
+ string data[SIZE];
 
  if (argc != 3)
   { 
    cout << "Incorrect number of command line arguments" << endl;
    exit(EXIT_FAILURE);
   }
- string fileName(argv[1]
- gfIopen(argv[1],fin); //file name is a command line argument 
 
- while (fin.peek() != EOF)
-  {
-   getline(fin,line, '\n'); 
-   cout << line << endl; //'\n' is the default delimiter and not read in. 
-  }
+ //argv[1] is a c-string, a sequence of characters terminated by '/0'
+ fileOpen(fin, argv[1], 'r');
+ fileOpen(fout, argv[2], 'w');
+
+ for (int i = 0; i < SIZE; i++)
+  getline(fin,data[i]);
+
+ swap(data,0,1);
+ 
+ for (int i = 0; i < SIZE; i++)
+  fout << data[i] << endl;
+
+ fin.close();
+ fout.close();
 
  fin.close(); 
+ fout.close(); 
 
  return 0;
 }
-/*
-/*
-Pre:   fileName holds the value stored in argv[1]. 
-       fin is an input file stream object.  File stream objects may be
-       passed by reference to functions.
-Post:  opens an existing file, displays an error and halts if the file
-       does not exist
-*/
-//void gfIopen(char fileName[],ifstream& fin)
-void gfIopen(string fileName,ifstream& fin)
-{
- fin.open(fileName);
 
- if (!fin) //error condition 
+/*
+Pre:  file is a reference to an fstream object
+      name of the physical name of a file
+      mode is 'r' for input and 'w' for output
+Post: file is opened, displays error and halts if error is encountered
+*/ 
+void fileOpen(fstream& file, char name[], char mode)
+{
+ string fileType;
+
+ if (mode == 'r')
+  fileType = "input";
+ if (mode == 'w')
+  fileType = "output";
+
+ if (mode == 'r')
+  file.open(name, ios::in);  //available thorugh fstream
+ if (mode == 'w')
+  file.open(name, ios::out);  //available through fstream;
+
+ if (file.fail()) //error condition 
  {
-  cout << "Error opening input file " << endl;
+  cout << "Error opening " << fileType << " file" << endl; 
   exit(EXIT_FAILURE);
  }
 }
+
+/*
+Pre:  data is an array of strings, idx1 and idx2 are indices into the array
+Post: what was in positon idx1 in now in position idx2 and vice-versa
 */
+void swap(string data[], int idx1, int idx2)
+{
+ string tmp;
+ tmp = data[idx1];
+ data[idx1] = data[idx2];
+ data[idx2] = tmp;
+}
+
+
