@@ -4,12 +4,12 @@ Paul De Palma
 GU Username: depalma
 Submitted By: Paul De Palma
 GU Username: depalma
-File Name: ex13.cpp
+File Name: inClassEx2Start.cpp 
 Program reads an inp;ut file into an array
-        exchanges the first two items in the array
-        writes the output to an output file 
-To Build: g++ ex13.cpp
-To Execute: ./ex13 ex12.in out 
+        sorts the input file using selection sort 
+        writes the sorted array to an output file 
+To Build: g++ inClassEx2Start.cpp 
+To Execute: ./a.out emily out 
 */
 
 #include <iostream>
@@ -42,7 +42,7 @@ int main(int argc, char* argv[])
 
  readData(fin, argv[1], data);
 
-//call to selection sort goes here
+//call to selSort goes here
 
  writeData(fout, argv[2], data);
 
