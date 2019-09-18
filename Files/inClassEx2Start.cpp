@@ -92,14 +92,15 @@ Post: data is in sorted order
 */
 void selSort(string data[])
 {
- //from positon 0 thorugh SIZE - 1
- //  find the smallest item in the array from cur to the end
- //  swap the smallest item with cur
+ cur = 0
+ //from positon cur thorugh SIZE - 1
+ //  find the smallest item in the subarray beginning with cur 
+ //  swap the smallest item with the item at position cur 
 }
 
 /*
 Pre:  data is an arrray of strings, cur begins the subarray under consideration
-Post: returns the smallest item in the array, beginnig with curr
+Post: returns the smallest item in the array, beginnig with cur
 */
 int findSmallest(string data[], int cur)
 {
