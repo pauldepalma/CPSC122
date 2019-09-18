@@ -7,7 +7,7 @@ Submitted By: Paul De Palma
 GU Username: depalma
 File Name: ex10.cpp
 Program illusrates file i/o with integers
-To Build: g++ Eex10.cpp
+To Build: g++ ex10.cpp
 To Execute: ./a.out
 */
 
