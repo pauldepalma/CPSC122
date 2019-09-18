@@ -23,8 +23,8 @@ void fileOpen(fstream&, char[], char);
 void readData(fstream&, char[], string[]);
 void writeData(fstream&, char[], string[]);
 //write these three functions
-void selSort(string[], int size);
-int findSmallest(string[], int, int);
+void selSort(string[]);
+int findSmallest(string[], int);
 void swap(string[], int, int);
 
 int main(int argc, char* argv[])
