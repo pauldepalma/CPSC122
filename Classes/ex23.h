@@ -60,7 +60,7 @@ class MyString
          MyString is ABC. strIn is DEF.  MyString is still a null-terminated
 	 string, but contains: ABCDEF. 
    */
-   void reverse();
+   void concat(char const* strIn);
 
 
  private: 
