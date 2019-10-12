@@ -64,6 +64,21 @@ class List
    */
    void Print() const;
   
+   /*
+   pre:  an instance of list exists and is not empty
+   post: returns the position of item if item is in the list, -1 
+         otherwise. The position of the head of the list is 0. 
+   */
+   int Find(const itemType item) const;
+
+   /*
+   pre:  an instance of List exists and contains n items.
+         pos is in the range [0..n-1]. If a list contained a single item,
+	 pos could only be 0. Notice you've alread written a function
+         to handle the situation where n = 1;
+   post: deletes item at postion, pos. 
+   */
+   void DeleteItem(const itemType item);
 
  private:
    int length;   //length of the list

@@ -28,7 +28,7 @@ void List::PutItemH(const itemType newItem)
 
 itemType List::GetItemH() const
 {
- return 0; 
+ return 1;
 }
 
 void List::DeleteItemH()
@@ -38,3 +38,13 @@ void List::DeleteItemH()
 void List::Print() const
 {
 }
+
+int List::Find(const itemType item) const
+{
+ return -1;
+}
+
+void DeleteItem(const itemType item)
+{
+}
+
