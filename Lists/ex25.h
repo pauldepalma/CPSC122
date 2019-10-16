@@ -78,7 +78,7 @@ class List
          to handle the situation where n = 1;
    post: deletes item at postion, pos. 
    */
-   void DeleteItem(const itemType item);
+   void DeleteItem(const int pos);
 
  private:
    int length;   //length of the list
