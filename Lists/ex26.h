@@ -83,20 +83,17 @@ class List1
    void Print() const;
   
    /*
-   pre:  an instance of list exists and is not empty
-   post: returns the position of item if item is in the list, -1 
-         otherwise. The position of the head of the list is 0. 
+   pre: an instance of list exists and is not empty
+   post: returns the number of nopdesd in the list that store target 
    */
-   int Find(const itemType item) const;
+   int FindItem(const itemType target) const;
 
    /*
-   pre:  an instance of List exists and contains n items.
-         pos is in the range [0..n-1]. If a list contained a single item,
-	 pos could only be 0. Notice you've alread written a function
-         to handle the situation where n = 1;
-   post: deletes item at postion, pos. 
+   pre:  an instance of List exists and is not empty 
+   post: deletes all nodes that store target.  Returns
+         the number of nodes deleted 
    */
-   void DeleteItem(const itemType item);
+   int DeleteItem(const itemType target);
 
  private:
    int length;   //length of the list
