@@ -1,0 +1,12 @@
+#to run: make -f makefile_comp
+stack_comp: stack1Tst.o stack1.o list.o
+	g++ -o stack_comp stack1Tst.o stack1.o list.o
+
+stack1Tst.o: stack1Tst.cpp
+	g++ -c stack1Tst.cpp 
+
+stack1.o: stack1.cpp
+	g++ -c stack1.cpp 
+
+list1.o: list1.cpp
+	g++ -c list.cpp 
