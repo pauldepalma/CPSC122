@@ -12,6 +12,8 @@ int main()
    lst->Insert(i,i);
 
  lst->Insert(11,11);
+ lst->Insert(-1,1);
+ lst->Insert(500,5);
 
  cout << "Front To Back" << endl;
  lst->PrintForward();
