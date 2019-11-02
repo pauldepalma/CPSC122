@@ -28,4 +28,3 @@ class Stack : public List
    itemType Peek();
 };
 #endif
-
