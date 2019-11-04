@@ -1,0 +1,14 @@
+#to run: 1) rename this file, makefile
+#        2) type: make
+queue: queue2Tst.o queue2.o list2.o
+	g++ -o queue queue2Tst.o queue2.o list2.o
+
+queue1Tst.o: queue2Tst.cpp
+	g++ -c queue2Tst.cpp 
+
+
+queue1.o: queue2.cpp
+	g++ -c queue2.cpp 
+
+list2.o: list2.cpp
+	g++ -c list2.cpp 

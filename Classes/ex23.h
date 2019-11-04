@@ -26,10 +26,11 @@ class MyString
    void myDisplay(); 
 
    /*
-   Pre:  An instance of MyString exists whose length <= length of strIn
-   Post: The contents of strIn overwrites the contents of the instance
-         of MyString pointed to by the member variable str.  str is 
-	 terminated by the null character.   
+   Pre:  An instance of MyString exists. The length of strIn <=
+         the length of the internal character array pointed to
+	 by str.
+   Post: The contents of strIn replaces the internal character
+         array. 
    */
    void myStrcpy(char const* strIn);  
 

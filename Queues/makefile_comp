@@ -1,0 +1,13 @@
+#to run: make -f makefile_comp 
+queue: queue1Tst.o queue1.o list.o
+	g++ -o queue queue1Tst.o queue1.o list.o
+
+queue1Tst.o: queue1Tst.cpp
+	g++ -c queue1Tst.cpp 
+
+
+queue1.o: queue1.cpp
+	g++ -c queue1.cpp 
+
+list.o: queue1.cpp
+	g++ -c list.cpp 
