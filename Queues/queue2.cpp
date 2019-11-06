@@ -3,23 +3,23 @@
 using namespace std;
 #include "queue2.h"
 
-Queue2::Queue2() : List2()
+Queue::Queue() : List()
 {}
 
-Queue2::Queue2(Queue2* q) : List2(q)
+Queue::Queue(Queue* q) : List(q)
 {}
 
-void Queue2::Enqueue(itemType newItem)
+void Queue::Enqueue(itemType newItem)
 { 
  PutItemT(newItem);
 }
 
-void Queue2::Dequeue()
+void Queue::Dequeue()
 {
  DeleteItemH();
 }
 
-itemType Queue2::Peek()
+itemType Queue::Peek()
 {
  GetItemH(); 
 }

@@ -3,13 +3,13 @@
 #ifndef QUEUE_H
 #define QUEUE_H
  
-#include "list2.h"
+#include "list.h"
 
-class Queue2 : public List2
+class Queue : public List
 {
  public:
-   Queue2();
-   Queue2(Queue2* q);
+   Queue();
+   Queue(Queue* q);
 
    /*
    pre: an instance of queue exists

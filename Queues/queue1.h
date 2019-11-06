@@ -1,7 +1,7 @@
 //Queue implemented using a List and composition
 
-#ifndef QUEUE_H
-#define QUEUE_H
+#ifndef QUEUE
+#define QUEUE
  
 #include "list.h"
 

@@ -1,26 +1,45 @@
 //Queue using List and composition 
 #include <iostream>
 using namespace std;
-#include "queue2.h"
+#include "queue1.h"
 
-Queue2::Queue2() : List2()
-{}
+Queue::Queue()
+{
+ lst = new List();
+}
 
-Queue2::Queue2(Queue2* q) : List2(q)
-{}
+Queue::Queue(Queue* q)
+{
+ lst = new List(q->lst);
+}
 
-void Queue2::Enqueue(itemType newItem)
+void Queue::Enqueue(itemType newItem)
 { 
- PutItemT(newItem);
+ lst->PutItemT(newItem);
 }
 
-void Queue2::Dequeue()
+Queue::~Queue()
 {
- DeleteItemH();
+ delete lst;
 }
 
-itemType Queue2::Peek()
+bool Queue::IsEmpty()
 {
- GetItemH(); 
+ return lst->IsEmpty();
+}
+
+void Queue::Dequeue()
+{
+ lst->DeleteItemH();
+}
+
+itemType Queue::Peek()
+{
+ return lst->GetItemH(); 
+}
+
+void Queue::Print()
+{
+ lst->Print();
 }
 	
