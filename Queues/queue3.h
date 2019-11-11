@@ -1,19 +1,22 @@
 //Priority Queue 
 
-#ifndef QUEUE4_H
-#define QUEUE4_H
+#ifndef QUEUE
+#define QUEUE
  
 #include "queue2.h"
-
-class Queue4 : public Queue2
+/*
+PQueue is a priority queue.  Nodes in PQueue are in ascending order by item
+*/
+class PQueue : public Queue
 {
  public:
-   Queue4();
-   Queue4(Queue4* q);
+   PQueue();
+   PQueue(Queue* q);
 
    /*
-   pre: an instance of queue exists
-   post: newItem is at the end of the queue 
+   pre: an instance of PQueue  exists. nodes in queue are in ascending order by 
+        item;
+   post: A new node is added to PQueue, which remains in sorted order 
    */
    void Enqueue(itemType newItem);
 

@@ -21,6 +21,6 @@ void Queue::Dequeue()
 
 itemType Queue::Peek()
 {
- GetItemH(); 
+ return GetItemH(); 
 }
 	
