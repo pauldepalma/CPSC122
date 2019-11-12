@@ -5,7 +5,7 @@
 class Rectangle
 {
  public:
-   //What do I know?
+   //What can I do?
    Rectangle(int widthIn, int lengthIn); 
    void   setWidth(double widthIn);
    void   setLength(double lengthIn);
@@ -14,7 +14,7 @@ class Rectangle
    double getArea() const;
 
  private:
-   //What can I do?
+   //What do I know?
    double width;
    double length;
 };
