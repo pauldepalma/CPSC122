@@ -25,7 +25,7 @@ class Queue : public List
 
    /*
    pre: an instance of queue exists and is not empty
-   post: returns the top of the stack. stack is undisturbed 
+   post: returns the head of the queue. queue is undisturbed 
    */
    itemType Peek();
 

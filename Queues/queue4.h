@@ -1,17 +1,17 @@
-//Queue implemented using a List and composition
+//Queue implemented as a circular queue 
 
-#ifndef QUEUE
-#define QUEUE
- 
-#include "list.h"
+#ifndef CQUEUE
+#define CQUEUE
 
-class Queue 
+typedef int itemType; 
+
+class CQueue 
 {
  public:
-   Queue();
-   Queue(Queue* q);
+   CQueue();
+   CQueue(CQueue* q);
  
-   ~Queue();
+   ~CQueue();
 
    /*
    pre: an instance of queue exists
@@ -33,18 +33,18 @@ class Queue
 
    /*
    pre: an instance of queue exists and is not empty
-   post: returns the head of the queue. queue is undisturbed 
+   post: returns the queue. queue is undisturbed 
    */
    itemType Peek();
 
    /*
    pre: an instance of queue exists and is not empty
-   post: each item from the queue is displayed on subsequent lines 
+   post: each item from  the queue is displayed on subsequent lines 
    */
    void Print();
 
  private:
-   List* lst;   //points to the first node on the list implementing the queue 
+   itemType* que;//pointer to array holding the queue3 
 };
 #endif
 
