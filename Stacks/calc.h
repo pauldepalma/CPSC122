@@ -20,15 +20,18 @@ class Calc
   /* 
   pre: none 
   post:
-       Part 1
+       Design/Code/Test in this order: 
        1. inFix points to newly allocated memory holding infix expression
        2. inFix expression has been checked for legal tokens
        3. inFix epression has been checked for balanced parentheses
-       Part 2
-       1. Hash table has been created and loaded (option 1) or plumbing 
+       4  Hash table has been created and loaded (option 1) or plumbing 
           for option 2 has been created.
-       2. Memory for postFix has been allocaed
-       3. Stack has been created
+       5. Memory for postFix has been allocaed
+       6. Stack has been created.  Since your stacks are serving multiple
+          purposes, you might do well to create a private method, EmptyStk,
+          that pops the stack until it is empty.  You could invoke this each
+          time you use a stack.  Alternatively, you could not use a class-wide
+          stack in favor of creating a new stack for each method that uses one.
   */
   Calc(int argcIn, char* argvIn[]);
 
