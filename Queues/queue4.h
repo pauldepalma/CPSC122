@@ -21,21 +21,30 @@ class CQueue
 
    /*
    pre: an instance of queue exists
-   post: newItem is at the end of the queue 
-   */
-   void Enqueue(itemType newItem);
+   post: true if queue is full, false otherwise
+   */ 
+   bool IsFull();
 
    /*
-   pre: an instance of Queue exists and is not empty
-   post: first item in queue has been removed.  
+   pre: an instance of queue exists
+   post: if not full, returns true and newItem is at end of the queue,
+         returns false otherwise 
    */
-   void Dequeue();
+   bool Enqueue(itemType newItem);
 
    /*
-   pre: an instance of queue exists and is not empty
-   post: returns the queue. queue is undisturbed 
+   pre: an instance of Queue exists
+   post: if not empty, returns true and head has been dequeued, false
+         otherwise
    */
-   itemType Peek();
+   bool Dequeue();
+
+   /*
+   pre: an instance of queue exists
+   post: if not empty, head holds head of queue and returns true, 
+         returns false otherwise 
+   */
+   bool Peek(itemType& head);
 
    /*
    pre: an instance of queue exists and is not empty
