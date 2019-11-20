@@ -3,7 +3,7 @@
 using namespace std;
 
  
-void prnt(char*);
+int prnt(char*);
 
 int main(int argc, char* argv[])
 {
@@ -11,7 +11,7 @@ int main(int argc, char* argv[])
  return 0;
 }
 
-void prnt(char* str)
+int prnt(char* str)
 { 
  if (*str == '\0')
   cout << endl;

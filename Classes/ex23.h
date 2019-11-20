@@ -63,7 +63,6 @@ class MyString
    */
    void concat(char const* strIn);
 
-
  private: 
    char* str; //points to a dynamically declared null-terminated 
               //array of characters 
