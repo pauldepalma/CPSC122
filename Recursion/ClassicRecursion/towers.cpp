@@ -8,33 +8,42 @@ int main(int argc, char* argv[])
 {
  int n = atoi(argv[1]);
  
- //solve for n disks by moving them from a to c with b as spare 
+ //solve for n disks by moving them from a to b with c as spare 
  towers(n, 'a', 'b', 'c');
 }
 
 /*
 Observation: 
-  The source is always the first argument
-  The spare is always the second argument
-  The destination is always the third argument
+  source destination spare
+  begin with a b c
 */ 
 
 void towers(int n, char a, char b, char c)
 {
  if (n == 1)
-    cout << "move disk from pole " << a << " to pole " << c << endl;
+    cout << "move disk from pole " << a << " to pole " << b << endl;
  else
     {
-     //solve for n-1 disks by moving them from a to b with c as spare 
+     //With n disks on pole a, solve the problem with n-1 disks
+     //moving them from a to c with b as spare
+     //At the end:
+     //a = 1 
+     //b = 0 
+     //c = n-1 
      towers(n-1,a,c,b);
 
-     //1 disk remains on pole a after the first recursive call
-     //solve for 1 disk by  moving it from a to c 
+     //Trivial Case: 1 disk on a 
+     //Move it to b
+     //At the end:
+     //a = 0
+     //b = 1
+     //c = n-1 
      towers(1,a,b,c);
 
-     //Because of the first recursive call, there are now n-1 discs on b.  
-     //solve for n-1 disks by moving them from b to c with a as spare 
-     towers(n-1,b,a,c);
+     //c is now the source with n-1 disk
+     //b has 1 disk. it is the destination
+     //a has 0 disks. it is the spare
+     towers(n-1,c,b,a);
     }
 }
 
