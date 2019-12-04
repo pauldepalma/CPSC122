@@ -10,9 +10,11 @@ PQueue::PQueue(PQueue* q) : Queue(q)
 {}
 
 void PQueue::Enqueue(itemType newItem)
-{}
+{ 
+ PutItemT(newItem);
+}
 
-node* PtrTo(itemType item)
+node* PQueue::PtrTo(itemType newItem)
 {
  return NULL;
 }

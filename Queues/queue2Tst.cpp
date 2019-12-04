@@ -1,19 +1,19 @@
 #include <iostream>
 using namespace std;
 
-#include "queue3.h"
+#include "queue2.h"
 
 
 int main()
 {
 
- PQueue* que = new PQueue;
- for (int i = 5; i >= 0; i--)
+ Queue* que = new Queue;
+ for (int i = 0; i < 5; i++)
   que->Enqueue(i);
  que->Dequeue();
  que->Print();
- cout << que->Peek() << endl;
- PQueue* que1 = new PQueue(que);
+
+ Queue* que1 = new Queue(que);
  que1->Print();
 
  delete que;
