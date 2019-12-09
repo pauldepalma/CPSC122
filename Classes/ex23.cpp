@@ -2,11 +2,12 @@
 using namespace std;
 
 #include "ex23.h"
+#include <cstring>
 
 //Constructor function
 MyString::MyString(char const* strIn)
 {
- cout << "constructor" << endl;
+ /*an OK way 
  //determine the length of MyString instance
  length = 0;
  while(strIn[length] != '\0')
@@ -23,13 +24,17 @@ MyString::MyString(char const* strIn)
   i++;
  }
  str[i] = '\0';
+ */
+ //A better way
+ str = new char[strlen(strIn) + 1];
+ strcpy(str,strIn);
+ length = strlen(str);
 }
 
 //Destructor function
 MyString::~MyString()
 {
  delete [] str;
- cout << "destructor" << endl;
 }
 
 void MyString::myDisplay()
