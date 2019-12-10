@@ -20,6 +20,11 @@ class PQueue : public Queue
    */
    void Enqueue(itemType newItem);
  private:
+   /*
+   use: Used in Enqueue. 
+   pre: Item to be inserted belongs somewhere between the head and tail  
+   post: Returns the insertion point of the new item 
+   */
   node* PtrTo(itemType newItem);
 };
 #endif
