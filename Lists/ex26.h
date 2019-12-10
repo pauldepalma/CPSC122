@@ -96,6 +96,12 @@ class List1
    int DeleteItem(const itemType target);
 
  private:
+   /*
+   pre: length of list > 1 
+   post: returns the address of the node just before the 
+         node pointed to by the tail 
+   */
+   node* PtrTo();
    int length;   //length of the list
    node* head;   //points to the first node on the list 
    node* tail;   //points to the last node on the list 
