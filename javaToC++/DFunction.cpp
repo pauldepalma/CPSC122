@@ -18,7 +18,9 @@ To Execute: ./DFunction
 #include <iostream>
 using namespace std;
 
-void display(int, int);
+void display(int, int);  //function prototype must be declared
+                         //before use.  prototype includes
+			 //return type, function name, parameters type(s)
 
 int main()
 {
