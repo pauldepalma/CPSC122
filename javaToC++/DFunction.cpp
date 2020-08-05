@@ -51,4 +51,3 @@ void display(int nums, int cols)
    ct++;
   }
 }
-

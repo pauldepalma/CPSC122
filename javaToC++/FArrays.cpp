@@ -9,7 +9,6 @@ Program illustrates arrays, random numbers, global constants
 To Build: g++ FArrays.cpp -o arrays 
 To Execute: ./arrays
 */
-
 #include <iostream>
 using namespace std;
 

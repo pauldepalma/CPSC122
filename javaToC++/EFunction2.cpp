@@ -39,7 +39,6 @@ int power(int base, int exp)
 
  for (int i = 0; i < exp; i++)
   value = value * base;
-
  return value;
 }
 
