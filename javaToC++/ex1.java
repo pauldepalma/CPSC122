@@ -8,14 +8,14 @@ Team Member 1: Paul De Palma
 Team Member 2: None
 Submitted By: Paul De Palma
 GU Username: depalma
-File Name: AHelloWorld.java
+File Name: ex1.java
 Program illustrates console output
-To Build: javac AHelloWorld.java
-To Execute: java AHelloWorld
+To Build: javac ex1.java
+To Execute: java ex1 
 */
 
 
-public class AHelloWorld
+public class ex1 
 {
   public static void main(String[] args)
   {

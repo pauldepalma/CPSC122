@@ -5,18 +5,18 @@ Team Member 1: Paul De Palma
 Team Member 2: None
 Submitted By: Paul De Palma
 GU Username: depalma
-File Name: DFunction.java
+File Name: ex4.java
 Program illustrates 
 void function
 while loop
 modulus
-To Build: javac DFunction.java
-To Execute: java DFunction 
+To Build: javac ex4.java
+To Execute: java ex4 
 */
 
 import java.util.Scanner;
 
-public class DFunction 
+public class ex4 
 {
   public static void main(String[] args)
   {

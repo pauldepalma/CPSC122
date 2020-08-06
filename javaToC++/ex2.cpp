@@ -8,9 +8,9 @@ Team Member 1: Paul De Palma
 Team Member 2: None
 Submitted By: Paul De Palma
 GU Username: depalma
-File Name: BDataTypes.cpp
+File Name: ex2.cpp
 Program illustrates fundmental data types and a simple if statement 
-To Build: g++ BDataTypes.java
+To Build: g++ ex2.java
 To Execute: ./a.ouut 
 */
 

@@ -4,12 +4,12 @@ Team Member 1: Paul De Palma
 Team Member 2: None
 Submitted By: Paul De Palma
 GU Username: depalma
-File Name: EFunction2.cpp
+File Name: ex5.cpp
 Program illustrates
   int function with integer arguments
   for loop
-To Build: g++ ex3.cpp -o example3
-To Execute: ./example3
+To Build: g++ ex5.cpp -o example5
+To Execute: ./example5
 */
 
 #include <iostream>

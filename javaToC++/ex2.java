@@ -8,15 +8,15 @@ Team Member 1: Paul De Palma
 Team Member 2: None
 Submitted By: Paul De Palma
 GU Username: depalma
-File Name: BDataTypes.java
+File Name: ex2.java
 Program illustrates fundmental data types 
-To Build: javac BDataTypes.java
-To Execute: java BDataTypes 
+To Build: javac ex2.java
+To Execute: java ex2 
 */
 
 import java.lang.Math;
 
-public class BDataTypes 
+public class ex2 
 {
   public static void main(String[] args)
   {
@@ -43,7 +43,7 @@ public class BDataTypes
 
    boolean cs_is_fun = true;
    if (cs_is_fun)
-     System.out.println("Computer Sciendce is Fun");
+     System.out.println("Computer Science is Fun");
 
   }
 } 

@@ -5,16 +5,16 @@ Team Member 1: Paul De Palma
 Team Member 2: None
 Submitted By: Paul De Palma
 GU Username: depalma
-File Name: EFunction2.java
+File Name: ex5.java
 Program illustrates 
 returning a value from a function
-To Build: javac EFunction2.java
-To Execute: java EFunction2 
+To Build: javac ex5.java
+To Execute: java ex5 
 */
 
 import java.util.Scanner;
 
-public class EFunction2 
+public class ex5 
 {
   public static void main(String[] args)
   {

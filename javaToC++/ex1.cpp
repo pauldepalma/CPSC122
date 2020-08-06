@@ -8,9 +8,9 @@ Team Member 1: Paul De Palma
 Team Member 2: None
 Submitted By: Paul De Palma
 GU Username: depalma
-File Name: AHelloWorld.cpp
+File Name: ex1.cpp
 Program illustrates console output
-To Build: g++ AHelloWorld.cpp
+To Build: g++ ex1.cpp
 To Execute: ./a.out 
 */
 

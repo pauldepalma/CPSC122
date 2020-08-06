@@ -5,18 +5,18 @@ Team Member 1: Paul De Palma
 Team Member 2: None
 Submitted By: Paul De Palma
 GU Username: depalma
-File Name: FArrays.java
+File Name: ex6.java
 Program illustrates 
 arrays, random numbers, global constants
-To Build: javac FArrays.java
-To Execute: java FArrays 
+To Build: javac ex6.java
+To Execute: java ex6 
 */
 
 import java.util.Scanner;
 import java.util.Random;
 import java.lang.Integer;
 
-public class FArrays
+public class ex6 
 {
   public static void main(String[] args)
   {

@@ -7,13 +7,13 @@ Submitted By: Paul De Palma
 GU Username: depalma
 File Name: CForLoop.java
 Program illustrates a for loop 
-To Build: javac CForLoop.java
-To Execute: java CForLoop 
+To Build: javac ex3.java
+To Execute: java ex3 
 */
 
 import java.util.Scanner;
 
-public class CForLoop 
+public class ex3 
 {
   public static void main(String[] args)
   {

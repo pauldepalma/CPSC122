@@ -4,9 +4,9 @@ Team Member 1: Paul De Palma
 Team Member 2: None
 Submitted By: Paul De Palma
 GU Username: depalma
-File Name: CForLoop.cpp 
+File Name: ex3.cpp 
 Program illustrates console i/o and a for loop;
-To Build: g++ CForLoop.cpp 
+To Build: g++ ex3.cpp 
 To Execute: ./a.out
 */
 

@@ -10,8 +10,8 @@ Program illustrates
   void function 
   while loop
   modulus
-To Build: g++ DFunction.cpp -o DFunction    //DFunction names executable 
-To Execute: ./DFunction
+To Build: g++ ex4.cpp -o ex4  //ex4 names executable 
+To Execute: ./ex4
 */
 
 

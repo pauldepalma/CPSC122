@@ -4,9 +4,9 @@ Team Member 1: Paul De Palma
 Team Member 2: None
 Submitted By: Paul De Palma
 GU Username: depalma
-File Name: FArrays.cpp
+File Name: ex6.cpp
 Program illustrates arrays, random numbers, global constants 
-To Build: g++ FArrays.cpp -o arrays 
+To Build: g++ ex6.cpp -o arrays 
 To Execute: ./arrays
 */
 #include <iostream>
