@@ -4,9 +4,9 @@ Team Member 1: Paul De Palma
 Team Member 2: None
 Submitted By: Paul De Palma
 GU Username: depalma
-File Name: ex6.cpp
+File Name: ex7.cpp
 Program is a first look at command line arguments 
-To Build: g++ ex6.cpp -o ex6
+To Build: g++ ex7.cpp -o ex7
 Sample Execution: ./ex6 1 2 3 4 5 
 */
 

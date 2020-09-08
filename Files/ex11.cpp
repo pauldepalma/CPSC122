@@ -5,9 +5,9 @@ GU Username: depalma
 Submitted By: Paul De Palma
 GU Username: depalma
 File Name: Fex11.cpp
-Program illusrates line file i/o  
-To Build: g++ Fex11.cpp -o Fex11
-To Execute: ./Fex11
+Program illusrates line file i/o, command line args  
+To Build: g++ ex11.cpp -o ex11
+To Execute: ./ex11 ex11.in ex11.out
 */
 
 
@@ -18,15 +18,15 @@ using namespace std;
 
 string amend(string);
 
-int main()
+int main(int argc, char* argv[])
 {
  string line; 
 
  ifstream fin;
  ofstream fout;
 
- fin.open("Dex9.in");
- fout.open("Fex11.out");         
+ fin.open(argv[1]);
+ fout.open(argv[2]);         
  while (fin.peek() != EOF)
  {
   getline(fin,line,'\n'); 

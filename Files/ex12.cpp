@@ -51,6 +51,7 @@ int main(int argc, char* argv[])
 
  return 0;
 }
+
 /*
 Pre:  file is a reference to an fstream object
       name of the physical name of a file

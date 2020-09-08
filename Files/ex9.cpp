@@ -4,9 +4,9 @@ Paul De Palma
 GU Username: depalma
 Submitted By: Paul De Palma
 GU Username: depalma
-File Name: Dex9.cpp
+File Name: ex9.cpp
 Program illusrates file i/o with characters
-To Build: g++ Dex9.cpp -o ex9
+To Build: g++ ex9.cpp -o ex9
 To Execute: ./ex9 
 */
 

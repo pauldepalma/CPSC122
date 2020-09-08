@@ -24,7 +24,6 @@ int main()
  int num, total;
 
 
- //fin.open("Eex10.in");
  fin.open("ex10.in");
  fout.open("ex10.out");
 

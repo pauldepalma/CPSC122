@@ -5,12 +5,12 @@ Paul De Palma
 GU Username: depalma
 Submitted By: Paul De Palma
 GU Username: depalma
-File Name: ex7.cpp
+File Name: ex7A.cpp
 Illustrates accepting an output file name from the command line
 Opening the file
 Writing to the file 
-To Build: g++ ex7.cpp -o ex7
-To Execute: ./ex7  
+To Build: g++ ex7A.cpp -o ex7A
+To Execute: ./ex7A  
 */
 
 

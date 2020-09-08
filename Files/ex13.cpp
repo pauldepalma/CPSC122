@@ -5,11 +5,11 @@ GU Username: depalma
 Submitted By: Paul De Palma
 GU Username: depalma
 File Name: ex13.cpp
-Program reads an inp;ut file into an array
+Program reads an input file into an array
         exchanges the first two items in the array
         writes the output to an output file 
 To Build: g++ ex13.cpp
-To Execute: ./ex13 ex12.in out 
+To Execute: ./ex13 ex13.in ex13.out 
 */
 
 #include <iostream>
@@ -18,7 +18,7 @@ To Execute: ./ex13 ex12.in out
 #include <cstdlib>
 using namespace std;
 
-const int SIZE = 9;  //number of lines in the input file
+const int SIZE = 8;  //number of lines in the input file
 void fileOpen(fstream&, char[], char);
 void swap(string[], int, int);
 
