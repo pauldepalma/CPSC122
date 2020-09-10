@@ -51,9 +51,6 @@ int main(int argc, char* argv[])
  fin.close();
  fout.close();
 
- fin.close(); 
- fout.close(); 
-
  return 0;
 }
 
