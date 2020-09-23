@@ -4,7 +4,7 @@ Paul De Palma
 GU Username: depalma
 Submitted By: Paul De Palma
 GU Username: depalma
-File Name: Fex11.cpp
+File Name: ex11.cpp
 Program illusrates line file i/o, command line args  
 To Build: g++ ex11.cpp -o ex11
 To Execute: ./ex11 ex11.in ex11.out
