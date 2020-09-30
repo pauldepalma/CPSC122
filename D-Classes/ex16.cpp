@@ -1,10 +1,19 @@
-//Implementation file
-#include "ex22.h"
+//Implementation file//
+
+#include <iostream>
+using namespace std;
+
+#include "ex16.h"
 
 Rectangle::Rectangle(int widthIn, int lengthIn)
 {
  width = widthIn;
  length = lengthIn;
+ cout << "I am a Rectangle" << endl;
+ cout << "I know my width: " <<  width << endl;
+ cout << "I know my length: " <<  length << endl;
+ cout << "I have some accessors (setters): getWidth, getLength, getArea" << endl;
+ cout << "I have some mutators (getters): setWidth, setLength, setArea" << endl;
 }
 
 void Rectangle::setWidth(double widthIn)
