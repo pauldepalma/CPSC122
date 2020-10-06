@@ -6,13 +6,13 @@ Team Member 1: Paul De Palma
 Team Member 2: None
 Submitted By: Paul De Palma
 GU Username: depalma
-File Name: ex16.cpp
+File Name: ex22.cpp
 Program illustrates classes and 3 file compilation 
-To Build: g++ ex16Tst.cpp ex16.cpp
+To Build: g++ ex22Tst.cpp ex22.cpp
 To Execute: ./a.out 
 */
 
-#include "ex16.h"
+#include "ex22.h"
 #include <iostream>
 using namespace std;
 
