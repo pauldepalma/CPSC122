@@ -14,8 +14,7 @@ where size is the size of an array, target is the search target
 
 #include <iostream>
 using namespace std;
-template<class ItemType>
-int binS(ItemType*, int, int);
+int binS(int*, int, int);
 
 
 int main(int argc, char* argv[])
@@ -23,7 +22,7 @@ int main(int argc, char* argv[])
  int size = atoi(argv[1]); 
  int target = 37; 
 
- ItemType* arr = new ItemType[size]; //dynamic declaration of array
+ int* arr = new int[size]; //dynamic declaration of array
 
  for (int i = 0; i < size; i++)
    arr[i] = i;
@@ -38,7 +37,7 @@ int main(int argc, char* argv[])
  return 0;
 }
 
-int binS(ItemType* arr, int size, ItemType target)
+int binS(int* arr, int size, int target)
 {
  int top, middle, bottom;
  top = middle = 0;

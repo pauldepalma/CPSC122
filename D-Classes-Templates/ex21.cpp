@@ -23,26 +23,25 @@ int main(int argc, char* argv[])
 {
  int size = atoi(argv[1]); 
  
- /*
+ 
   int target = 37; 
   int* arr = new int[size]; //dynamic declaration of array
   for (int i = 0; i < size; i++)
     arr[i] = i + 1; 
- */
+/*
  
- /*
  double target = 37.5; 
  double* arr = new double[size]; //dynamic declaration of array
  for (int i = 0; i < size; i++)
    arr[i] = static_cast<double>(i) + 1.5; 
- */
-
+ */ 
+/*
   char target = 'C'; 
   char* arr = new char[size]; //dynamic declaration of array
   for (int i = 0; i < size; i++)
     arr[i] = static_cast<char>(i + 65); 
  
-  
+ */ 
  int found = binS(arr,size,target);
 
  if (found == -1)

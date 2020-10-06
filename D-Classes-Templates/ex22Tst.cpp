@@ -24,7 +24,6 @@ int main(int argc, char* argv[])
  Rectangle box(widthIn, lengthIn);
 
  cout << "My area is: " << box.getArea() << endl;
-
  box.setWidth(10);
  box.setLength(20);
  cout << "I have reset my width: " << box.getWidth() << endl;

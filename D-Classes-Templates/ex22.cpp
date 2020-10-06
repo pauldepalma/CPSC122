@@ -3,12 +3,13 @@
 #include <iostream>
 using namespace std;
 
-#include "ex16.h"
+#include "ex22.h"
 
 Rectangle::Rectangle(int widthIn, int lengthIn)
 {
  width = widthIn;
  length = lengthIn;
+ display();
  cout << "I am a Rectangle" << endl;
  cout << "I know my width: " <<  width << endl;
  cout << "I know my length: " <<  length << endl;
@@ -41,3 +42,7 @@ double Rectangle::getArea() const
  return length * width;
 } 
 
+void Rectangle::display()
+{
+   cout << "Float like a butterfly, sting like a bee" << endl;
+}

@@ -1,12 +1,12 @@
-#ifndef Search_H
-#define Search_H
+#ifndef Rect_H
+#define Rect_H
 
 
-class Search 
+class Rectangle 
 {
  public:
    //What can I do?
-   Search(int widthIn, int lengthIn); 
+   Rectangle(int widthIn, int lengthIn); 
    void   setWidth(double widthIn);
    void   setLength(double lengthIn);
    double getWidth() const; 
@@ -15,6 +15,7 @@ class Search
 
  private:
    //What do I know?
+   void display(); 
    double width;
    double length;
 };
