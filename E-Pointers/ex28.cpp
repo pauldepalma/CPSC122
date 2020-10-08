@@ -6,27 +6,35 @@ Submitted By: Paul De Palma
 GU Username: depalma
 File Name: ex20.cpp
 swap three ways 
-To Build: g++ ex20.cpp
-To Execute: ./a.out integer 
+To Build: g++ ex28.cpp
+To Execute: ./a.out  
 */
 
 #include <iostream>
 #include <cstdlib> 
 using namespace std;
 
-void swap1(int,int);
-void swap2(int&,int&);
-void swap3(int*,int*);
+void swap1(int,int);     //int args
+void swap2(int&,int&);   //reference to int args
+void swap3(int*,int*);   //pointer to int args
 
-int main(int argc, char* argv[])
+int main()
 {
- int x = atoi(argv[1]); 
- int y = atoi(argv[2]);
- 
+ int x = 0 ;
+ int y = 0 ;
+
+ x = 5;
+ y = 10; 
  swap1(x,y);
- cout << x << " " << y << endl;
+ cout << x << " " << y <<  endl;
+
+ x = 5; 
+ y = 10; 
  swap2(x,y);
  cout << x << " " << y <<  endl;
+ 
+ x = 5; 
+ y = 10; 
  swap3(&x,&y);
  cout << x << " " << y << endl;
 

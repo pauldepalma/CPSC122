@@ -4,9 +4,9 @@ Team Member 1: Paul De Palma
 Team Member 2: None
 Submitted By: Paul De Palma
 GU Username: depalma
-File Name: ex19.cpp
+File Name: ex26.cpp
 illustrates dynamic memory
-To Build: g++ ex19.cpp
+To Build: g++ ex26.cpp
 To Execute: ./a.out integer 
 */
 
@@ -31,7 +31,6 @@ int main(int argc, char* argv[])
  return 0;
 }
 
-//add 10 to each of the parameters
 void getData(int* stuff, int size)
 {
  for (int i = 0; i < size; i++)

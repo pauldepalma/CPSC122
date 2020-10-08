@@ -1,46 +1,26 @@
+/*
+Class: CPSC 122-01
+Team Member 1: Paul De Palma
+Team Member 2: None
+Submitted By: Paul De Palma
+GU Username: depalma
+File Name: ex23.cpp
+Illustrates address operator 
+To Build: g++ ex23.cpp
+To Execute: ./a.out integer 
+*/
+
 #include <iostream>
+#include <cstdlib> //necessary for atoi
 using namespace std;
 
-#include "ex23.h"
-#include <cstring>
-
-//Constructor function
-MyString::MyString(char const* strIn)
+int main(int argc, char* argv[])
 {
- /*an OK way 
- //determine the length of MyString instance
- length = 0;
- while(strIn[length] != '\0')
-  length++;
+ int var = atoi(argv[1]); 
 
- //dynamically allocate memory for MyString instance
- str = new char[length + 1];
+ cout << "Value stored in variable, var: " << var << endl;
+ cout << "Size of var in bytes: " << sizeof(var) << endl;
+ cout << "Address of var: " << &var << endl;
 
- //copy contents of strIn to MyString instance
- int i = 0;
- while(i < length)
- {
-  str[i] = strIn[i];
-  i++;
- }
- str[i] = '\0';
- */
- //A better way
- str = new char[strlen(strIn) + 1];
- strcpy(str,strIn);
- length = strlen(str);
+ return 0;
 }
-
-//Destructor function
-MyString::~MyString()
-{
- delete [] str;
-}
-
-void MyString::myDisplay()
-{
- for (int i = 0; i < length; i++)
-  cout << str[i];
- cout << endl;
-}
-

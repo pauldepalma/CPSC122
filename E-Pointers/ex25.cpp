@@ -4,47 +4,40 @@ Team Member 1: Paul De Palma
 Team Member 2: None
 Submitted By: Paul De Palma
 GU Username: depalma
-File Name: ex17.cpp
+File Name: ex25.cpp
 array names and pointers 
-To Build: g++ ex17.cpp
-To Execute: ./a.out integer 
+To Build: g++ ex25.cpp
+To Execute: ./a.out  
 */
 
 #include <iostream>
 #include <cstdlib> //necessary for atoi
 using namespace std;
 
-void passStuff(int[], int*, int);
+void passStuff(int*,int);     //note the pointer type
 
 int main(int argc, char* argv[])
 {
-
- int dataArray[5];
- int dataPtr = 1;
- int data = 1;
+ int size = 5;
+ int dataArray[size];        //a conventional interger array
  for (int i = 0; i < 5; i++)
    dataArray[i] = i; 
 	 
- passStuff(dataArray, &dataPtr, data);
+ passStuff(dataArray,size);
 
  cout << "Array" << endl;
- for (int i = 0; i < 5; i++)
+ for (int i = 0; i < size; i++)
    cout << dataArray[i] << endl;
 
- cout << "Pointer " <<  dataPtr << endl;
- cout << "data " << data << endl;
 
  return 0;
 }
 
 //add 10 to each of the parameters
-void passStuff(int dataArray[], int* dataPtr, int data)
+void passStuff(int* dataArray,int size)    //pointer notation
 {
- for (int i = 0; i < 5; i++)
+ for (int i = 0; i < 5; i++)               //array notation
    dataArray[i] = dataArray[i] + 10;
 
- *dataPtr = *dataPtr + 10;
- data = data + 10;
 }
-
 

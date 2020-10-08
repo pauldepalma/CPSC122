@@ -26,11 +26,10 @@ class MyString
    void myDisplay(); 
 
    /*
-   Pre:  An instance of MyString exists. The length of strIn <=
-         the length of the internal character array pointed to
-	 by str.
-   Post: The contents of strIn replaces the internal character
-         array. 
+   Pre:  An instance of MyString exists whose length <= length of strIn
+   Post: The contents of strIn overwrites the contents of the instance
+         of MyString pointed to by the member variable str.  str is 
+	 terminated by the null character.   
    */
    void myStrcpy(char const* strIn);  
 
@@ -61,9 +60,27 @@ class MyString
          MyString is ABC. strIn is DEF.  MyString is still a null-terminated
 	 string, but contains: ABCDEF. 
    */
-   void concat(char const* strIn);
+   void concat();
 
- private: 
+
+ private:
+   //helper functions for the class
+
+   /*
+   pre: idx is the first character of str that matches the substring
+        strIn is a null terminated string designated as the substring
+   post: returns true if strIn is a substring of str, false otherwise. 
+         Used by find()
+   */ 
+   bool isSub(char const* strIn, int idx); 
+
+   /*
+   pre: strIn is a null-terminated string
+   post: returns the number of characters in strIn, excluding the null
+         character
+   */
+   int myStrlen(char const* strIn); 
+
    char* str; //points to a dynamically declared null-terminated 
               //array of characters 
    int length;//number of characters in the array pointed to by str 

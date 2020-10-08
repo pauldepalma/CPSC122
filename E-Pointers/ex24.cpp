@@ -4,9 +4,9 @@ Team Member 1: Paul De Palma
 Team Member 2: None
 Submitted By: Paul De Palma
 GU Username: depalma
-File Name: ex16.cpp
+File Name: ex24.cpp
 Illustrates dereferencing 
-To Build: g++ ex16.cpp
+To Build: g++ ex24.cpp
 To Execute: ./a.out integer 
 */
 
@@ -22,7 +22,7 @@ int main(int argc, char* argv[])
  //assign the address of var to addrVar
  addrVar = &var;
 
- //We can now get to the value of var by dereference addrVar
+ //We can now get to the value of var by dereferencign addrVar
  cout << "Here is the value stored in variable, var: " << var << endl;
  cout << "Here is the address of var: " << &var << endl;
  cout << "It is the same as value stored in addrVar: " << addrVar << endl;
