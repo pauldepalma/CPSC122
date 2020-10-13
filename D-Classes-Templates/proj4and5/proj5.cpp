@@ -11,16 +11,17 @@ TransPos::TransPos(string inp_name_in, string out_name_in, string key_name_in, i
  out_name = out_name_in;
  key_name = key_name_in;
  mode = mode_in; 
- R = 26;
- C = 2;
 }
 
 TransPos::TransPos(string key_name_in)
 {
- key_enc = new int[26];
  key_name = key_name_in;
- R = 26;
- C = 2;
+ key_enc = new int[R]; //holds encryption key
+
+ //ctpt is a dynamically declared 2D array
+ ctpt = new int*[R]; //rows
+ for (int i = 0; i < R; i++)   //cols
+  ctpt[i] = new int[C];
 }
 
 void TransPos::store_enc_key()
@@ -33,7 +34,7 @@ void TransPos::store_enc_key()
  fkey.close();
 }
 
-//generate the key
+//generate the encryption key
 void TransPos::enc_key_gen()
 {
   bool validate[R] = {false};
@@ -57,9 +58,11 @@ void TransPos::enc_key_gen()
   }
 }
 
-
 void TransPos::store_dec_key()
 {
+ dec_key_gen();  
+ //append dec key to key file 
+ /*
  fileOpen(fkey,key_name,'a');
  //storing 0 .. 25 on the second line of the key file to demonstrate appending
  //to an existing file
@@ -67,6 +70,20 @@ void TransPos::store_dec_key()
   fkey << i << ' ';
  fkey << endl;
  fkey.close();
+ */
+}
+
+void TransPos::dec_key_gen()
+{
+ //make ctpt for sorting purposes
+ for (int i = 0; i < R; i++)
+ {
+   ctpt[i][0] = i;
+   ctpt[i][1] = key_enc[i]; 
+ }
+
+ //sort ctpt
+ //swap cols in ctpt
 }
 
 void TransPos::fileOpen(fstream& file, string name, char mode)

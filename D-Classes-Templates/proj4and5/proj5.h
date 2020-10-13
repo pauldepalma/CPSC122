@@ -22,9 +22,12 @@ class TransPos
    fstream fkey;
    fstream fin;
    fstream fout;
-   int* key_enc; 
+   int* key_enc;
+   int* key_dec;
+   int** ptct;
+   int** ctpt; 
    int mode;
-   int R;
-   int C;
+   const int R = 26;
+   const int C = 2;
 };
 #endif  
