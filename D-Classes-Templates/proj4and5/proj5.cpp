@@ -15,6 +15,7 @@ TransPos::TransPos(string inp_name_in, string out_name_in, string key_name_in, i
 
 TransPos::TransPos(string key_name_in)
 {
+ cout << "entered the key creation constructor" << endl;
  key_name = key_name_in;
  key_enc = new int[R]; //holds encryption key
 

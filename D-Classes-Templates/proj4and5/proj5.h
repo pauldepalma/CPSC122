@@ -24,8 +24,7 @@ class TransPos
    fstream fout;
    int* key_enc;
    int* key_dec;
-   int** ptct;
-   int** ctpt; 
+   int** ctpt;  //pointer to a 2D array 
    int mode;
    const int R = 26;
    const int C = 2;
