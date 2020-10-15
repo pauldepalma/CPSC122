@@ -74,13 +74,6 @@ class MyString
    */ 
    bool isSub(char const* strIn, int idx); 
 
-   /*
-   pre: strIn is a null-terminated string
-   post: returns the number of characters in strIn, excluding the null
-         character
-   */
-   int myStrlen(char const* strIn); 
-
    char* str; //points to a dynamically declared null-terminated 
               //array of characters 
    int length;//number of characters in the array pointed to by str 

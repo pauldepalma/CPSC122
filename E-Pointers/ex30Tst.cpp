@@ -4,14 +4,14 @@ Team Member 1: Paul De Palma
 Team Member 2: None
 Submitted By: Paul De Palma
 GU Username: depalma
-File Name: ex29Tst.cpp
+File Name: ex30Tst.cpp
 Test file for a string class: ex29.h and ex29.cpp 
-To Build: g++ ex29Tst.cpp ex29.cpp
+To Build: g++ ex30Tst.cpp ex29.cpp
 To Execute: ./a.out Higgledy 
 */
 
 
-#include "ex29.h"
+#include "ex30.h"
 #include <iostream> 
 using namespace std;
 
@@ -19,7 +19,7 @@ int main(int argc, char* argv[])
 {
  MyString str1(argv[1]); //causes the constructor to run
  str1.myDisplay();
- return 0;  //destructor runs again because str1 goes out of scope
+ return 0;  //destructor runs because str1 goes out of scope
 }
    
   

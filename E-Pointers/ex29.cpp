@@ -1,46 +1,48 @@
+/*
+Class: CPSC 122-01
+Team Member 1: Paul De Palma
+Team Member 2: None
+Submitted By: Paul De Palma
+GU Username: depalma
+File Name: ex29.cpp
+illustrates dynamic creation of a 2D array.
+To Build: g++ ex29.cpp
+To Execute: ./a.out  
+*/
+
 #include <iostream>
+#include <cstdlib> 
 using namespace std;
 
-#include "ex29.h"
-#include <cstring>
+const int R = 5;
+const int C = 2;
 
-//Constructor function
-MyString::MyString(char const* strIn)
+void load(int**);
+void display(int**);
+
+int main()
 {
- /*an OK way 
- //determine the length of MyString instance
- length = 0;
- while(strIn[length] != '\0')
-  length++;
 
- //dynamically allocate memory for MyString instance
- str = new char[length + 1];
+ int** example = new int* [R];   //declare an array of R pointers to int
+ for (int i = 0; i < R; i++)     //R int arrays, each of size C 
+     example[i] = new int[C];
 
- //copy contents of strIn to MyString instance
- int i = 0;
- while(i < length)
- {
-  str[i] = strIn[i];
-  i++;
- }
- str[i] = '\0';
- */
- //A better way
- str = new char[strlen(strIn) + 1];
- strcpy(str,strIn);
- length = strlen(str);
+ load(example);
+ display(example); 
+}
+void load(int** ex)
+{
+  for (int i = 0; i < R; i++)
+    for (int j = 0; j < C; j++)
+      ex[i][j] = i; 
 }
 
-//Destructor function
-MyString::~MyString()
+void display(int** ex)
 {
- delete [] str;
+  for (int i = 0; i < R; i++)
+    {
+      for (int j = 0; j < C; j++)
+        cout << ex[i][j] << " ";
+      cout << endl;
+    }
 }
-
-void MyString::myDisplay()
-{
- for (int i = 0; i < length; i++)
-  cout << str[i];
- cout << endl;
-}
-
