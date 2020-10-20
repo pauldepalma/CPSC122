@@ -10,6 +10,7 @@ class TransPos
    TransPos(string key_name_in); 
    void store_enc_key();
    void store_dec_key();
+   void transform();
 
  private:
    void enc_key_gen();

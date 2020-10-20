@@ -11,7 +11,6 @@ To Build: g++ ex8.cpp -o input
 To Execute: ./ex8 
 */
 
-//csuser-> jesus 72
 #include <iostream>
 using namespace std;
 

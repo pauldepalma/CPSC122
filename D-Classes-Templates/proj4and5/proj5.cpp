@@ -63,15 +63,13 @@ void TransPos::store_dec_key()
 {
  dec_key_gen();  
  //append dec key to key file 
- /*
  fileOpen(fkey,key_name,'a');
  //storing 0 .. 25 on the second line of the key file to demonstrate appending
  //to an existing file
  for (int i = 0; i < R; i++)
-  fkey << i << ' ';
+  fkey << i  << ' ';
  fkey << endl;
  fkey.close();
- */
 }
 
 void TransPos::dec_key_gen()
@@ -82,6 +80,8 @@ void TransPos::dec_key_gen()
    ctpt[i][0] = i;
    ctpt[i][1] = key_enc[i]; 
  }
+ for (int i = 0;i < R; i++)
+   cout << ctpt[i][0] << " " << ctpt[i][1] << endl;
 
  //sort ctpt
  //swap cols in ctpt
