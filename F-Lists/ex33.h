@@ -4,9 +4,9 @@ Paul De Palma
 GU Username: depalma
 Submitted By: Paul De Palma
 GU Username: depalma
-File Name: ex26.h
+File Name: ex33.h
 Header file for a linked list with head and tail pointers  
-To Build: g++ ex26Tst.cpp ex26.cpp 
+To Build: g++ ex33Tst.cpp ex33.cpp 
 To Execute: ./a.out
 */
 
@@ -84,7 +84,7 @@ class List1
   
    /*
    pre: an instance of list exists and is not empty
-   post: returns the number of nopdesd in the list that store target 
+   post: returns the number of nodes in the list that store target 
    */
    int FindItem(const itemType target) const;
 

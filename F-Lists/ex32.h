@@ -4,9 +4,9 @@ Paul De Palma
 GU Username: depalma
 Submitted By: Paul De Palma
 GU Username: depalma
-File Name: ex25.h
+File Name: ex32.h
 Header file for a simple linked list  
-To Build: g++ ex25Tst.cpp ex25.cpp 
+To Build: g++ ex32Tst.cpp ex32.cpp 
 To Execute: ./a.out
 */
 
