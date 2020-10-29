@@ -2,7 +2,7 @@
 #include <climits>
 using namespace std;
 
-#include "ex27.h"
+#include "ex34.h"
 
    
 List2::List2()
@@ -72,15 +72,3 @@ void List2::PrintForward()
  }
 }
  
-void List2::PrintBackwards()
-{
- doubleNode*  cur = tail->prev;
-
- int i = 0;
- while (i < length)
- {
-  cout << cur->item << endl;
-  cur = cur->prev;
-  i++;
- }
-} 

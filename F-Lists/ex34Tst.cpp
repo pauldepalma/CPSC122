@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-#include "ex27.h"
+#include "ex34.h"
 
 
 int main()
@@ -18,8 +18,5 @@ int main()
  cout << "Front To Back" << endl;
  lst->PrintForward();
 
- cout << "Back To Front" << endl;
- lst->PrintBackwards();
  return 0;
-
 }
