@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-#include "ex25.h"
+#include "ex32.h"
 
 List::List()
 {
@@ -44,7 +44,7 @@ int List::Find(const itemType item) const
  return -1;
 }
 
-void DeleteItem(const itemType item)
+void DeleteItem(const int pos)
 {
 }
 
