@@ -34,7 +34,7 @@ class List2
    /*
    Comment: This function is called a copy constructor.  When invoked from
    the test file with an existing object of type List2, will create
-   an exact copy of the object.  That is, instead simpley creating an empty 
+   an exact copy of the object.  That is, instead simply creating an empty 
    new list like a conventional constructor, it will create a new list that,
    at the time of creation, is an exact copy of the list pointed to by the
    parameter.

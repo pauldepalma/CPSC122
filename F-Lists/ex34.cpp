@@ -24,6 +24,35 @@ List2::List2()
  tail->next = NULL;
 }
 
+List2::List2(List2* lst)
+{
+ length = 0; 
+ 
+//create dummy nodes;
+ head = new doubleNode;
+ tail = new doubleNode;
+
+ //set values for head dummy node;
+ head->prev = NULL;
+ head->item = INT_MIN;
+ head->next = tail;
+
+ //set values for tail dummy node;
+ tail->prev = head; 
+ tail->item = INT_MAX;
+ tail->next = NULL;
+
+ int pos = 1;
+ doubleNode* start = lst->FindPosition(pos);
+
+ while (pos < lst->length)
+ {
+  Insert(start->item,pos);
+  start = start->next;
+  pos++;
+ }  
+}
+
 List2::~List2()
 {
 }

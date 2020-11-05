@@ -11,11 +11,11 @@ int main()
  for (int i = 1; i <= 10; i++)
    lst->Insert(i,i);
 
- lst->Insert(11,11);
- lst->Insert(-1,1);
- lst->Insert(500,5);
+ lst->PrintForward();
 
- cout << "Front To Back" << endl;
+ cout << endl;
+ List2* lst1 = new List2(lst);
+
  lst->PrintForward();
 
  return 0;
