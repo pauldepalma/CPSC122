@@ -5,8 +5,7 @@ GU Username: depalma
 Submitted By: Paul De Palma
 GU Username: depalma
 File Name: calc.h
-To Execute (option 1): ./calc "(A+B)" 73 1020
-To Execute (option 2): ./calc "(73 + 1020)"
+To Execute: ./calc "(73 + 1020)"
 */
 
 #ifndef CALC
@@ -22,16 +21,9 @@ class Calc
   post:
        Design/Code/Test in this order: 
        1. inFix points to newly allocated memory holding infix expression
-       2. inFix expression has been checked for legal tokens
-       3. inFix epression has been checked for balanced parentheses
-       4  Hash table has been created and loaded (option 1) or plumbing 
-          for option 2 has been created.
-       5. Memory for postFix has been allocaed
-       6. Stack has been created.  Since your stacks are serving multiple
-          purposes, you might do well to create a private method, EmptyStk,
-          that pops the stack until it is empty.  You could invoke this each
-          time you use a stack.  Alternatively, you could not use a class-wide
-          stack in favor of creating a new stack for each method that uses one.
+       2. MakeInFix() (see private functions, below) has been invoked 
+       4. CheckTokens() has been invoked.  If it returns false, display a 
+          message and exit the program.  
   */
   Calc(int argcIn, char* argvIn[]);
 
@@ -44,47 +36,39 @@ class Calc
   void DisplayInFix();
 
   /*
-  pre: instance of calculator exists and infix expression has been 
-       transformed to postfix
-  post: postfix exression displayed 
- */
-  void DisplayPostFix();
- 
-  /*
-  pre: instance of calculator exists. 
-  post: infix expression transformed to postfix and stored in 
-        memory pointed to by the member variable postfix
- */
-  void InFixToPostFix();
-
-  /*
-  pre: instance of calculator exists. valid postfix expr. has been created
-  post: post fix expression has been evaluated and displayed on the screen
- */
-  void Evaluate();
-
- private:
-  /*
-  pre:  instance of calculator exists
-  post: returns true if all characters in the infix expression are legal,
-        false otherwise  Legal characters are ')', '(', '+','-','*','/',
-        'A' ... 'Z'   
-  */
-  bool CheckTokens(); 
-
-  /*
    pre:  instance of calculator exists and all input tokens are legal
    post: Using the stack technique discussed in class, returns true 
          if parentheses are balanced, false otherwise
   */
   bool CheckParens();
-  
-  Stack* stk;  
-  char*  inFix;    //null-terminated string that holds infix expression  
-  char*  postFix;  //null-terminated string that holds the post-fix
-  int*   hashTble; //pointer to hash table holding expression values
-                   //necessary for option 1.  An analog is almost 
-		   //certainly necessary for option 2.
+
+ private:
+  /*
+  pre:  invoked from constructor 
+  post: returns true if all characters in the infix expression are legal,
+        false otherwise.   Legal characters are ')', '(', '+','-','*','/',
+        'A' ... 'Z'   
+  */
+  bool CheckTokens(); 
+
+  /*
+  pre:  invoked from constructor 
+  post: transforms, for example, ((17 * 12) + 17) to ((A * B) + C).
+        26 position symbolTble--see below--looks like this:
+
+        17
+        12
+        17
+         0
+         0
+        ...
+         0
+        where the alphabetic characters in the transformed infix expression are
+	indices into the symbol table.
+  */
+  void MakeInFix(); 
+
+  char*  inFix;     //null-terminated string that holds infix expression 
+  int*   symbolTble; //pointer to hash table holding expression values
 };
 #endif 
-
