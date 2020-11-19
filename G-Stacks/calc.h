@@ -5,7 +5,7 @@ GU Username: depalma
 Submitted By: Paul De Palma
 GU Username: depalma
 File Name: calc.h
-To Execute: ./calc "(73 + 1020)"
+To Execute: ./calc "(A+B)" 27 32
 */
 
 #ifndef CALC
@@ -21,9 +21,11 @@ class Calc
   post:
        Design/Code/Test in this order: 
        1. inFix points to newly allocated memory holding infix expression
-       2. MakeInFix() (see private functions, below) has been invoked 
-       4. CheckTokens() has been invoked.  If it returns false, display a 
+       2. CheckTokens() has been invoked.  If it returns false, display a 
           message and exit the program.  
+       3. CheckParens() has been invoked.  If it returns false, display a 
+          message and exit the program.  
+
   */
   Calc(int argcIn, char* argvIn[]);
 
@@ -51,24 +53,8 @@ class Calc
   */
   bool CheckTokens(); 
 
-  /*
-  pre:  invoked from constructor 
-  post: transforms, for example, ((17 * 12) + 17) to ((A * B) + C).
-        26 position symbolTble--see below--looks like this:
-
-        17
-        12
-        17
-         0
-         0
-        ...
-         0
-        where the alphabetic characters in the transformed infix expression are
-	indices into the symbol table.
-  */
-  void MakeInFix(); 
-
   char*  inFix;     //null-terminated string that holds infix expression 
-  int*   symbolTble; //pointer to hash table holding expression values
+  int*   values;    //pointer to an array holding expression values
+  Stack* stk;
 };
 #endif 
