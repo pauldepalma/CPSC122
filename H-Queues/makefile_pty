@@ -1,5 +1,5 @@
 #to run: make -f makefile_pty 
-queue: queue3Tst.o queue3.o queue2.o list.o
+pqueue: queue3Tst.o queue3.o queue2.o list.o
 	g++ -o pqueue queue3Tst.o queue3.o queue2.o list.o
 
 queue3Tst.o: queue3Tst.cpp

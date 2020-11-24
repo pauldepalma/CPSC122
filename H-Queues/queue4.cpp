@@ -5,6 +5,8 @@ using namespace std;
 
 CQueue::CQueue(int sizeIn)
 {
+ //design philsophy
+ //front and back are always 1 position behind the actual front and back
  size = sizeIn;
  length = 0;
  front = -1;
@@ -47,7 +49,7 @@ bool CQueue::Enqueue(itemType newItem)
 {
  if (IsFull())
    return false;
- back = (back+1) % size;
+ back = (back+1) % size; //adjust the back before enqueue
  que[back] = newItem;
  length++;
  return true;
@@ -57,7 +59,7 @@ bool CQueue::Dequeue()
 {
  if (IsEmpty())
    return false;
- front = (front+1) % size;
+ front = (front+1) % size; //adjust front implies dequeue
  length--;
  return true;
 }
@@ -66,18 +68,18 @@ bool CQueue::Peek(itemType& item)
 {
  if (IsEmpty())
    return false;
- item = que[front+1];
+ item = que[front+1]; //front is always one position behind
  return true;
 }
 
 void CQueue::Print()
 {
  int num = 0;
- int adjFront = (front + 1) % size;
+ int next = -1;
  while (num < length)
  {
-  cout << que[adjFront] << endl;
-  adjFront = (adjFront + 1) % size;
+  next = (next + 1) % size;
+  cout << que[next] << endl;
   num++;
  }
 }

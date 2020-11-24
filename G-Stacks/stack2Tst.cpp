@@ -5,15 +5,17 @@ using namespace std;
 
 int main()
 {
- Stack* stk = new Stack;
+ Stack stk;
 
  cout << "push 0 through 4 on the stack" << endl;
  for (int i = 0; i < 5; i++)
-   stk->Push(i);
- stk->Pop();
- stk->Print();
+   stk.Push(i);
 
- delete stk;
+ if (stk.IsEmpty())
+  cout << "empty" << endl;
+ else
+  cout << "not empty" << endl;
+
 
  return 0;
 

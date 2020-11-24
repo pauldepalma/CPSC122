@@ -53,10 +53,10 @@ class CQueue
    void Print();
 
  private:
-   itemType* que; //pointer to array holding the queue3 
+   itemType* que; //pointer to array holding the queue 
    int front;     //index of front of queue
    int back;      //index of back of queue
-   int length;    //num items in the queue;
+   int length;    //num actual items in the queue;
    int size;      //num slots in queue
 };
 #endif

@@ -1,3 +1,7 @@
+//This is for part 2 of the project
+
+
+
 /*
 Class: CPSC 122-0X
 Paul De Palma

@@ -9,18 +9,13 @@ int main()
  CQueue* que1 = new CQueue(10);
  for (int i = 0; i < 10; i++)
   que1->Enqueue(i);
- que1->Enqueue(100);
- que1->Dequeue();
- cout << "Queue1" << endl;
+ //que1->Enqueue(100);
+ //que1->Dequeue();
  que1->Print();
+ cout << endl;
 
- CQueue* que2 = new CQueue(que1);
- cout << "Queue2" << endl;
- que2->Print();
- cout << "Peek Queue2" << endl;
- itemType item;
- if (que2->Peek(item))
-   cout << item << endl;
+ itemType x;
+ que1->Peek(x);
+ cout << "head " << x << endl; 
  delete que1;
- delete que2;
 }

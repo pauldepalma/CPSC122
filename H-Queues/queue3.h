@@ -7,6 +7,7 @@
 /*
 PQueue is a priority queue.  Nodes in PQueue are in ascending order by item
 */
+
 class PQueue : public Queue
 {
  public:
@@ -19,6 +20,7 @@ class PQueue : public Queue
    post: A new node is added to PQueue, which remains in sorted order 
    */
    void Enqueue(itemType newItem);
+
  private:
    /*
    use: Used in Enqueue. 

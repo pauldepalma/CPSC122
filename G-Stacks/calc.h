@@ -5,7 +5,7 @@ GU Username: depalma
 Submitted By: Paul De Palma
 GU Username: depalma
 File Name: calc.h
-To Execute: ./calc "(73 + 1020)"
+To Execute: ./calc "(A+B)" 73 22
 */
 
 #ifndef CALC
@@ -18,31 +18,31 @@ class Calc
   public: 
   /* 
   pre: none 
-  post:
-       Design/Code/Test in this order: 
-       1. inFix points to newly allocated memory holding infix expression
-       2. MakeInFix() (see private functions, below) has been invoked 
-       4. CheckTokens() has been invoked.  If it returns false, display a 
-          message and exit the program.  
+  post: instance of Calc is created
   */
   Calc(int argcIn, char* argvIn[]);
 
+  /* 
+  pre: an istance of Cals exists 
+  post: dynamically declared memory is returned to the run-time stack 
+  */
   ~Calc();
 
   /*
-  pre: instance of Calc exists. 
-  post: infix expression displayed
+  pre: instance of Calc exists 
+  post: infix expression is displayed
  */
   void DisplayInFix();
 
-  /*
-   pre:  instance of calculator exists and all input tokens are legal
-   post: Using the stack technique discussed in class, returns true 
-         if parentheses are balanced, false otherwise
-  */
-  bool CheckParens();
-
  private:
+ //MakeInFix, CheckTokens, CheckParens are all invoked from the constructor  
+  /*
+  pre:  invoked from constructor 
+  post: character by character copy of argv[1] is made to dynamically declared inFix
+        (see member variables) 
+  */
+  void MakeInFix(); 
+  
   /*
   pre:  invoked from constructor 
   post: returns true if all characters in the infix expression are legal,
@@ -52,23 +52,13 @@ class Calc
   bool CheckTokens(); 
 
   /*
-  pre:  invoked from constructor 
-  post: transforms, for example, ((17 * 12) + 17) to ((A * B) + C).
-        26 position symbolTble--see below--looks like this:
-
-        17
-        12
-        17
-         0
-         0
-        ...
-         0
-        where the alphabetic characters in the transformed infix expression are
-	indices into the symbol table.
+   pre:  invoked from constructor
+         and all input tokens are legal 
+   post: Using the stack technique discussed in class, returns true 
+         if parentheses are balanced, false otherwise
   */
-  void MakeInFix(); 
+  bool CheckParens();
 
   char*  inFix;     //null-terminated string that holds infix expression 
-  int*   symbolTble; //pointer to hash table holding expression values
 };
 #endif 

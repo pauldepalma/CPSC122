@@ -4,7 +4,9 @@ using namespace std;
 #include "queue3.h"
 
 PQueue::PQueue() : Queue()
-{}
+{
+ cout << "constructor priority queue" << endl;
+}
 
 PQueue::PQueue(PQueue* q) : Queue(q)
 {}

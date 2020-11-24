@@ -13,10 +13,7 @@ int main()
  que->Dequeue();
  que->Print();
  cout << que->Peek() << endl;
- PQueue* que1 = new PQueue(que);
- que1->Print();
 
  delete que;
- delete que1;
  
 }
