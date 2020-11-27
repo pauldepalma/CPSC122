@@ -6,6 +6,7 @@ using namespace std;
 
 Calc::Calc(int argcIn, char* argvIn[])
 {}
+
 Calc::~Calc()
 {}
 
