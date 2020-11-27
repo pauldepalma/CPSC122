@@ -6,16 +6,24 @@ using namespace std;
 
 int main()
 {
- CQueue* que1 = new CQueue(10);
- for (int i = 0; i < 10; i++)
+ CQueue* que1 = new CQueue(5);
+ for (int i = 1; i <= 5; i++)
   que1->Enqueue(i);
- //que1->Enqueue(100);
- //que1->Dequeue();
+ que1->Dequeue();
+ que1->Dequeue();
+ que1->Dequeue();
+ que1->Dequeue();
+ que1->Enqueue(100);
  que1->Print();
  cout << endl;
 
- itemType x;
- que1->Peek(x);
- cout << "head " << x << endl; 
+ itemType item;
+ que1->Peek(item);
+ cout << item << endl;
+ cout << endl;
+
+ CQueue* que2 = new CQueue(que1);
+ que2->Print();
  delete que1;
+ delete que2;
 }
