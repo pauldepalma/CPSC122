@@ -75,7 +75,7 @@ class List
    node* head;   //point to the first node on the list 
    void Print(node* head);
    void PrintR(node* head);
-   int GetLength(node* head);
+   int GetLength(node* head, int& ct);
 };
 #endif
 

@@ -4,7 +4,7 @@ using namespace std;
 #include "list.h"
 
 
-//Non-recursive functions
+//Non-recursive functions. I have written them for you.
 List::List()
 {
  head = NULL;
@@ -29,6 +29,7 @@ void List::DeleteItemH()
  node* cur = head;
  head = head->next;
  delete cur;
+ cur == NULL;
 }
 
 
@@ -38,22 +39,17 @@ void List::DeleteItemH()
 
 int List::GetLength()
 {
- return 0; //here only so that the template will pass a syntax check
+ return 0; 
 }
 
-int List::GetLength(node* cur)
+int List::GetLength(node* cur, int& ct)
 {
- return 0; //here only so that the template will pass a syntax check
-}
-
-//This can not have complexity O(n^2) 
-List::~List()
-{
+ return 0;
 }
 
 bool List::IsEmpty() 
 {
- return true; //here only so that the template will pass a syntax check
+ return true; 
 }
 
 void List::Print( )
@@ -69,5 +65,9 @@ void List::PrintR( )
 }
 
 void List::PrintR(node* cur) 
+{
+}
+
+List::~List()
 {
 }
