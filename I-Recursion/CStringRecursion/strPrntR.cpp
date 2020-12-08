@@ -16,7 +16,7 @@ void prnt(char* str)
 { 
  if (*str == '\0')
   return; 
- cout << *str; 
+ cout << *str;
  prnt(++str);
 } 
 

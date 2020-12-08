@@ -1,9 +1,10 @@
 #include <iostream>
 #include <stdlib.h>
+#include <cstring>
 using namespace std;
 
  
-int prnt(char*);
+void prnt(char*);
 
 int main(int argc, char* argv[])
 {
@@ -11,16 +12,13 @@ int main(int argc, char* argv[])
  return 0;
 }
 
-int prnt(char* str)
+void prnt(char* str)
 {
- int i = 0;
  while (str[i] != 0)
  {
   cout << str[i];
   i++;
  }
-
  cout << endl;
 } 
-
 

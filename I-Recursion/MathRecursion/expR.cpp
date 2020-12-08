@@ -20,6 +20,7 @@ int main(int argc, char* argv[])
 
 int power(int base, int exp)
 {
+ cout << "hi" << endl;
  if (exp == 0)
   return 1;
  return base * power(base,exp-1);

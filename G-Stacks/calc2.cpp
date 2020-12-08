@@ -21,7 +21,8 @@ bool Calc::CheckParens()
 }
 
 void Calc::InFixToPostFix()
-{}
+{
+}
 
 int Calc::Evaluate()
 {
