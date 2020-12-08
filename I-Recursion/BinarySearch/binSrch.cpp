@@ -1,19 +1,29 @@
 #include <iostream>
+#include <cstring>
 using namespace std;
 
 int binSrch(int*, int, int);
+int binSrch(int*, int, int, int);
 
 int main(int argc, char* argv[])
 {
  int size = atoi(argv[1]);
  int key = atoi(argv[2]);
+ char* which = argv[3];
+ int top = 0;
+ int bottom = size-1;
+ int pos = 0;
  
  int* stuff = new int[size];
  
  for (int i = 0; i < size; i++)
       stuff[i] = i;
 
- int pos = binSrch(stuff, size, key);
+ if (strcmp(which,"I") == 0)
+  pos = binSrch(stuff, size, key);  //iterative
+
+ if (strcmp(which,"R") == 0)
+  pos = binSrch(stuff, key, top, bottom); //recursive
 
  if (pos < 0)
      cout << "Not found" << endl;
@@ -23,6 +33,7 @@ int main(int argc, char* argv[])
  return 0;
 }
 
+//Iterative
 int binSrch(int stuff[], int size, int key)
 {
  int top, middle, bottom;
@@ -42,4 +53,21 @@ int binSrch(int stuff[], int size, int key)
      bottom = middle - 1;   //discard bottom half
  }
  return -1 ;
+}
+
+//Recursive
+int binSrch(int stuff[], int key, int top, int bottom)
+{
+ if (top > bottom)
+  return -1;
+
+ int middle = int((top + bottom) / 2);
+
+ if (key == stuff[middle])
+  return middle;
+
+ if (key > stuff[middle])
+  return binSrch(stuff, key, middle+1, bottom);
+ else
+  return  binSrch(stuff, key, top, middle-1);
 }
