@@ -25,16 +25,13 @@ int main(int argc, char* argv[])
 
 int fib(int nth)
 {
+ if (nth == 0 || nth == 1)
+   return nth; 
+
+ //0th and 1st Fibonacci number 
  int fn_minus_2 = 0;
  int fn_minus_1 = 1;
  int fn = 0;
-
- //0th and 1st Fibonacci number 
- if (nth == 0)
-   return 0; 
- if (nth == 1)
-   return 1; 
- 
  while (nth > 1)
  {
   fn = fn_minus_2 + fn_minus_1;  //2nd ... nth Fibonacci numbers
