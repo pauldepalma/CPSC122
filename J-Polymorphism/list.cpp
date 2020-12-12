@@ -71,7 +71,6 @@ void List<T>::DeleteItemH()
  cur = NULL;
 }
 
-	
 template <typename T>
 void List<T>::Print() const
 {
@@ -85,7 +84,6 @@ void List<T>::Print() const
 
 template <typename T>
 void List<T>::PutItemT(const T newItem)
-
 {
  if (IsEmpty())
   PutItemH(newItem);

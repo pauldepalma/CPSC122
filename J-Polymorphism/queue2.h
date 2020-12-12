@@ -10,13 +10,13 @@ class Queue : public List<T>
 {
  public:
    Queue();
-   Queue(Queue* q);
+   Queue(Queue*);
 
    /*
    pre: an instance of queue exists
    post: newItem is at the end of the queue 
    */
-   void Enqueue(T newItem);
+   void Enqueue(T);
 
    /*
    pre: an instance of Queue exists and is not empty

@@ -18,8 +18,8 @@ int main(int argc, char* argv[])
  lst1->PutItemH(argv[3]);
  lst1->PutItemH(argv[4]);
  lst1->PutItemH(argv[5]);
-
  lst1->Print();
+
  delete lst;
  delete lst1;
  return 0;

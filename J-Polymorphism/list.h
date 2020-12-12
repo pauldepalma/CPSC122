@@ -11,7 +11,6 @@ Header file for a linked list with:
 3) The capacity to make a copy of a list with a the copy constructor
 */
 
-
 #ifndef LIST
 #define LIST
 
@@ -78,7 +77,7 @@ class List
    pre: an instance of list exists
    post: newItem is at the tail of the list
    */
-   void PutItemT(T newItem);
+   void PutItemT(T);
 
    /*
    use: returns the contents of the tail of the list
