@@ -3,10 +3,9 @@ using namespace std;
 
 #include "queue3.cpp"
 
-
+//requires 4 command line arguments
 int main(int argc, char* argv[])
 {
- /*
  PQueue<int>* pque = new PQueue<int>;
  pque->Enqueue(4,4);
  pque->Enqueue(7,7);
@@ -16,7 +15,6 @@ int main(int argc, char* argv[])
  pque->Print();
  delete pque;
  cout << endl;
-*/
 
  PQueue<char*>* pque1 = new PQueue<char*>;
 
