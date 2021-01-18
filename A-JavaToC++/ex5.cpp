@@ -1,15 +1,12 @@
 /*
-Class: CPSC 122-01
-Team Member 1: Paul De Palma
-Team Member 2: None
-Submitted By: Paul De Palma
-GU Username: depalma
+Name: Paul De Palma
+Class: CPSC 122, Section 1
+Date: January 17, 2021
 File Name: ex5.cpp
-Program illustrates
+Assignment Name: Example 5
+Description: program illustrates
   int function with integer arguments
   for loop
-To Build: g++ ex5.cpp -o example5
-To Execute: ./example5
 */
 
 #include <iostream>

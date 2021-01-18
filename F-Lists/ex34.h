@@ -7,7 +7,7 @@ GU Username: depalma
 File Name: ex34.h
 Header file for a doubly linked list with dummy notes at head and
 tail to make insertion and deletion easier
-To Build: g++ ex27Tst.cpp ex27.cpp
+To Build: g++ ex34Tst.cpp ex34.cpp
 To Execute: ./a.out
 */
 

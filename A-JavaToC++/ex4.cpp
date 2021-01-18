@@ -1,17 +1,13 @@
 
 /*
-Class: CPSC 122-01
-Team Member 1: Paul De Palma
-Team Member 2: None
-Submitted By: Paul De Palma
-GU Username: depalma
-File Name: DFunction.cpp
-Program illustrates
+Name: Paul De Palma
+Class: CPSC 122, Section 1
+Date: January 17, 2021
+Assignment: Example 4
+Description:  Program issutrates 
   void function 
   while loop
   modulus
-To Build: g++ ex4.cpp -o ex4  //ex4 names executable 
-To Execute: ./ex4
 */
 
 

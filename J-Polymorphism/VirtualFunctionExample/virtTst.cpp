@@ -3,8 +3,8 @@ using namespace std;
 
 //Virtual Function Example
 //Experiment by changing what is included
-#include "VHeader.h"
-//#include "nonVHeader.h"
+//#include "VHeader.h"
+#include "nonVHeader.h"
 
 PlainBox::PlainBox()
 {}
@@ -48,22 +48,23 @@ void MagicBox::setItem(string itemIn)
  
 int main()
 {
+/*
  //Base Class Test, non-polymorphic
  //Output: Jack of Spades 
  PlainBox* p = new PlainBox("Queen of Hearts");
+ cout << p->getItem() << endl;
  p->setItem("Jack of Spades");
  cout << p->getItem() << endl;
-
  //Derived Class Test, non-polymorphic
  //Output: Queen of Hearts 
  MagicBox* m = new MagicBox("Queen of Hearts");
  m->setItem("Jack of Spades");
  cout << m->getItem() << endl;
-
 //Polymorphic Test Case 1
 //setItem in PlainBox is non-virtual
 //Output: Jack of Spades
 //Reason: p1 is of type PlainBox though it points to MagicBox
+ */
 //
 //Polymorphic Test Case 2 
 //setItem in PlainBox is virtual

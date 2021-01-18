@@ -1,13 +1,13 @@
+
+
+
+
 /*
-Class: CPSC 122-01
-Team Member 1: Paul De Palma
-Team Member 2: None
-Submitted By: Paul De Palma
-GU Username: depalma
-File Name: ex3.cpp 
-Program illustrates console i/o and a for loop;
-To Build: g++ ex3.cpp 
-To Execute: ./a.out
+Name: Paul De Palma
+Class: CPSC122, Section 1
+Date: January 17, 2021
+Assignment: Example 3 
+Description: Program illustrates console i/o and a for loop;
 */
 
 #include <iostream>

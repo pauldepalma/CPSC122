@@ -1,17 +1,10 @@
-//This line is a comment
-//Header information like below goes at the top of your programs
 
 /*
-Class: CPSC 122
-Section: 01
-Team Member 1: Paul De Palma
-Team Member 2: None
-Submitted By: Paul De Palma
-GU Username: depalma
-File Name: ex2.cpp
-Program illustrates fundmental data types and a simple if statement 
-To Build: g++ ex2.java
-To Execute: ./a.ouut 
+Name : Paul De Palma
+Class: CPSC 122, Section 1
+Date: January 17, 2021
+Assignment: Example 2
+Description: Program illustrates fundmental data types and a simple if statement 
 */
 
 #include <iostream>

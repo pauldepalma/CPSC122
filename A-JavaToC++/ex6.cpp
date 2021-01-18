@@ -1,13 +1,9 @@
 /*
+Name: Paul De Palma
 Class: CPSC 122-01
-Team Member 1: Paul De Palma
-Team Member 2: None
-Submitted By: Paul De Palma
-GU Username: depalma
-File Name: ex6.cpp
-Program illustrates arrays, random numbers, global constants 
-To Build: g++ ex6.cpp -o arrays 
-To Execute: ./arrays
+Date: January 17, 2021
+Assignment Name: Example 6 
+Description: Program illustrates arrays, random numbers, global constants 
 */
 #include <iostream>
 using namespace std;
@@ -53,7 +49,8 @@ void loadArray(int stuff[], int size)
 
 }
 
-void print(int myStuff[], int mySize)  //parameter names can differ from those in calling program  
+void print(int myStuff[], int mySize)  //parameter names can differ 
+	                               //from those in calling program  
 {
  for (int i = 0; i < mySize; i++)
    cout << myStuff[i] << endl;  //braces not necessary for a single statement
