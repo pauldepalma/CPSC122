@@ -4,37 +4,44 @@ Paul De Palma
 GU Username: depalma
 Submitted By: Paul De Palma
 GU Username: depalma
-File Name: ex9.cpp
-Program illusrates file i/o with characters
-To Build: g++ ex9.cpp -o ex9
-To Execute: ./ex9 
+File Name: ex14.cpp
+Program demonstrates that -x % n == -x + n % n
+Requires 2 command line arguments: x, an integer, n an integer > 0
+To Build: g++ ex14.cpp
+To Execute: ./a.out x n 
 */
 
 #include <iostream>
-#include <fstream>
+#include <cstdlib>
 using namespace std;
 
-int main()
+
+int main(int argc, char* argv[])
 {
- char ch;
- ifstream fin;
- ofstream fout;
+ if (argc != 3)
+    {
+     cout << "Requires 2 arguments, x an integer, and n an intger > 0";
+     return(EXIT_FAILURE); 
+    }
 
- fin.open("ex9.in");
- fout.open("ex9.out");
+ int x = atoi(argv[1]);
+ int n = atoi(argv[2]);
+ if (n <= 0)
+   {
+    cout << "n must be positive" << endl;
+    return(EXIT_FAILURE);
+   }
+ 
+ cout << "-x % n" << endl;
+ cout << -x % n << endl;
+ cout << endl;
 
- while(fin.peek() != EOF)
- {
-  ch = fin.get();
-  if (isalpha(ch))
-   ch = toupper(ch);
-  fout.put(ch); 
- }
- fout.put('\n'); 
-
- fin.close();
- fout.close(); 
+ cout << "-x + 26 % 26" << endl;
+ cout << (-x + n) % n << endl;
+  
 
  return 0;
 }
+
+
 
