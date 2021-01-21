@@ -1,15 +1,21 @@
+
 /*
-Class: CPSC 122-01
-Team Member 1: Paul De Palma
-Team Member 2: None
-Submitted By: Paul De Palma
-GU Username: depalma
-File Name: ex7.cpp
-Program is a first look at command line arguments 
-To Build: g++ ex7.cpp -o ex7
-Sample Execution: ./ex6 1 2 3 4 5 
+Name: Paul De Palma
+Class: CPSC 122
+Date Submitted: January 17, 2021
+Assignment: N/A 
+Description: Program illustrates command line arguments 
 */
 
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  cout << "Hello World" << endl;
+  return 0;
+}
 #include <iostream>
 using namespace std;
 

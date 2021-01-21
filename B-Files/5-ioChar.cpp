@@ -20,8 +20,8 @@ int main()
  ifstream fin;
  ofstream fout;
 
- fin.open("ex9.in");
- fout.open("ex9.out");
+ fin.open("ex5.in");
+ fout.open("ex5.out");
 
  while(fin.peek() != EOF)
  {
