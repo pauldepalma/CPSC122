@@ -9,26 +9,14 @@ Description: i/o with integers
 
 
 #include <iostream>
-using namespace std;
-
-int main()
-{
-  cout << "Hello World" << endl;
-  return 0;
-}
-
-#include <iostream>
 #include <fstream>
 using namespace std;
 
-//int main()
 int main(int argc, char* argv[])
 {
-
  ifstream fin;
  ofstream fout;
  int num, total;
-
 
  fin.open("ioInt.in");
  fout.open(argv[1]);

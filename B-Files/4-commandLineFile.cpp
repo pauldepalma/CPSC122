@@ -1,4 +1,3 @@
-
 /*
 Name: Paul De Palma
 Class: CPSC 122
@@ -8,14 +7,6 @@ Description: entering an ouput file at the command line
 */
 
 
-#include <iostream>
-using namespace std;
-
-int main()
-{
-  cout << "Hello World" << endl;
-  return 0;
-}
 
 #include <iostream>
 #include <fstream>

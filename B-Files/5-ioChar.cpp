@@ -1,13 +1,9 @@
 /*
-Class: CPSC 122-01
-Paul De Palma
-GU Username: depalma
-Submitted By: Paul De Palma
-GU Username: depalma
-File Name: ex9.cpp
-Program illusrates file i/o with characters
-To Build: g++ ex9.cpp -o ex9
-To Execute: ./ex9 
+Name: Paul De Palma
+Class: CPSC 122
+Date Submitted: January 17, 2021
+Assignment: N/A 
+Description: Program illustrates reading & writing lines 
 */
 
 #include <iostream>
@@ -20,7 +16,7 @@ int main()
  ifstream fin;
  ofstream fout;
 
- fin.open("ex5.in");
+ fin.open("inChar.in");
  fout.open("ex5.out");
 
  while(fin.peek() != EOF)

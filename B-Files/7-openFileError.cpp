@@ -1,18 +1,14 @@
 /*
-Class: CPSC 122-01
-Paul De Palma
-GU Username: depalma
-Submitted By: Paul De Palma
-GU Username: depalma
-File Name: ex12.cpp
+Name: Paul De Palma
+Class: CPSC 122, Section 1
+Date Submitted: January 17, 2021
+Assignment: Example 1
+Description: Program illustrates console output
 Program illusrates:
   trapping for file open errors
   passing argv elements to functions
-  passing file stream objects to functions  
-To Build: g++ ex12.cpp
-To Execute: ./ex12 ex9.in out //correct input
-To Execute: ./ex12           //incorrect number of command line args
-To Execute: ./ex12 hello.world //non-existent input file
+  passing file stream objects to functions
+  requires that the user enter and input and output file at the command line
 */
 
 #include <iostream>
@@ -21,11 +17,10 @@ To Execute: ./ex12 hello.world //non-existent input file
 #include <string>
 using namespace std;
 
-void fileOpen(fstream&, char[], char);
+void fileOpen(fstream&, string, char);
 
 int main(int argc, char* argv[])
 {
- //notice use fstream
  fstream fin;
  fstream fout;
  string line;
@@ -37,13 +32,14 @@ int main(int argc, char* argv[])
   }
 
  //argv[1] is a c-string, a sequence of characters terminated by '/0'
+ //here it is being transformed to a string
  fileOpen(fin, argv[1], 'r');
  fileOpen(fout, argv[2], 'w');
 
  while (fin.peek() != EOF)
  {
-   getline(fin,line, '\n'); 
-   fout << line << endl; //'\n' is the default delimiter and not read in. 
+   getline(fin,line, '\n'); //'\n is the default delimiter and not read in 
+   fout << line << endl;  
  }
 
  fin.close(); 
@@ -53,12 +49,13 @@ int main(int argc, char* argv[])
 }
 
 /*
-Pre:  file is a reference to an fstream object
-      name of the physical name of a file
-      mode is 'r' for input and 'w' for output
-Post: file is opened, displays error and halts if error is encountered
+Description: function opens a file 
+Input: file stream object reference, name of the file, mode of open
+Output: void function, but at exit, file stream object is tied to 
+the input file name. 
 */ 
-void fileOpen(fstream& file, char name[], char mode)
+void fileOpen(fstream& file, string name, char mode)
+//void fileOpen(fstream& file, char name[], char mode)
 {
  string fileType;
 

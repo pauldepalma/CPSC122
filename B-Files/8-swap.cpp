@@ -1,30 +1,23 @@
 /*
-Class: CPSC 122-01
-Paul De Palma
-GU Username: depalma
-Submitted By: Paul De Palma
-GU Username: depalma
-File Name: ex13.cpp
-Program reads an input file into an array
-        exchanges the first two items in the array
-        writes the output to an output file 
-To Build: g++ ex13.cpp
-To Execute: ./ex13 ex13.in ex13.out 
+Name: Paul De Palma
+Class: CPSC 122, Section 1
+Date Submitted: January 17, 2021
+Assignment: Example 1
+Description: Program illustrates 
 */
 
 #include <iostream>
-#include <fstream> 
-#include <string>
+#include <fstream>
 #include <cstdlib>
+#include <string>
 using namespace std;
 
 const int SIZE = 8;  //number of lines in the input file
-void fileOpen(fstream&, char[], char);
+void fileOpen(fstream&, string, char);
 void swap(string[], int, int);
 
 int main(int argc, char* argv[])
 {
- //notice use fstream
  fstream fin;
  fstream fout;
  string line;
@@ -36,7 +29,6 @@ int main(int argc, char* argv[])
    exit(EXIT_FAILURE);
   }
 
- //argv[1] is a c-string, a sequence of characters terminated by '/0'
  fileOpen(fin, argv[1], 'r');
  fileOpen(fout, argv[2], 'w');
 
@@ -54,13 +46,9 @@ int main(int argc, char* argv[])
  return 0;
 }
 
-/*
-Pre:  file is a reference to an fstream object
-      name of the physical name of a file
-      mode is 'r' for input and 'w' for output
-Post: file is opened, displays error and halts if error is encountered
-*/ 
-void fileOpen(fstream& file, char name[], char mode)
+
+//See 7-openFileError.cpp for documention
+void fileOpen(fstream& file, string name, char mode)
 {
  string fileType;
 
@@ -82,8 +70,9 @@ void fileOpen(fstream& file, char name[], char mode)
 }
 
 /*
-Pre:  data is an array of strings, idx1 and idx2 are indices into the array
-Post: what was in positon idx1 in now in position idx2 and vice-versa
+Description: swaps two lines in an array of strings
+Input: reference to an array of strings, two integer indices 
+line indexed by idx1 is now indexed by idx2 and vice-versa
 */
 void swap(string data[], int idx1, int idx2)
 {
@@ -92,5 +81,4 @@ void swap(string data[], int idx1, int idx2)
  data[idx1] = data[idx2];
  data[idx2] = tmp;
 }
-
 

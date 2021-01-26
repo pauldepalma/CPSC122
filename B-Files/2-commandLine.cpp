@@ -1,31 +1,9 @@
-
 /*
 Name: Paul De Palma
 Class: CPSC 122
 Date Submitted: January 17, 2021
 Assignment: N/A 
 Description: Program illustrates numerical command line arguments 
-*/
-
-
-#include <iostream>
-using namespace std;
-
-int main()
-{
-  cout << "Hello World" << endl;
-  return 0;
-}
-/*
-Class: CPSC 122-01
-Paul De Palma
-GU Username: depalma
-Submitted By: Paul De Palma
-GU Username: depalma
-File Name: ex8.cpp
-Illustrates doing arithmetic with command line arguments 
-To Build: g++ ex8.cpp -o input 
-To Execute: ./ex8 
 */
 
 #include <iostream>

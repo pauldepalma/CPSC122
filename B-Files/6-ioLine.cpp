@@ -1,13 +1,9 @@
 /*
-Class: CPSC 122-01
-Paul De Palma
-GU Username: depalma
-Submitted By: Paul De Palma
-GU Username: depalma
-File Name: ex11.cpp
-Program illusrates line file i/o, command line args  
-To Build: g++ ex11.cpp -o ex11
-To Execute: ./ex11 ex11.in ex11.out
+Name: Paul De Palma
+Class: CPSC 122
+Date Submitted: January 17, 2021
+Assignment: N/A 
+Description: Program illustrates reading and writing lines 
 */
 
 
@@ -40,8 +36,9 @@ int main(int argc, char* argv[])
 } 
 
 /*
-Pre:  line is a C++ variable of type string
-Post: Each lower case character in line is transformed to upper case
+Description: transforms lower case chars to upper case.
+Input: a string composed of ascii chars 
+Outpout: the amended string
 */
 string amend(string line)
 {

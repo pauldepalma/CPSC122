@@ -1,15 +1,13 @@
 /*
-Class: CPSC 122-01
-Paul De Palma
-GU Username: depalma
-Submitted By: Paul De Palma
-GU Username: depalma
-File Name: ex14.cpp
-Program demonstrates that -x % n == -x + n % n
-Requires 2 command line arguments: x, an integer, n an integer > 0
-To Build: g++ ex14.cpp
-To Execute: ./a.out x n 
+Name: Paul De Palma
+Class: CPSC 122, Section 1
+Date Submitted: January 17, 2021
+Assignment: Example 1
+Description: Program demonstrates that -x % n == -x + n % n
+something that will be useful in the affine cipher, which is coming up soon
+Requires two command line arguments: x. an integer, n an integer > 0
 */
+
 
 #include <iostream>
 #include <cstdlib>
