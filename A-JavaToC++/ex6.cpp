@@ -5,6 +5,7 @@ Date: January 17, 2021
 Assignment Name: Example 6 
 Description: Program illustrates arrays, random numbers, global constants 
 */
+
 #include <iostream>
 using namespace std;
 
