@@ -19,11 +19,12 @@ using namespace std;
 
 void fileOpen(fstream&, string, char);
 
+void readWrite(fstream&,fstream&);
+
 int main(int argc, char* argv[])
 {
  fstream fin;
  fstream fout;
- string line;
 
  if (argc != 3)
   { 
@@ -36,17 +37,30 @@ int main(int argc, char* argv[])
  fileOpen(fin, argv[1], 'r');
  fileOpen(fout, argv[2], 'w');
 
- while (fin.peek() != EOF)
- {
-   getline(fin,line, '\n'); //'\n is the default delimiter and not read in 
-   fout << line << endl;  
- }
+
+ readWrite(fin,fout);
 
  fin.close(); 
  fout.close(); 
 
  return 0;
 }
+
+/*
+Description: reads and writes a line at time from an input file to an output file 
+Input: file stream object references
+Output: output file with the contents of an input file 
+*/ 
+void readWrite(fstream& fin, fstream& fout)
+{
+ string line;
+ while (fin.peek() != EOF)
+ {
+   getline(fin,line, '\n'); //'\n is the default delimiter and not read in 
+   fout << line << endl;  
+ }
+}
+
 
 /*
 Description: function opens a file 

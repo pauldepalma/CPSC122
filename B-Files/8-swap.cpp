@@ -8,7 +8,7 @@ Description: Program illustrates
 
 #include <iostream>
 #include <fstream>
-#include <cstdlib>
+//#include <cstdlib>
 #include <string>
 using namespace std;
 
@@ -26,7 +26,8 @@ int main(int argc, char* argv[])
  if (argc != 3)
   { 
    cout << "Incorrect number of command line arguments" << endl;
-   exit(EXIT_FAILURE);
+   //exit(EXIT_FAILURE);
+   exit(1);
   }
 
  fileOpen(fin, argv[1], 'r');
