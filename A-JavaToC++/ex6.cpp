@@ -42,7 +42,7 @@ void loadArray(int stuff[], int size)
 {
  //seed the pseudo random number generation so that 
  //subsequent runs will generate a different sequence
- unsigned seed = time(0);
+ unsigned seed = time(NULL);
  srand(seed); 
 
  for (int i = 0; i < size; i++) 
