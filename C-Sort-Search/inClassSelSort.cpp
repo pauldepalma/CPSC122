@@ -2,7 +2,7 @@
 #include <cstdlib>
 using namespace std;
 
-int findSmallest(int, int, int);
+int find_small(int start, int stuff[], int len);
 void loadArray(int[], int);
 
 int main(int argc, char* argv[])
@@ -13,25 +13,40 @@ int main(int argc, char* argv[])
 
   loadArray(stuff, size);
 
+  for (int i = 0; i < size; i++)
+   cout << stuff[i] << endl;
+   cout << endl;
+
+  int idxSmall = find_small(0,stuff,size);
+
+  cout << "idx: " << idxSmall << " " << "Smallest: " << stuff[idxSmall] << endl;
+
+
   return 0;
  }
 
 void loadArray(int stuff[], int size)
 {
- unsigned seed = time(0);
+ unsigned seed = time(NULL);
+ srand(seed);
 
  for (int i = 0; i < size; i++)
   stuff[i] = rand() % 100;
 
 }
 
-int findSmallest(int stuff[], int len, int start)
+
+int find_small(int start, int stuff[], int len)
 {
  int smallIdx = start;
+ int next = start + 1;
 
- for (int idx = start+1; idx < len; idx++)
-  if (stuff[idx] < stuff[smallIdx])
-   smallIdx = idx;
+ while(next < len)
+ {
+  if (stuff[next] < stuff[smallIdx])
+   smallIdx = next;
+  next++;
+ }
 
  return smallIdx;
 }

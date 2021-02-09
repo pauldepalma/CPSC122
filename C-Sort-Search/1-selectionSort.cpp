@@ -1,14 +1,10 @@
 /*
-Class: CPSC 122-01
 Paul De Palma
+Class: CPSC 122
 GU Username: depalma
-Submitted By: Paul De Palma
-GU Username: depalma
-File Name: ex15.cpp
-Demonstrates selection sort
-Requires length of array as command line argument` 
-To Build: g++ ex15.cpp
-To Execute: ./a.out length 
+Date Submitted: February 2, 2021 
+Assignment: N/A
+Description: Demonstrates selection sort
 */
 
 #include <iostream>
@@ -44,8 +40,8 @@ int main(int argc, char* argv[])
 }
 
 /*
-pre: arr is an integer of length, length
-post: arr is filled with randomly generated integers
+Description: filles an array with randomly generated integers
+Input: integer array and its length
 */
 void fill_array(int arr[], int length)
 {
@@ -57,9 +53,9 @@ void fill_array(int arr[], int length)
 }
 
 /*
-pre: arr is an integer of length, length, filled with integers
-     in no particular order
-post: the intgers in arr are in sorted order, smallest to largest 
+Description: outer, control loop for selection sort  
+Input: array of integers to be sorted along with its length
+Output: array is sorted at the end of function
 */
 void selection_sort(int arr[], int length)
 {
@@ -90,12 +86,10 @@ void selection_sort(int arr[], int length)
 }
 
 /*
-pre: start is the positon from which we begin searching for the smallest integer
-     arr is an integer of length, length, filled with integers
-post: returns the smallest integer in the array, from start to the bottom 
-Note: This is linear search
+Description: linear search through an array looking for smallest element
+Input: position to start search, array, length of array
+Output: returns smallest element in the array
 */
-
 int find_small(int start, int arr[], int length)
 {
  int idx_small = start;  //candidate smallest
@@ -111,10 +105,15 @@ int find_small(int start, int arr[], int length)
 }
 
 
-void swap(int start, int idx_small, int arr[])
+/*
+Description: swaps the contents of two posiitons in an array 
+Input: position whose contents is swapped with smallest,  position of smallest, array 
+Output: returns smallest element in the array
+*/
+void swap(int pos, int idx_small, int arr[])
 {
- int tmp = arr[start];
- arr[start] = arr[idx_small];
+ int tmp = arr[pos];
+ arr[pos] = arr[idx_small];
  arr[idx_small] = tmp;
 }
 

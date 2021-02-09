@@ -1,15 +1,8 @@
 /*
 Class: CPSC 122
-Section: 01
-Team Member 1: Paul De Palma
-Team Member 2: None
-Submitted By: Paul De Palma
-GU Username: depalma
-File Name: ex17.cpp
+Name: Paul De Palma
+Date Submitted: February 3, 2021 
 Program illustrates binary search, dynamic array declaration 
-To Build: g++ ex17.cpp
-To Execute: ./a.out size target
-where size is the size of an array, target is the search target
 */
 
 #include <iostream>
@@ -36,6 +29,11 @@ int main(int argc, char* argv[])
 
  return 0;
 }
+
+/*
+Description: Binary search
+Input: pointer to an array of integers, array size, item searched for
+Output: position of the of the item if found, -1 otherwise
 
 int binS(int* arr, int size, int target)
 {
