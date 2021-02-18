@@ -1,18 +1,12 @@
-
 /*
-Class: CPSC 122
-Section: 01
-Team Member 1: Paul De Palma
-Team Member 2: None
-Submitted By: Paul De Palma
-GU Username: depalma
-File Name: ex22.cpp
-Program illustrates classes and 3 file compilation 
-To Build: g++ ex22Tst.cpp ex22.cpp
-To Execute: ./a.out 
+Name: Paul De Palma
+Class: CPSC 122, Section 1
+Date Submitted: February 18, 2021
+Assignment: N/A 
+Description: Program illustrates classes and 3 file compilation 
 */
 
-#include "ex22.h"
+#include "3-class.h"
 #include <iostream>
 using namespace std;
 

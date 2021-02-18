@@ -15,7 +15,6 @@ class Rectangle
 
  private:
    //What do I know?
-   void display(); 
    double width;
    double length;
 };

@@ -1,17 +1,12 @@
 /*
-Class: CPSC 122-01
-Paul De Palma
-GU Username: depalma
-Submitted By: Paul De Palma
-GU Username: depalma
-File Name: ex20.cpp
-illustrates function templates 
-To Build: g++ ex20.cpp
-To Execute: ./ex20 ex20.in ex20.out 
+Name: Paul De Palma
+Class: CPSC 122, Section 1
+Date Submitted: February 18, 2021
+Assignment: N/A 
+Description: Program illustrates function templates 
 */
 
 #include <iostream>
-#include <iomanip>
 using namespace std;
 
 template <class ItemType> 

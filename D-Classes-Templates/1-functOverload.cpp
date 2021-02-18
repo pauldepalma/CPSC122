@@ -1,13 +1,9 @@
 /*
-Class: CPSC 122-01
-Paul De Palma
-GU Username: depalma
-Submitted By: Paul De Palma
-GU Username: depalma
-File Name: ex19.cpp
-illustrates function overloading
-To Build: g++ ex19.cpp
-To Execute: ./ex19 ex19.in ex19.out 
+Name: Paul De Palma
+Class: CPSC 122, Section 1
+Date Submitted: February 18, 2021
+Assignment: N/A 
+Description: Program illustrates function overloading 
 */
 
 #include <iostream>

@@ -1,8 +1,14 @@
+/*
+Name: Paul De Palma
+Class: CPSC 122, Section 1
+Date Submitted: January 17, 2021
+Assignment: N/A 
+Description: Program illustrates manipulating a 2-D array. 
+*/
+
+
 #include <iostream>
 using namespace std;
-
-//illustrates manipulating a 2-D array
-//The  first row is exchanged with the last
 
 void swap(int stuff[][2],int,int);
 
