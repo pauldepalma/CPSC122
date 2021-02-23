@@ -1,13 +1,9 @@
 /*
-Class: CPSC 122-01
-Team Member 1: Paul De Palma
-Team Member 2: None
-Submitted By: Paul De Palma
-GU Username: depalma
-File Name: ex25.cpp
-array names and pointers 
-To Build: g++ ex25.cpp
-To Execute: ./a.out  
+Name: Paul De Palma
+Class: CPSC 122, Section 1
+Date Submitted: February 18, 2021
+Assignment: N/A 
+Description: Program illustrates arrays as pointers 
 */
 
 #include <iostream>
@@ -19,7 +15,7 @@ void passStuff(int*,int);     //note the pointer type
 int main(int argc, char* argv[])
 {
  int size = 5;
- int dataArray[size];        //a conventional interger array
+ int dataArray[size];        //a conventional integer array
  for (int i = 0; i < 5; i++)
    dataArray[i] = i; 
 	 

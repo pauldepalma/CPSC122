@@ -1,13 +1,10 @@
+
 /*
-Class: CPSC 122-01
-Team Member 1: Paul De Palma
-Team Member 2: None
-Submitted By: Paul De Palma
-GU Username: depalma
-File Name: ex29.cpp
-illustrates dynamic creation of a 2D array.
-To Build: g++ ex29.cpp
-To Execute: ./a.out  
+Name: Paul De Palma
+Class: CPSC 122, Section 1
+Date Submitted: February 18, 2021
+Assignment: N/A 
+Description: Program illustrates dynamic declaration of 2-D arrays 
 */
 
 #include <iostream>

@@ -6,34 +6,38 @@ class MyString
  public:
 
    /*
+   Desc: Constructor for MyString. 
    Pre:  strIn is a null-terminated array of characters
-   Post: An instance of Mystring is created and set to the contents of strIn
+   Post: Instance of MyString is created 
    */ 
    MyString(char const* strIn);
 
    /*
-   Pre:  An instance of MyString exists 
-   Post: Invoked automatically when a static instance of MyString 
-         goes out of scope. Invoked when a dynamic instance of MyString
-	 is deleted.  
+   Desc: Destructor for MyString 
+   Invoked automatically when a static instance of MyString 
+   goes out of scope. Invoked when a dynamic instance of MyString
+   is deleted.  
+   Pre: None 
+   Output: Dynamically declared memory is returned to the heap 
    */ 
    ~MyString();
 
    /*
-   Pre:  An instance of MyString exists
-   Post: Contents of the instance of myString is displayed on the screen
+   Desc: Displays the contents of MyString 
+   Pre: None
+   Post: Contents of MyString are displayed on the screen 
    */ 
    void myDisplay(); 
 
    /*
-   Pre:  An instance of MyString exists whose length <= length of strIn
-   Post: The contents of strIn overwrites the contents of the instance
-         of MyString pointed to by the member variable str.  str is 
-	 terminated by the null character.   
+   Desc: Overwrites contents of MyString.str with what strIn points to 
+   Pre: strIn is a null-terminated string 
+   Post: contents of strIn replaces MyString 
    */
    void myStrcpy(char const* strIn);  
 
    /*
+   Desc: Used to determine the length of MyString.str
    Pre:  An instance of MyString exists
    Post: Returns the number of characters, excluding the null character
          in MyString. 
@@ -41,6 +45,7 @@ class MyString
    int myStrlen();  
 
    /*
+   Desc: Determines if MyString.str is equivalent to an input C-String 
    Pre:  An instance of MyString exists. strIn is a null-terminated
          string.
    Post: Returns true if the strings are equivalent, false otherwise 
@@ -48,27 +53,29 @@ class MyString
    bool isEqual(char const* strIn); 
 
    /*
+   Desc: Searches for a substring within MyString 
    Pre:  An instance of MyString exists
-   Post: If strIn is a substring of the instance of MyString, returns
+   Post: If strIn is a substring of MyString.str, returns
          the index of its starting positon, -1 otherwise
    */
    int find(char const* strIn); 
 
    /*
+   Desc: Concatenates strIn with MyString 
    Pre:  An instance of MyString exists. strIn is a null-terminated string
-   Post: strIn is concatenated with the instance of MyString.  Ex.
-         MyString is ABC. strIn is DEF.  MyString is still a null-terminated
+   Post: strIn is concatenated with MyString.str.  Ex.
+         MyString.str is ABC. strIn is DEF.  MyString is still a null-terminated
 	 string, but contains: ABCDEF. 
    */
-   void concat();
+   void concat(char const* strIn);
 
 
  private:
    //helper functions for the class
 
    /*
-   pre: idx is the first character of str that matches the substring
-        strIn is a null terminated string designated as the substring
+   Desc: Used in conjunction with the function, find. 
+   pre: idx is the first character of MyString.str that matches the substring, strIn
    post: returns true if strIn is a substring of str, false otherwise. 
          Used by find()
    */ 

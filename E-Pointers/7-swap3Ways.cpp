@@ -1,14 +1,12 @@
 /*
-Class: CPSC 122-01
-Team Member 1: Paul De Palma
-Team Member 2: None
-Submitted By: Paul De Palma
-GU Username: depalma
-File Name: ex20.cpp
-swap three ways 
-To Build: g++ ex28.cpp
-To Execute: ./a.out  
+Name: Paul De Palma
+Class: CPSC 122, Section 1
+Date Submitted: February 18, 2021
+Assignment: N/A 
+Description: Program illustrates swap three ways 
 */
+
+
 
 #include <iostream>
 #include <cstdlib> 
