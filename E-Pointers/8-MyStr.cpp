@@ -7,21 +7,17 @@ using namespace std;
 //Constructor function
 MyString::MyString(char const* strIn)
 {
- str = new char[strlen(strIn) + 1];
- strcpy(str,strIn);
- length = strlen(str);
+ cout << "constructor" << endl;
 }
 
 //Destructor function
 MyString::~MyString()
 {
- delete [] str;
+ cout << "destructor" << endl;
 }
 
 void MyString::myDisplay()
 {
- for (int i = 0; i < length; i++)
-  cout << str[i];
- cout << endl;
+ cout << "myDisplay" << endl;
 }
 

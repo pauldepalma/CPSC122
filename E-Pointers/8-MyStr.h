@@ -71,10 +71,9 @@ class MyString
 
 
  private:
-   //helper functions for the class
-
    /*
-   Desc: Used in conjunction with the function, find. 
+   Desc: Used in conjunction with the function, find. Loops through MyString starting
+         with idx looking for strIn.
    pre: idx is the first character of MyString.str that matches the substring, strIn
    post: returns true if strIn is a substring of str, false otherwise. 
          Used by find()
