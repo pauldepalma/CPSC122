@@ -7,17 +7,11 @@ using namespace std;
 //Constructor function
 MyString::MyString(char const* strIn)
 {
- cout << "constructor" << endl;
 }
 
 //Destructor function
 MyString::~MyString()
 {
- cout << "destructor" << endl;
 }
 
-void MyString::myDisplay()
-{
- cout << "myDisplay" << endl;
-}
 
