@@ -1,15 +1,10 @@
 /*
-Class: CPSC 122-01
-Paul De Palma
-GU Username: depalma
-Submitted By: Paul De Palma
-GU Username: depalma
-File Name: ex32.h
-Header file for a simple linked list  
-To Build: g++ ex32Tst.cpp ex32.cpp 
-To Execute: ./a.out
+Name: Paul De Palma
+Class: CPSC 122, Section 1
+Date Submitted: February 25, 2021
+Assignment: N/A 
+Description: Program illustrates a simple linked list 
 */
-
 
 #ifndef LIST_H
 #define LIST_H
@@ -44,7 +39,7 @@ class List
    pre: an instance of list exists
    post: newItem is at the head of the list 
    */
-   void PutItemH(const itemType newItem);
+   void PutItemH(itemType newItem);
 
    /*
    pre: an instance of list exists and is not empty
@@ -69,7 +64,7 @@ class List
    post: returns the position of item if item is in the list, -1 
          otherwise.  
    */
-   int Find(const itemType item) const;
+   int Find(itemType item) const;
 
    /*
    pre:  an instance of List exists and contains n items, n >= 1; 
@@ -81,7 +76,7 @@ class List
 
  private:
    int length;   //length of the List
-   node* head;   //point to the first node on the list 
+   node* head;   //pointer to the first node on the list 
 };
 #endif
 
