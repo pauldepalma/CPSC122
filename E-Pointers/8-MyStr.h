@@ -31,6 +31,7 @@ class MyString
 
    /*
    Desc: Overwrites contents of MyString.str with what strIn points to 
+   To clarify: nothing of str remains. strIn replaces it entirely
    Pre: strIn is a null-terminated string 
    Post: contents of strIn replaces MyString 
    */
