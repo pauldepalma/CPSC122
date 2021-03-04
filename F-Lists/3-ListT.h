@@ -1,15 +1,10 @@
 /*
-Class: CPSC 122-01
-Paul De Palma
-GU Username: depalma
-Submitted By: Paul De Palma
-GU Username: depalma
-File Name: ex33.h
-Header file for a linked list with head and tail pointers  
-To Build: g++ ex33Tst.cpp ex33.cpp 
-To Execute: ./a.out
+Name: Paul De Palma
+Class: CPSC 122, Section 1
+Date Submitted: February 25, 2021
+Assignment: N/A 
+Description: Program illustrates a linked list both head and tail pointers 
 */
-
 
 #ifndef LIST_H
 #define LIST_H
@@ -22,7 +17,7 @@ struct node
  node* next;
 };
 
-class List1
+class ListT
 {
  public:
    /*
@@ -33,7 +28,7 @@ class List1
 	List1* lst = new List1;
    post: an instance of List1 exists
    */ 
-   List1();
+   ListT();
 
 
    /*
@@ -43,7 +38,7 @@ class List1
    post: All dynamically declared memory, i.e., the memory for all nodes, has been
         returned to the heap.   
    */ 
-   ~List1();
+   ~ListT();
 
    /*
    pre: an instance of lists exists

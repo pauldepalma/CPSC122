@@ -3,7 +3,6 @@ using namespace std;
 
 #include "2-List.h"
 
-
 int main()
 {
  //Use of a static list 
