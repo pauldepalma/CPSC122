@@ -4,8 +4,11 @@ using namespace std;
 #include "2-List.h"
 
 List::List()
-{
+{       
+ length = 0;
+ head = NULL;
 }
+
 
 List::~List()
 {
@@ -23,15 +26,19 @@ int List::GetLength() const
 
 void List::PutItemH(const itemType newItem)
 {
+ node* tmp = new node;
+ tmp->item = newItem;
+ tmp->next = head;
+ head = tmp;
+ length++;
+ tmp = NULL;
 }
 
 itemType List::GetItemH() const
 {
+ return head->item;
 }
 
-void List::DeleteItemH()
-{
-}
 	
 void List::Print() const
 {
