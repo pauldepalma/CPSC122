@@ -2,10 +2,10 @@
 #include <climits>
 using namespace std;
 
-#include "ex34.h"
+#include "4-ListD.h"
 
    
-List2::List2()
+ListD::ListD()
 {
  length = 0;
  
@@ -24,7 +24,7 @@ List2::List2()
  tail->next = NULL;
 }
 
-List2::List2(List2* lst)
+ListD::ListD(ListD* lst)
 {
  length = 0; 
  
@@ -42,25 +42,25 @@ List2::List2(List2* lst)
  tail->item = INT_MAX;
  tail->next = NULL;
 
- int pos = 1;
- doubleNode* start = lst->FindPosition(pos);
-
- while (pos < lst->length)
+ //returns pointer to the first node, which is what we want here
+ doubleNode* cur = lst->FindPosition(2);
+ for (int i = 1; i <= lst->length; i++)
  {
-  Insert(start->item,pos);
-  start = start->next;
-  pos++;
- }  
+  Insert(cur->item,i);
+  cur = cur->next;
+ }
 }
 
-List2::~List2()
+ListD::~ListD()
 {
 }
 
-doubleNode* List2::FindPosition(int pos)
+doubleNode* ListD::FindPosition(int pos)
 {
+ //Inserting at the tail is a special case.  It can be made much more efficient than
+ //this.
  doubleNode* cur = head;
- int i = 0;
+ int i = 0;  //begin at the dummy node
  while (i < pos - 1)
  {
   cur = cur->next;
@@ -69,7 +69,7 @@ doubleNode* List2::FindPosition(int pos)
  return cur;
 } 
   
-void List2::Insert(itemType item, int pos)
+void ListD::Insert(itemType item, int pos)
 {
  //new node goes between these two nodes
  doubleNode* insertPtA = FindPosition(pos);  
@@ -81,14 +81,14 @@ void List2::Insert(itemType item, int pos)
  tmp->item = item;
  tmp->next = insertPtB;
 
- //set pointers for the previous and next nodes
+ //set pointers for nodes before and after the insertion point
  insertPtA->next = tmp;
  insertPtB->prev = tmp;
 
  length++;
 }
 
-void List2::PrintForward()
+void ListD::PrintForward()
 {
  doubleNode*  cur = head->next;
 

@@ -1,17 +1,10 @@
 /*
-Class: CPSC 122-01
-Paul De Palma
-GU Username: depalma
-Submitted By: Paul De Palma
-GU Username: depalma
-File Name: ex34.h
-Header file for a doubly linked list with dummy notes at head and
-tail to make insertion and deletion easier
-To Build: g++ ex34Tst.cpp ex34.cpp
-To Execute: ./a.out
+Name: Paul De Palma
+Class: CPSC 122, Section 1
+Date Submitted: February 25, 2021
+Assignment: N/A 
+Description: header file for a doubly linked list with dummy notes at head and tail
 */
-
-
 
 #ifndef LIST_H
 #define LIST_H
@@ -25,48 +18,48 @@ struct doubleNode
  doubleNode* next;
 };
 
-class List2
+class ListD
 {
  public:
    
-   List2();
+   ListD();
 
    /*
    Comment: This function is called a copy constructor.  When invoked from
-   the test file with an existing object of type List2, will create
+   the test file with an existing object of type List2, it will create
    an exact copy of the object.  That is, instead simply creating an empty 
    new list like a conventional constructor, it will create a new list that,
    at the time of creation, is an exact copy of the list pointed to by the
    parameter.
-   pre:  lst points to an object of type List2
+   pre:  lst points to an object of type ListD
    post: The current object is an exact and deep copy of what lst points
          to.
    */
-   List2(List2* lst);
+   ListD(ListD* lst);
 
-   ~List2();
+   ~ListD();
   
    /*
-   pre: List exists, pos is in the range [1..length+1].
+   pre: ListD exists, pos is in the range [1..length+1].
    post: new node is inserted at postion pos. 
    */
    void Insert(itemType item, int pos);   
 
    /*
-   pre: List exists, pos is in the range [1..length].
+   pre: ListD exists, pos is in the range [1..length].
    post: node at postion, pos, is deleted 
    */
    void Delete(int pos);   
 
    /*
-   pre: List exists
+   pre: ListD exists
    post: All nodes containing item have been deleted.  Returns the
          number of nodes that have been deleted. 
    */
    int DeleteAll(itemType item);   
 
    /*
-   pre: List exits.
+   pre: ListD exists.
    post: The item value of each node, from head to tail,
          is displayed on the screen, excluding the dummy nodes. 
    */
@@ -77,7 +70,7 @@ class List2
    post: The item value of each node, from tail to head,
          is displayed on the screen, excluding dummy nodes.
    */
-   void PrintBackwards();
+   void PrintBackward();
 
    /*
    pre:  List exists
@@ -88,7 +81,7 @@ class List2
   
  private:
    /*
-   Comment: Used in conjunction with insert (and, possibly, delete)
+   Comment: Used in conjunction with functions that insert and delete   
    pre:  List exists, pos is the position where the new node is to be
          inserted. pos is in the range [1..length+1].
    Post: Returns insertion point A (see the implemention of insert)

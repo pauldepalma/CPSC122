@@ -1,12 +1,12 @@
 #include <iostream>
 using namespace std;
 
-#include "ex34.h"
+#include "4-ListD.h"
 
 
 int main()
 {
- List2* lst = new List2;
+ ListD* lst = new ListD;
  
  for (int i = 1; i <= 10; i++)
    lst->Insert(i,i);
@@ -14,9 +14,10 @@ int main()
  lst->PrintForward();
 
  cout << endl;
- List2* lst1 = new List2(lst);
+ 
+ ListD* lst1 = new ListD(lst);
 
- lst->PrintForward();
+ lst1->PrintForward();
 
  return 0;
 }
