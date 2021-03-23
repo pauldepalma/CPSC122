@@ -10,3 +10,6 @@ stack1.o: stack1.cpp
 
 list1.o: list1.cpp
 	g++ -c list.cpp 
+
+clean :
+	rm *.o

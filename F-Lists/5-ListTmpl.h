@@ -1,13 +1,9 @@
 /*
-Class: CPSC 122-01
-Paul De Palma
-GU Username: depalma
-Submitted By: Paul De Palma
-GU Username: depalma
-File Name: ex35.h
-Header file for a simple linked list using templates
-To Build: g++ ex35Tst.cpp ex35.cpp 
-To Execute: ./a.out
+Name: Paul De Palma
+Class: CPSC 122, Section 1
+Date Submitted: February 25, 2021
+Assignment: N/A 
+Description: simple linked list using templates 
 */
 
 
