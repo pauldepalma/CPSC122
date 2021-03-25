@@ -64,6 +64,7 @@ class List
    */
    void Print() const;
   
+ //protected:
  private:
    int length;   //length of the list
    node* head;   //point to the first node on the list 
