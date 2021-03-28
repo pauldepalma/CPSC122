@@ -7,6 +7,10 @@ using namespace std;
 //Constructor function
 MyString::MyString(char const* strIn)
 {
+ length = strlen(strIn);
+ str = new char[length + 1];
+ strcpy(str, strIn);
+
 }
 
 //Destructor function
@@ -14,6 +18,11 @@ MyString::MyString(char const* strIn)
 MyString::~MyString()
 {
 //delete []str; 
+}
+
+void MyString::myDisplay()
+{
+ cout << str << endl;
 }
 
 

@@ -16,7 +16,6 @@ int main(int argc, char* argv[])
  MyString str1(argv[1]);
  MyString* str2 = new MyString(argv[1]);
 
- /* 
  //Test of myDisplay
  cout << "***************************************" << endl;
  cout << "*****Test 1 myDisplay*****" << endl;
@@ -31,7 +30,6 @@ int main(int argc, char* argv[])
  cout << endl;
  cout << "***************************************" << endl;
  //End Test of myDisplay
- */
 
  delete str2;
  return 0;  
