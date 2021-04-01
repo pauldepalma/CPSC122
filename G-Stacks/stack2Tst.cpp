@@ -6,16 +6,13 @@ using namespace std;
 int main()
 {
  Stack stk;
-
- cout << "push 0 through 4 on the stack" << endl;
- for (int i = 0; i < 5; i++)
-   stk.Push(i);
-
- if (stk.IsEmpty())
-  cout << "empty" << endl;
- else
-  cout << "not empty" << endl;
-
+ float x = 6.0;
+ float y =  5.0;
+ float z = x/y;
+ stk.Push(z);
+ stk.Push(7);
+ stk.Push('A');
+ stk.Print();
 
  return 0;
 

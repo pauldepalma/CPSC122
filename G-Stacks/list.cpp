@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 #include "list.h"
@@ -57,6 +58,8 @@ void List::Print() const
  node* cur = head;
  for (int i = 0; i < length; i++)
  {
+  //displays type
+  //cout << typeid(cur->item).name() << endl; 
   cout << cur->item << endl;
   cur = cur->next;
  }

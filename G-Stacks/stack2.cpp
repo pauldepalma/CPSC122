@@ -6,7 +6,6 @@ using namespace std;
 
 Stack::Stack() : List()
 {
- cout << length << endl;
 }
 
 

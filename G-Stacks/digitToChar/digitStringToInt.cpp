@@ -9,7 +9,7 @@ int main(int argc, char* argv[])
  char* str = new char[strlen(argv[1]) + 1];
  strcpy(str, argv[1]);
  int* tokens = new int[26];
- char delimiters[] = "()+_*/";
+ char delimiters[] = " ()+_*/";
 
  int i = 0;
  ptr = strtok(str,delimiters);
