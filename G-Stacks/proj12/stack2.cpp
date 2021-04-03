@@ -6,9 +6,7 @@ using namespace std;
 
 Stack::Stack() : List()
 {
- cout << length << endl;
 }
-
 
 void Stack::Push(itemType newItem)
 { 

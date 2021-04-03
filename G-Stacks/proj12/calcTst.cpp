@@ -6,7 +6,6 @@ using namespace std;
 int main(int argc, char* argv[])
 {
  Calc* C = new Calc(argc, argv);
- C->DisplayInFix();
 
  delete C;
  return 0;

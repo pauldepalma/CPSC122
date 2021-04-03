@@ -50,28 +50,48 @@ class Calc
 
   /*
   pre:  invoked from constructor 
-  post: two dynamically allocated tables are allocated. valueTbl holds 26 zeroes.  
-        symbolTbl holds 'A' through 'Z'
-
-        valueTbl: [0 0 0 ... 0]
-        symbolTbl: ['A' 'B' 'C' ... 'Z']
+  post: 26 position valueTbl is dyanically allocated and filled with zeroes  
+        valueIdx is set to 0
   */
-  void MakeTables(); 
+  void MakeValueTbl(); 
   
   /*
   pre:  invoked from constructor 
   post: 1. space for inFix expression is dynamically allocated 
         2. infix is a copy of argv[1] except:
-           characters from symbolTbl are substituted for numbers
-           corresponding numbers are stored in value table
+           Beginning with 'A' Upper case alphabetic characters for substituted for digit 
+	   strings. Numbers corresponding to digit strikngs are stored in valueTbl. 
+	   valueIdx is appropriately incremented. 
 
-           Example: (122+12) becomes (A+B),  where A, B are the first two entries
-	   in symbolTbl
-	   valueTbl becomes: [122 12 0 0 0 ... 0] 
+           Example: (322+12) becomes (A+B)
+	            valueTbl becomes: [322 12 0 0 0 ... 0] 
+		    valueIdx becomes 2, the next available position in valueTbl
+		    Notice that when the ASCII value of an  operand in inFix is
+		    substracted from the operands, we get the get the index
+		    to the value of the operand stored in the value table.
+		    So, for the second operand above, 'B' - 'A' = 1
+		    valuTbl[1] == 12
+
+	  This function invokes FindLast, below. 
+          Imagine traversing argv[1] until you 
+          see a digit.  You need to find the last digit in the sequence.  The 
+          collection of such digits can be transformed to an integer and stored
+          in valueTable.  FindLast returns the index of the last digit in 
+          the current digit string being examined.
+  
+          Example: (912+12)
+          Suppose current index = 1, meaning we are looking digit '9'.  FindLast,
+          below, returns, 3, meaning the last digit in the current digit string is 2.	  
   */
   void Parse();
 
-  /*
+  /* 
+   pre:  invoked from Parse 
+   post: Returns the index of the final digit in a digit string.  See Parse, above. 
+  */ 
+  int FindLast(int cur);
+  
+  /* 
    pre:  invoked from constructor
    post: Using the stack technique discussed in class, returns true 
          if parentheses are balanced, false otherwise
@@ -81,6 +101,7 @@ class Calc
   char*  inFix;     //null-terminated string that holds infix expression 
   int*   symbolTbl; //pointer to an array holding UC alpha characters 
   char*  valueTbl;  //pointer to an array holding expression values
+  int valueIdx; //index of the next available position in valueTbl
   Stack* stk;
 };
 #endif 
