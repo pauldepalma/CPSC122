@@ -20,7 +20,7 @@ bool Calc::CheckTokens()
  return true;
 }
 
-void Calc::MakeTables()
+void Calc::MakeValueTbl()
 {}
 
 void Calc::Parse()

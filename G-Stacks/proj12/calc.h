@@ -39,7 +39,7 @@ class Calc
  private:
   /*
   pre:  invoked from constructor 
-  post: returns true if each character is argv[1] is:
+  post: returns true if each character in argv[1] is:
         either: one of the four arithmetic operators
         or: an upper case alphabetic character
         or: a character digit (0..9)
@@ -58,19 +58,39 @@ class Calc
   /*
   pre:  invoked from constructor 
   post: 1. space for inFix expression is dynamically allocated 
-        2. infix is a copy of argv[1] except:
-           Beginning with 'A' Upper case alphabetic characters for substituted for digit 
+	2. inFix is a copy of argv[1] except:
+           Beginning with 'A', upper case alphabetic characters for substituted for digit 
 	   strings. Numbers corresponding to digit strikngs are stored in valueTbl. 
 	   valueIdx is appropriately incremented. 
 
-           Example: (322+12) becomes (A+B)
-	            valueTbl becomes: [322 12 0 0 0 ... 0] 
-		    valueIdx becomes 2, the next available position in valueTbl
+           Example: ((322+12)*12) becomes ((A+B)*C)
+	            valueTbl becomes: [322 12 12 0 0 ... 0] 
+		    valueIdx becomes 3, the next available position in valueTbl
 		    Notice that when the ASCII value of an  operand in inFix is
 		    substracted from the operands, we get the get the index
 		    to the value of the operand stored in the value table.
 		    So, for the second operand above, 'B' - 'A' = 1
-		    valuTbl[1] == 12
+		    valueTbl[1] == 12
+
+		    The value table is used in evaluating expressions.  The 
+		    above inFix will ultimately become this postfix expression:
+
+		    AB+C* 
+
+		    During evaluation, A and B are pushed onto the stackj:
+
+		    B
+		    A
+
+		    When + is read, A and B are popped and their corresponding values
+		    are read from valueTbl. 322+12 is computed and its sum is placed 
+		    in the next available position in valueTbl: 
+                    
+	            [322 12 12 334 0 ... 0] 
+
+		    The upper alhabetic character, corresponding to the position of 
+		    344, 'D', is pushed onto the stack.  valueIdx is incremented by
+		    1.
 
 	  This function invokes FindLast, below. 
           Imagine traversing argv[1] until you 
