@@ -119,9 +119,8 @@ class Calc
   bool CheckParens();
 
   char*  inFix;     //null-terminated string that holds infix expression 
-  int*   symbolTbl; //pointer to an array holding UC alpha characters 
-  char*  valueTbl;  //pointer to an array holding expression values
-  int valueIdx; //index of the next available position in valueTbl
+  int*  valueTbl;   //pointer to an array holding variable and expression values 
+  int valueIdx;    //index of the next available position in valueTbl
   Stack* stk;
 };
 #endif 
