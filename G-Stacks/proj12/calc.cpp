@@ -6,9 +6,9 @@ using namespace std;
 
 
 //Write functions in this order.  Constructor and destructor will be built as the
-//functions it invokdes are written
+//functions it invokes are written
 
-Calc::Calc(int argcIn, char* argvIn[])
+Calc::Calc(char* argvIn)
 {
 }
 

@@ -19,10 +19,18 @@ class Calc
 { 
   public: 
   /* 
-  pre: an istance of Cals exists 
-  post: dynamically declared memory is returned to the run-time stack 
+  pre: argvIn is a pointer to the C-String entered at the command line
+  post: 
+       set-up functions invoked:
+       CheckTokens
+       MakeValueTbl
+       Parse
+       CheckParens
+
+       if a boolean function returns false, a relevant error is displayed. Execution
+       is halted with this function: exit(EXIT_FAILURE) 
   */
-  Calc(int argcIn, char* argvIn[]);
+  Calc(char* argvIn);
 
   /* 
   pre: an istance of Cals exists 
