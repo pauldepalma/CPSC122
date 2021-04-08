@@ -1,16 +1,13 @@
+
 /*
-Class: CPSC 122-01
-Paul De Palma
-GU Username: depalma
-Submitted By: Paul De Palma
-GU Username: depalma
-File Name: List1.h 
+Name: Paul De Palma
+Class: CPSC 122, Section 1
+Date Submitted: February 25, 2021
 Header file for a linked list with:
 1) The capacity to manipulate the tail
 2) The capacity to manipulate the head
 3) The capacity to make a copy of a list with a the copy constructor
 */
-
 
 #ifndef LIST
 #define LIST
