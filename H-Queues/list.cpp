@@ -27,7 +27,6 @@ List::List(List* lst)
 	 
 List::~List()
 {
- cout << "Entering list destructor" << endl;
  while(length > 0)
    DeleteItemH();
 }

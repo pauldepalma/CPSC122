@@ -33,7 +33,7 @@ class Calc
   Calc(char* argvIn);
 
   /* 
-  pre: an istance of Cals exists 
+  pre: an instance of Cals exists 
   post: dynamically declared memory is returned to the stack 
   */
   ~Calc();
@@ -67,14 +67,14 @@ class Calc
   pre:  invoked from constructor 
   post: 1. space for inFix expression is dynamically allocated 
 	2. inFix is a copy of argv[1] except:
-           Beginning with 'A', upper case alphabetic characters for substituted for digit 
+           Beginning with 'A', upper case alphabetic characters are substituted for digit 
 	   strings. Numbers corresponding to digit strikngs are stored in valueTbl. 
 	   valueIdx is appropriately incremented. 
 
            Example: ((322+12)*12) becomes ((A+B)*C)
 	            valueTbl becomes: [322 12 12 0 0 ... 0] 
-		    valueIdx becomes 3, the next available position in valueTbl
-		    Notice that when the ASCII value of an  operand in inFix is
+		    valueIdx becomes 3, the next available position in valueTbl.
+		    Notice that when the ASCII value of 'A'  is
 		    substracted from the operands, we get the get the index
 		    to the value of the operand stored in the value table.
 		    So, for the second operand above, 'B' - 'A' = 1
@@ -86,7 +86,7 @@ class Calc
 
 		    AB+C* 
 
-		    During evaluation, A and B are pushed onto the stackj:
+		    During evaluation, A and B are pushed onto the stack:
 
 		    B
 		    A

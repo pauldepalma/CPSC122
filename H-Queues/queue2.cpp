@@ -5,12 +5,7 @@ using namespace std;
 
 Queue::Queue() : List()
 {
- cout << "constructor inherited queue" << endl;
 }
-
-
-
-
 
 
 Queue::Queue(Queue* q) : List(q)
