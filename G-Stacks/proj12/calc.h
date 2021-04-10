@@ -81,7 +81,8 @@ class Calc
 		    valueTbl[1] == 12
 
 		    The value table is used in evaluating expressions.  The 
-		    above inFix will ultimately become this postfix expression:
+		    above inFix will ultimately (in project 13) 
+		    become this postfix expression:
 
 		    AB+C* 
 
