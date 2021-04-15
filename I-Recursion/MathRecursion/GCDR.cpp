@@ -1,4 +1,5 @@
 //GCD Recursively
+//Trace gcd(103,7)
 
 #include <iostream>
 #include <stdlib.h>

@@ -17,13 +17,13 @@ int main(int argc, char* argv[])
 
 int gcd(int m, int n)
 {
- int ms = 0;
- while (n > 0)
+ int r = m % n;
+ while (r > 0)
  {
-  ms = m;
   m = n;
-  n = ms % n;
+  n = r;
+  r = m % n; 
  }
- return m;
+ return n;
 }  
 
