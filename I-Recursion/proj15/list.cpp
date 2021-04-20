@@ -10,6 +10,13 @@ List::List()
  head = NULL;
 }
 
+bool List::IsEmpty() 
+{
+ if (head == NULL)
+  return true;
+ return false; 
+}
+
 void List::PutItemH(itemType item)
 {
  node* tmp = new node;
@@ -32,25 +39,19 @@ void List::DeleteItemH()
  cur == NULL;
 }
 
-
 //Write the following functions recursively or in such a way that they use
-//recursive functions
+//recursive functions.  You may add these recursive utility functions to the 
+//Private section of the header (.h) file.
 
+List::~List()
+{
+}
 
 int List::GetLength()
 {
  return 0; 
 }
 
-int List::GetLength(node* cur, int& ct)
-{
- return 0;
-}
-
-bool List::IsEmpty() 
-{
- return true; 
-}
 
 void List::Print( )
 {
@@ -64,10 +65,3 @@ void List::PrintR( )
 {
 }
 
-void List::PrintR(node* cur) 
-{
-}
-
-List::~List()
-{
-}
