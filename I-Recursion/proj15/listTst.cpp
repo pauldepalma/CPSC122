@@ -10,7 +10,7 @@ int main()
  for (int i = 0; i < 5; i++)
   lst1->PutItemH(i);
  lst1->Print();
- lst1->PrintR();
+ lst1->PrintRev();
 
  delete lst1; 
  return 0;

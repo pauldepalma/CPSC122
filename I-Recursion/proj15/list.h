@@ -1,14 +1,9 @@
 /*
-Class: CPSC 122-01
-Paul De Palma
-GU Username: depalma
-Submitted By: Paul De Palma
-GU Username: depalma
-File Name: list.h
+Name: Paul De Palma
+Class: CPSC 122, Section 1
+Project Number: 15
 Header file for a simple linked list that adds and deletes at the head
-Traversals are done recursively
-To Build: make 
-To Execute: ./list
+All traversals are done recursively, either directly or indirectly
 */
 
 
@@ -63,7 +58,7 @@ class List
    pre: an instance of list exists and is not empty
    post: contents of list nodes are displayed in reverse  
    */
-   void PrintR();
+   void PrintRev();
 
    /*
    pre: an instance of list exists
@@ -72,6 +67,8 @@ class List
    int GetLength();
   
  private:
+   //Utility function to assist recursive traversal of list 
+   void Print(node* cur);
    node* head;    
 };
 #endif

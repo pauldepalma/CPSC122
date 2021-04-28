@@ -40,8 +40,8 @@ void List::DeleteItemH()
 }
 
 //Write the following functions recursively or in such a way that they use
-//recursive functions.  You may add these recursive utility functions to the 
-//Private section of the header (.h) file.
+//recursive functions.  You may add recursive utility functions to the 
+//private section of the header (.h) file.
 
 List::~List()
 {
@@ -57,11 +57,11 @@ void List::Print( )
 {
 }
 
+
+void List::PrintRev( )
+{
+}
+
 void List::Print(node* cur) 
 {
 }
-
-void List::PrintR( )
-{
-}
-
