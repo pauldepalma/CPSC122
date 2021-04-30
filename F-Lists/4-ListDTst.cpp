@@ -14,9 +14,14 @@ void TestInsert()
 {
 
  ListD* lst = new ListD;
- for (int i = 1; i <= 6; i++)
+ for (int i = 1; i <= 5; i++)
   lst->Insert(i,i);
+ lst->PrintForward();
+ lst->Delete(5); 
+ cout << endl;
+ lst->PrintForward();
 
+ /*
  //test general case insert
  cout << "Passed Insert Test 1 if 1 through 6 appear on subsequent lines" << endl;
  lst->PrintForward();
@@ -39,7 +44,7 @@ void TestInsert()
  cout << "Passed Insert Test 4 if 50 appears in middle position" << endl; 
  lst->PrintForward();
  cout << endl;
- 
+ */ 
  delete lst;
 }
 
