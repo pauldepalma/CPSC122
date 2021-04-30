@@ -1,6 +1,8 @@
 #include <iostream>
 #include <cstdlib>
 using namespace std;
+//F(0) = F(1) = 1
+//F(N) = F(N-2) + F(N-1) for N > 1
 
 int fib(int);
 
@@ -10,7 +12,7 @@ int main(int argc, char* argv[])
 
  if (nth_in < 0)
   {
-   cout << "The zeroth fibonacci number is 0"  << endl;
+   cout << "The zeroth fibonacci number is 1"  << endl;
    exit(1);
   }
 
@@ -26,18 +28,15 @@ int main(int argc, char* argv[])
 int fib(int nth)
 {
  if (nth == 0 || nth == 1)
-   return nth; 
+   return 1; 
 
- //0th and 1st Fibonacci number 
  int fn = 0;
- int fn_minus_2 = 0;
+ //0th and 1st Fibonacci number 
+ int fn_minus_2 = 1;
  int fn_minus_1 = 1;
- //cout << fn_minus_2 << endl;
- //cout << fn_minus_1 << endl;
  while (nth > 1)
  {
   fn = fn_minus_2 + fn_minus_1;  //2nd ... nth Fibonacci numbers
-  //cout << fn << endl;  //2nd ... nth Fibonacci numbers
   fn_minus_2 = fn_minus_1;       //advance fib-2
   fn_minus_1 = fn;               //advance fib-1
   --nth; 
@@ -45,8 +44,3 @@ int fib(int nth)
  return fn;
 }
 
-void fibError()
-{
-   cout << "Enter a number >= 0" << endl;
-   exit(1); 
-}
