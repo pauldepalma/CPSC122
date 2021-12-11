@@ -12,6 +12,7 @@ PQueue::PQueue(PQueue* q) : Queue(q)
 
 void PQueue::Enqueue(itemType newItem)
 { 
+ cout << "Hi Santiago" << endl;
 }
 
 node* PQueue::PtrTo(itemType newItem)
