@@ -1,15 +1,13 @@
 /*
 Name: Paul De Palma
 Class: CPSC 122-01
-Date: January 17, 2021
+Date: January 9, 2022
 Assignment Name: Example 6 
 Description: Program illustrates arrays, random numbers, global constants 
 */
 
 #include <iostream>
 using namespace std;
-
-const int LIMIT = 100;  //constant decaration
 
 #include <iostream>
 #include <cstdlib> //for rand and srand
@@ -21,9 +19,19 @@ void loadArray(int[],int);
 void print(int[], int);
 int findLargest(int[],int);
 
+const int LIMIT = 100;  //constant decaration
+
 int main()
 {
- int size = 25; 
+ int size;
+
+ cout << "Enter an array size" << endl;
+ cin >> size;
+ cout << "The largest possible number generated to be generated will be " 
+      << LIMIT << endl;
+ cout << endl;
+ cout << "Here come the random numbers " << endl;
+
  int stuff[size];  //array declaration
 
  loadArray(stuff,size);

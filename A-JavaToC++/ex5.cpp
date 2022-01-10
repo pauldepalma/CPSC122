@@ -1,7 +1,7 @@
 /*
 Name: Paul De Palma
 Class: CPSC 122, Section 1
-Date: January 17, 2021
+Date: January 9, 2022
 File Name: ex5.cpp
 Assignment Name: Example 5
 Description: program illustrates

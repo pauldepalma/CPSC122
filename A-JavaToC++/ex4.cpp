@@ -2,9 +2,9 @@
 /*
 Name: Paul De Palma
 Class: CPSC 122, Section 1
-Date: January 17, 2021
+Date: January 9, 2022
 Assignment: Example 4
-Description:  Program issutrates 
+Description:  Program illustrates 
   void function 
   while loop
   modulus
@@ -41,8 +41,10 @@ void display(int nums, int cols)
  
  while (ct < nums)
   {
-   cout << ct << '\t';         //tab to next col 
-   if (ct % cols == cols - 1)  //think about this one 
+   cout << ct << '\t';  //tab to next col 
+   //line break after desired number of columns. suppose 3 cols are desired.
+   //line break after displaying 2, 5, 8, 11, since each of this go in the 3rd col.
+   if (ct % cols == cols - 1)  
     cout << endl;
    ct++;
   }

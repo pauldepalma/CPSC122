@@ -1,11 +1,7 @@
-
-
-
-
 /*
 Name: Paul De Palma
 Class: CPSC122, Section 1
-Date: January 17, 2021
+Date: January 9, 2022
 Assignment: Example 3 
 Description: Program illustrates console i/o and a for loop;
 */
