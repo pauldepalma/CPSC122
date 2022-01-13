@@ -1,83 +1,84 @@
 /*
 Name: Paul De Palma
-Class: CPSC 122-01
+Class: CPSC 122, Section 1
 Date: January 9, 2022
-Assignment Name: Example 6 
-Description: Program illustrates arrays, random numbers, global constants 
+File Name: ex6.cpp
+Assignment Name: Example 7 
+Description: program illustrates ideas pracrices so far
+The program displays in columns the first n exponentiated ingters.  
+Input:: how many numbers, how many columns, exponent
 */
 
 #include <iostream>
 using namespace std;
 
-#include <iostream>
-#include <cstdlib> //for rand and srand
-#include <ctime>  // for time
-#include <climits> //for INT_MIN, smallest integer value
-using namespace std;
-
-void loadArray(int[],int);
-void print(int[], int);
-int findLargest(int[],int);
-
-const int LIMIT = 100;  //constant decaration
+void display(int,int,int);
+int power(int,int);  
+void error(int);
 
 int main()
 {
- int size;
+ int nums, cols, base, exp;
 
- cout << "Enter an array size" << endl;
- cin >> size;
- cout << "The largest possible number generated to be generated will be " 
-      << LIMIT << endl;
+ cout << "How many numbers do you want to see? " << endl; 
+ cin >>  nums;
+ if (nums < 1)
+    error(1);
+
+ cout << "Displayed over how many columns? " << endl; 
+ cin >> cols;
+ if (cols < 1)
+    error(2);
+
+ cout << "Enter an exponent" << endl; 
+ cin >> exp;
+ if (exp < 0)
+    error(3);
+
+ display(nums,cols,exp);
  cout << endl;
- cout << "Here come the random numbers " << endl;
+ return 0;
+} 
 
- int stuff[size];  //array declaration
-
- loadArray(stuff,size);
- print(stuff,size);
-
- cout << endl;
- cout << "Here's the largest random number generated" << endl;
-
- cout << findLargest(stuff,size) << endl;
-
-
- return 0;  
-}
-
-void loadArray(int stuff[], int size)
+void display(int nums, int cols, int exp)
 {
- //seed the pseudo random number generation so that 
- //subsequent runs will generate a different sequence
- unsigned seed = time(NULL);
- srand(seed); 
-
- for (int i = 0; i < size; i++) 
-   stuff[i] = rand() % LIMIT + 1;  //largest num will be 100. Why?
-
-}
-
-void print(int myStuff[], int mySize)  //parameter names can differ 
-	                               //from those in calling program  
-{
- for (int i = 0; i < mySize; i++)
-   cout << myStuff[i] << endl;  //braces not necessary for a single statement
-}
-
-//This algorithm is called linear search
-//It traverses the array looking for the largest number;
-int findLargest(int stuff[],int size)
-{
- int largest = INT_MIN;  //system defined constant for least possible integer value 
- int idx = 0;
-
- while (idx < size)
+ int ct = 1;
+ int value = 0; 
+ while (ct <= nums)
  {
-  if (stuff[idx] > largest) 
-    largest = stuff[idx];
-  ++idx;
+  value = power(ct,exp);
+  cout << value << '\t';
+  //if (ct % cols == cols - 1)  //start counting from 0
+  if (ct % cols == 0)  //start counting from 1
+   cout << endl;
+  ct++;
  }
+}
  
- return largest;
+int power(int base, int exp)
+{
+ int value = 1;
+
+ for (int i = 0; i < exp; i++)
+  value = value * base;
+ return value;
+}
+
+void error(int code)
+{
+ if (code == 1)
+  {
+   cout <<  "Numbers displayed must be >= 1" << endl;
+   exit(EXIT_FAILURE);
+  }
+ if (code == 2)
+  {
+   cout <<  "Columns must be >= 1" << endl;
+   exit(EXIT_FAILURE);
+  }
+ if (code == 3)
+  {
+   cout <<  "Exponent must be >= 0" << endl;
+   exit(EXIT_FAILURE);
+  }
 }

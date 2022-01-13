@@ -5,7 +5,7 @@ Team Member 1: Paul De Palma
 Team Member 2: None
 Submitted By: Paul De Palma
 GU Username: depalma
-File Name: ex6.java
+File Name: ex7.java
 Program illustrates 
 arrays, random numbers, global constants
 To Build: javac ex6.java

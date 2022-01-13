@@ -36,15 +36,13 @@ int main()
 
 void display(int nums, int cols)
 {
- int ct = 0;
+ int ct = 1;
  int rowCt = 1;
  
- while (ct < nums)
+ while (ct <= nums)
   {
    cout << ct << '\t';  //tab to next col 
-   //line break after desired number of columns. suppose 3 cols are desired.
-   //line break after displaying 2, 5, 8, 11, since each of this go in the 3rd col.
-   if (ct % cols == cols - 1)  
+   if (ct % cols == 0)  
     cout << endl;
    ct++;
   }
