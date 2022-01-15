@@ -11,6 +11,7 @@ using namespace std;
 
 //argc holds the number of command line arguments
 //argv is an array of the arguments
+//usage: ./a.out 5
 int main(int argc, char* argv[])
 {
 
