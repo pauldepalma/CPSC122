@@ -23,5 +23,8 @@ int main()
  cout << "Bytes in short int: " << sizeof(ints) << endl; 
  cout << "Bytes in float: " << sizeof(float) << endl; 
  cout << "Bytes in double: " << sizeof(double) << endl; 
+ cout << "Largest signed integer: " << INT_MAX << endl;
+ cout << "Smallest signed integer: " << INT_MIN << endl;
+
 }
 
