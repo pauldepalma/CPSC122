@@ -7,7 +7,7 @@ Assignment: N/A
 Description: i/o with integers 
 */
 
-
+//usage ./a.out ioInt.in iotInt.out
 #include <iostream>
 #include <fstream>
 using namespace std;
@@ -18,8 +18,8 @@ int main(int argc, char* argv[])
  ofstream fout;
  int num, total;
 
- fin.open("ioInt.in");
- fout.open(argv[1]);
+ fin.open(argv[1]);
+ fout.open(argv[2]);
 
  num = 0;
  total = 0;

@@ -12,7 +12,7 @@ Description: Program illustrates
 #include <string>
 using namespace std;
 
-const int SIZE = 8;  //number of lines in the input file
+const int SIZE = 50;  //number of lines in the input file
 void fileOpen(fstream&, string, char);
 void swap(string[], int, int);
 
@@ -33,9 +33,13 @@ int main(int argc, char* argv[])
  fileOpen(fin, argv[1], 'r');
  fileOpen(fout, argv[2], 'w');
 
- for (int i = 0; i < SIZE; i++)
-  getline(fin,data[i]);
-
+ int i = 0;
+ while(fin.peek() != EOF)
+  {
+   getline(fin,data[i]);
+   i++;
+  }
+ fout << endl;
  swap(data,0,1);
  
  for (int i = 0; i < SIZE; i++)

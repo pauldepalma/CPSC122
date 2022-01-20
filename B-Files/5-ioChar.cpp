@@ -3,7 +3,7 @@ Name: Paul De Palma
 Class: CPSC 122
 Date Submitted: January 17, 2021
 Assignment: N/A 
-Description: Program illustrates reading & writing lines 
+Description: Program illustrates reading & writing characters 
 */
 
 #include <iostream>
@@ -16,7 +16,7 @@ int main()
  ifstream fin;
  ofstream fout;
 
- fin.open("inChar.in");
+ fin.open("dickinson.in");
  fout.open("ex5.out");
 
  while(fin.peek() != EOF)
