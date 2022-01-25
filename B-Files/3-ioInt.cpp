@@ -3,7 +3,7 @@
 Name: Paul De Palma
 Class: CPSC 122
 Date Submitted: January 17, 2021
-Assignment: N/A 
+Assignment: example 3 
 Description: i/o with integers 
 */
 

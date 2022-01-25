@@ -2,7 +2,7 @@
 Name: Paul De Palma
 Class: CPSC 122, Section 1
 Date Submitted: January 17, 2021
-Assignment: Example 1
+Assignment: Example 8
 Description: Program illustrates 
 */
 
@@ -12,7 +12,7 @@ Description: Program illustrates
 #include <string>
 using namespace std;
 
-const int SIZE = 50;  //number of lines in the input file
+const int SIZE = 50;  //max number of lines in the input file
 void fileOpen(fstream&, string, char);
 void swap(string[], int, int);
 

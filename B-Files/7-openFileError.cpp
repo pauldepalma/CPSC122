@@ -2,8 +2,8 @@
 Name: Paul De Palma
 Class: CPSC 122, Section 1
 Date Submitted: January 17, 2021
-Assignment: Example 1
-Description: Program illustrates console output
+Assignment: Example7 
+Description: 
 Program illusrates:
   trapping for file open errors
   passing argv elements to functions
@@ -32,8 +32,7 @@ int main(int argc, char* argv[])
    exit(EXIT_FAILURE);
   }
 
- //argv[1] is a c-string, a sequence of characters terminated by '/0'
- //here it is being transformed to a string
+ //argv[1] is a c-string, a sequence of characters terminated by '\0'
  fileOpen(fin, argv[1], 'r');
  fileOpen(fout, argv[2], 'w');
 
@@ -66,7 +65,7 @@ void readWrite(fstream& fin, fstream& fout)
 Description: function opens a file 
 Input: file stream object reference, name of the file, mode of open
 Output: void function, but at exit, file stream object is tied to 
-the input file name. 
+the input file name because 'file' is a reference variable 
 */ 
 void fileOpen(fstream& file, string name, char mode)
 //void fileOpen(fstream& file, char name[], char mode)

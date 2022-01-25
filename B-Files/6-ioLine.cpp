@@ -1,8 +1,8 @@
 /*
 Name: Paul De Palma
-Class: CPSC 122
+Class: CPSC 122 01
 Date Submitted: January 17, 2021
-Assignment: N/A 
+Assignment: example 6 
 Description: Program illustrates reading and writing lines 
 */
 
@@ -42,8 +42,8 @@ Outpout: the amended string
 */
 string amend(string line)
 {
- for (int i = 0; i < line.length(); i++)
+for (int i = 0; i < line.length(); i++)
   if (isalpha(line[i]))
    line[i] = toupper(line[i]);
- return line;
+  return line;
 }
