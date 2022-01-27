@@ -60,7 +60,6 @@ void readWrite(fstream& fin, fstream& fout)
  }
 }
 
-
 /*
 Description: function opens a file 
 Input: file stream object reference, name of the file, mode of open
