@@ -40,7 +40,7 @@ int main(int argc, char* argv[])
 }
 
 /*
-Description: filles an array with randomly generated integers
+Description: fills an array with randomly generated integers
 Input: integer array and its length
 */
 void fill_array(int arr[], int length)
@@ -65,7 +65,7 @@ void selection_sort(int arr[], int length)
 
  /*There are two ways of thinking about the outer loop
    1) we know we have to make N-1 passes through the array.  Think of this as moving
-      horizontally in the example shown on the board. Though this requires redundant
+      horizontally as in the example shown in class. Though this requires redundant
       code, I think it's clearer
    2) we know we are finished when we have compared
       1st to 2nd
