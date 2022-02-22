@@ -7,8 +7,8 @@ class MyString
 
    /*
    Desc: Constructor for MyString. 
-   Pre:  strIn is a null-terminated array of characters
-   Post: Instance of MyString is created 
+   Input:  strIn is a null-terminated array of characters
+   Output: Instance of MyString is created 
    */ 
    MyString(char const* strIn);
 
@@ -17,8 +17,8 @@ class MyString
    Invoked automatically when a static instance of MyString 
    goes out of scope. Invoked when a dynamic instance of MyString
    is deleted.  
-   Pre: None 
-   Output: Dynamically declared memory is returned to the heap 
+   Pre: A instance of MyString exists 
+   Post: Dynamically declared memory is returned to the heap 
    */ 
    ~MyString();
 
@@ -32,8 +32,8 @@ class MyString
    /*
    Desc: Overwrites contents of MyString.str with what strIn points to 
    To clarify: nothing of str remains. strIn replaces it entirely
-   Pre: strIn is a null-terminated string 
-   Post: contents of strIn replaces MyString 
+   Input: strIn is a null-terminated string 
+   : contents of strIn replaces MyString 
    */
    void myStrcpy(char const* strIn);  
 

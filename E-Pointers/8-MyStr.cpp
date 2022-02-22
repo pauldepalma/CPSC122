@@ -4,12 +4,12 @@ using namespace std;
 #include "8-MyStr.h"
 #include <cstring>
 
-//Constructor function
+//Constructor
 MyString::MyString(char const* strIn)
 {
- length = strlen(strIn);
+ length = strlen(strIn);  //strlen function
  str = new char[length + 1];
- strcpy(str, strIn);
+ strcpy(str, strIn); //strlen function
 
 }
 
@@ -17,7 +17,8 @@ MyString::MyString(char const* strIn)
 //once you get the constructor working, remove the comments.
 MyString::~MyString()
 {
-//delete []str; 
+ cout << "OMG, I'm about to be deleted" << endl;
+ delete []str; 
 }
 
 void MyString::myDisplay()
