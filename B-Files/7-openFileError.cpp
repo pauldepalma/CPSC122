@@ -78,8 +78,9 @@ void fileOpen(fstream& file, string name, char mode)
 
  if (mode == 'r')
   file.open(name, ios::in);  //available thorugh fstream
- if (mode == 'w')
-  file.open(name, ios::out);  //available through fstream;
+ else
+  if (mode == 'w')
+   file.open(name, ios::out);  //available through fstream;
 
  if (file.fail()) //error condition 
  {
