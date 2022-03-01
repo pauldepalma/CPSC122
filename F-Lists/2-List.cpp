@@ -3,14 +3,38 @@ using namespace std;
 
 #include "2-List.h"
 
+
+//Class-related functions
+//Constructor
 List::List()
 {       
  length = 0;
  head = NULL;
 }
 
-
+//Destructor
 List::~List()
+{
+}
+
+//Head-related functions
+void List::PutItemH(itemType item)
+{
+}
+
+itemType List::GetItemH() const
+{
+ return head->item;
+}
+
+void List::DeleteItemH()
+{
+}
+
+
+//General operations on the class
+
+void List::Print() const
 {
 }
 
@@ -19,37 +43,5 @@ bool List::IsEmpty() const
  return true;
 }
 
-int List::GetLength() const
-{
- return 0;
-}
 
-void List::PutItemH(const itemType newItem)
-{
- node* tmp = new node;
- tmp->item = newItem;
- tmp->next = head;
- head = tmp;
- length++;
- tmp = NULL;
-}
-
-itemType List::GetItemH() const
-{
- return head->item;
-}
-
-	
-void List::Print() const
-{
-}
-
-int List::Find(const itemType item) const
-{
- return -1;
-}
-
-void DeleteItem(const int pos)
-{
-}
 
