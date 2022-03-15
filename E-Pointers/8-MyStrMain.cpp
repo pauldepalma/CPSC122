@@ -24,6 +24,7 @@ int main(int argc, char* argv[])
  cout << endl;
  //End Test of myDisplay
 
+/*
  //Test of myStrlen
  cout << "*****Test myStrlen*****" << endl;
  cout << "dynamic test" << endl;
@@ -31,7 +32,7 @@ int main(int argc, char* argv[])
  cout << str2->myStrlen() << endl;
  cout << endl;
  //End Test of myStrlen
- cout << "***************************************" << endl;
+*/
 
  delete str2;
  return 0;  
