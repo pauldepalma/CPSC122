@@ -1,7 +1,7 @@
 /*
 Name: Paul De Palma
 Class: CPSC 122, Section 1
-Date Submitted: February 25, 2021
+Date Submitted: March, 2022
 Assignment: N/A 
 Description: Program illustrates a linked list both head and tail pointers 
 */
