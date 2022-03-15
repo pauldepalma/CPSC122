@@ -1,7 +1,7 @@
 /*
 Name: Paul De Palma
 Class: CPSC 122, Section 1
-Date Submitted: February 25, 2021
+Date Submitted: March 15, 2022
 Assignment: N/A 
 Description: Program illustrates a simple linked list  
 */
@@ -25,7 +25,7 @@ class List
         the client program: 
         List lst;
 	or
-	List* lst = new List1;
+	List* lst1 = new List;
    post: an instance of List exists
    */ 
    List();

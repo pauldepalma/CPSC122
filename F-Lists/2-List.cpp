@@ -24,7 +24,6 @@ void List::PutItemH(itemType item)
 
 itemType List::GetItemH() const
 {
- return head->item;
 }
 
 void List::DeleteItemH()
