@@ -17,7 +17,6 @@ MyString::MyString(char const* strIn)
 //once you get the constructor working, remove the comments.
 MyString::~MyString()
 {
- cout << "OMG, I'm about to be deleted" << endl;
  delete []str; 
 }
 
@@ -26,4 +25,15 @@ void MyString::myDisplay()
  cout << str << endl;
 }
 
+int MyString::myStrLen(char const* strIn)
+{
+ int idx = 0;
+ while (strIn[idx] != '\0')
+  idx++;
+ return idx;
+}
 
+int MyString::myStrlen()
+{
+ return myStrLen(str);
+}

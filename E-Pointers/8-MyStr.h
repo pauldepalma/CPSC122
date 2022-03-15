@@ -81,6 +81,14 @@ class MyString
    */ 
    bool isSub(char const* strIn, int idx); 
 
+   /*
+   Desc: Used to determine the length of the argument
+   Pre:  An instance of MyString exists
+   Post: Returns the number of characters, excluding the null character
+         in pointed to by the argument 
+   */
+   int myStrLen(char const* strIn); 
+
    char* str; //points to a dynamically declared null-terminated 
               //array of characters 
    int length;//number of characters in the array pointed to by str 
