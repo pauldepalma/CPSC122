@@ -4,7 +4,6 @@ using namespace std;
 
 #include "4-ListD.h"
 
-   
 ListD::ListD()
 {
  InitializeVars();

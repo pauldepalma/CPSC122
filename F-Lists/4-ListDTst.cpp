@@ -44,13 +44,13 @@ void TestInsert()
  cout << "Passed Insert Test 4 if 50 appears in middle position" << endl; 
  lst->PrintForward();
  cout << endl;
- delete lst;
+ //delete lst;
 }
 
 void TestCopyConstructor()
 {
  ListD* lst1 = new ListD;
- for (int i = 1; i <= 5; i++)
+ for (int i = 1; i <= 3; i++)
   lst1->Insert(i,i);
 
  ListD* lst2(lst1);
@@ -62,6 +62,6 @@ void TestCopyConstructor()
  lst2->PrintForward();
 
 
- delete lst1;
- delete lst2;
+ //delete lst1;
+ //delete lst2;
 }
