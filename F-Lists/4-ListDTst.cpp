@@ -4,10 +4,12 @@ using namespace std;
 #include "4-ListD.h"
 
 void TestInsert();
+void TestCopyConstructor();
 
 int main()
 {
- TestInsert();
+ //TestInsert();
+ TestCopyConstructor();
 }
 
 void TestInsert()
@@ -17,13 +19,11 @@ void TestInsert()
  for (int i = 1; i <= 5; i++)
   lst->Insert(i,i);
  lst->PrintForward();
- lst->Delete(5); 
- cout << endl;
- lst->PrintForward();
 
- /*
+ cout << "What's wrong with this test suite?" << endl;
+ //answer: we've not tested the tail pointer
  //test general case insert
- cout << "Passed Insert Test 1 if 1 through 6 appear on subsequent lines" << endl;
+ cout << "Passed Insert Test 1 if 1 through 5 appear on subsequent lines" << endl;
  lst->PrintForward();
  cout << endl;
 
@@ -34,7 +34,7 @@ void TestInsert()
  cout << endl;
 
  //test insert at the tail 
- lst->Insert(100,8);
+ lst->Insert(100,7);
  cout << "Passed Insert Test 3 if 100 appears in final position" << endl; 
  lst->PrintForward();
  cout << endl;
@@ -44,7 +44,24 @@ void TestInsert()
  cout << "Passed Insert Test 4 if 50 appears in middle position" << endl; 
  lst->PrintForward();
  cout << endl;
- */ 
  delete lst;
 }
 
+void TestCopyConstructor()
+{
+ ListD* lst1 = new ListD;
+ for (int i = 1; i <= 5; i++)
+  lst1->Insert(i,i);
+
+ ListD* lst2(lst1);
+ 
+ cout << "Traverse lst1" << endl;
+ lst1->PrintForward();
+ cout << endl;
+ cout << "Traverse lst2" << endl;
+ lst2->PrintForward();
+
+
+ delete lst1;
+ delete lst2;
+}

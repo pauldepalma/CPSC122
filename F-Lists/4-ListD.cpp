@@ -7,6 +7,24 @@ using namespace std;
    
 ListD::ListD()
 {
+ InitializeVars();
+}
+
+ListD::ListD(ListD* lst)
+{
+ InitializeVars();
+ //returns pointer to the first node, which is what we want here
+ doubleNode* cur = lst->FindPosition(2);
+ for (int i = 1; i <= lst->length; i++)
+ {
+  cout << cur->item << endl;
+  Insert(cur->item,i);
+  cur = cur->next;
+ }
+}
+
+void ListD::InitializeVars()
+{
  length = 0;
  
 //create dummy nodes;
@@ -24,33 +42,7 @@ ListD::ListD()
  tail->next = NULL;
 }
 
-ListD::ListD(ListD* lst)
-{
- length = 0; 
- 
-//create dummy nodes;
- head = new doubleNode;
- tail = new doubleNode;
-
- //set values for head dummy node;
- head->prev = NULL;
- head->item = INT_MIN;
- head->next = tail;
-
- //set values for tail dummy node;
- tail->prev = head; 
- tail->item = INT_MAX;
- tail->next = NULL;
-
- //returns pointer to the first node, which is what we want here
- doubleNode* cur = lst->FindPosition(2);
- for (int i = 1; i <= lst->length; i++)
- {
-  Insert(cur->item,i);
-  cur = cur->next;
- }
-}
-
+//how would you do this?
 ListD::~ListD()
 {
 }

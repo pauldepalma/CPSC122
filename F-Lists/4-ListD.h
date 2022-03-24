@@ -26,7 +26,7 @@ class ListD
 
    /*
    Comment: This function is called a copy constructor.  When invoked from
-   the test file with an existing object of type List2, it will create
+   the test file with an existing object of type ListD, it will create
    an exact copy of the object.  That is, instead simply creating an empty 
    new list like a conventional constructor, it will create a new list that,
    at the time of creation, is an exact copy of the list pointed to by the
@@ -40,7 +40,8 @@ class ListD
    ~ListD();
   
    /*
-   pre: ListD exists, pos is in the range [1..length+1].
+   pre: ListD exists, pos is in the range [1..length+1]. For convenvience, the 
+        first real node is at position 1. 
    post: new node is inserted at postion pos. 
    */
    void Insert(itemType item, int pos);   
@@ -66,14 +67,14 @@ class ListD
    void PrintForward();
    
    /*
-   pre: List exits.
+   pre: ListD exits.
    post: The item value of each node, from tail to head,
          is displayed on the screen, excluding dummy nodes.
    */
    void PrintBackward();
 
    /*
-   pre:  List exists
+   pre:  ListD exists
    post: Nodes in the list are in ascending order.  The algorithm used
          to put nodes in order is selection sort. 
    */
@@ -82,12 +83,19 @@ class ListD
  private:
    /*
    Comment: Used in conjunction with functions that insert and delete   
-   pre:  List exists, pos is the position where the new node is to be
+   pre:  ListD exists, pos is the position where the new node is to be
          inserted. pos is in the range [1..length+1].
    Post: Returns insertion point A (see the implemention of insert)
          used in inserting a node in a list 
    */
    doubleNode* FindPosition(int pos);
+
+   /*
+   Comment: Used in constructors to prevent duplicate code   
+   pre:  List instance does not exist 
+   post: Dummy nodes are created and private variables initialized
+   */
+   void InitializeVars(); 
 
    int length;         //length of the list
    doubleNode* head;   //points to the first dummy node 
