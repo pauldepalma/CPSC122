@@ -5,9 +5,6 @@ using namespace std;
 
 ListT::ListT()
 {
- length = 0;
- head = NULL;
- tail = NULL;
 }
 
 ListT::~ListT()
