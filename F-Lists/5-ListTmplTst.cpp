@@ -9,20 +9,14 @@ int main()
  for (int i = 0; i < 5; i ++)
    lst->PutItemH(i);
  lst->Print();
- cout << "head of list" << endl;
- cout << lst->GetItemH() << endl;
-
  cout << endl;
 
  List<string>* lst1 = new List<string>;
- for (int i = 0; i < 5; i ++)
-   if (i % 2 == 0)
-     lst1->PutItemH("hello");
-   else
-     lst1->PutItemH("Goodbye");
+ lst1->PutItemH("To see what my black hen hath laid.");
+ lst1->PutItemH("Gentlemen come every day");
+ lst1->PutItemH("She lays eggs for gentlemen.");
+ lst1->PutItemH("Higgledy, piggledy my black hen.");
  lst1->Print();
- cout << "head of list" << endl;
- cout << lst1->GetItemH() << endl;
 
  return 0;
 }
