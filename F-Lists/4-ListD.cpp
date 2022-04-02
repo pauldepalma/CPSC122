@@ -12,7 +12,7 @@ ListD::ListD()
 ListD::ListD(ListD* lst)
 {
  InitializeVars();
- //returns pointer to the first node, which is what we want here
+ //returns a pointer to the first node, which is what we want here
  doubleNode* cur = lst->FindPosition(2);
  for (int i = 1; i <= lst->length; i++)
  {

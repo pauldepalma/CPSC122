@@ -1,7 +1,7 @@
 /*
 Name: Paul De Palma
 Class: CPSC 122, Section 1
-Date Submitted: February 25, 2021
+Date Submitted: April 2, 2022 
 Assignment: N/A 
 Description: header file for a doubly linked list with dummy notes at head and tail
 */
@@ -27,7 +27,7 @@ class ListD
    /*
    Comment: This function is called a copy constructor.  When invoked from
    the test file with an existing object of type ListD, it will create
-   an exact copy of the object.  That is, instead simply creating an empty 
+   an exact copy of the object.  That is, instead of simply creating an empty 
    new list like a conventional constructor, it will create a new list that,
    at the time of creation, is an exact copy of the list pointed to by the
    parameter.
@@ -41,7 +41,7 @@ class ListD
   
    /*
    pre: ListD exists, pos is in the range [1..length+1]. For convenvience, the 
-        first real node is at position 1. 
+        first real (non-dummy) node is at position 1. 
    post: new node is inserted at postion pos. 
    */
    void Insert(itemType item, int pos);   

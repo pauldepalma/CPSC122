@@ -3,14 +3,17 @@ using namespace std;
 
 #include "4-ListD.h"
 
+//All tests are separated by function
 void TestInsert();
 void TestCopyConstructor();
 
 int main()
 {
- //TestInsert();
- TestCopyConstructor();
+ TestInsert();
+ //TestCopyConstructor();
 }
+
+
 
 void TestInsert()
 {
@@ -20,8 +23,6 @@ void TestInsert()
   lst->Insert(i,i);
  lst->PrintForward();
 
- cout << "What's wrong with this test suite?" << endl;
- //answer: we've not tested the tail pointer
  //test general case insert
  cout << "Passed Insert Test 1 if 1 through 5 appear on subsequent lines" << endl;
  lst->PrintForward();
@@ -60,7 +61,6 @@ void TestCopyConstructor()
  cout << endl;
  cout << "Traverse lst2" << endl;
  lst2->PrintForward();
-
 
  //delete lst1;
  //delete lst2;
