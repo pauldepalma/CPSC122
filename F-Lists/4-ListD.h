@@ -76,7 +76,8 @@ class ListD
    /*
    pre:  ListD exists
    post: Nodes in the list are in ascending order.  The algorithm used
-         to put nodes in order is selection sort. 
+         to put nodes in order is selection sort. Use the functions
+	 found here: .../C-Search-Sort/1-selectionSort.cpp 
    */
    void Sort();
   
