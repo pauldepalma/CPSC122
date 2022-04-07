@@ -1,14 +1,14 @@
 //Queue using List and composition 
 #include <iostream>
 using namespace std;
-#include "queue3.h"
+#include "queueP.h"
 
-PQueue::PQueue() : Queue()
+PQueue::PQueue() : QueueI()
 {
  cout << "constructor priority queue" << endl;
 }
 
-PQueue::PQueue(PQueue* q) : Queue(q)
+PQueue::PQueue(PQueue* q) : QueueI(q)
 {}
 
 void PQueue::Enqueue(itemType newItem)

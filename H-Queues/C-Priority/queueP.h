@@ -3,20 +3,20 @@
 #ifndef PQUEUE
 #define PQUEUE
  
-#include "queue2.h"
+#include "queueI.h"
 /*
 PQueue is a priority queue.  Nodes in PQueue are in ascending order by item
 */
 
-class PQueue : public Queue
+class PQueue : public QueueI
 {
  public:
    PQueue();
    PQueue(PQueue* q);
 
    /*
-   pre: an instance of PQueue  exists. nodes in queue are in ascending order by 
-        item;
+   pre: an instance of PQueue  exists. 
+        nodes in queue are in ascending order by item
    post: A new node is added to PQueue, which remains in sorted order 
    */
    void Enqueue(itemType newItem);

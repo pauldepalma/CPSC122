@@ -5,13 +5,13 @@
  
 #include "list.h"
 
-class Queue 
+class QueueC 
 {
  public:
-   Queue();
-   Queue(Queue* q);
+   QueueC();
+   QueueC(QueueC* q);
  
-   ~Queue();
+   ~QueueC();
 
    /*
    pre: an instance of queue exists

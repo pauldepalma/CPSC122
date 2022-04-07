@@ -1,0 +1,15 @@
+#to run: 1) make -f makefileC
+#        2) or rename to makefile
+#        3) type: make
+queueI: queueITst.o queueI.o list.o
+	g++ -o queueI queueITst.o queueI.o list.o
+
+queueITst.o: queueITst.cpp
+	g++ -c queueITst.cpp 
+
+
+queueI.o: queueI.cpp
+	g++ -c queueI.cpp 
+
+list.o: list.cpp
+	g++ -c list.cpp 

@@ -1,0 +1,12 @@
+#to run: make -f makefileC
+queueC: queueCTst.o queueC.o list.o
+	g++ -o queueC queueCTst.o queueC.o list.o
+
+queueCTst.o: queueCTst.cpp
+	g++ -c queueCTst.cpp 
+
+queueC.o: queueC.cpp
+	g++ -c queueC.cpp 
+
+list.o: queueC.cpp
+	g++ -c list.cpp 

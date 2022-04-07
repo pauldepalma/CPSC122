@@ -1,22 +1,21 @@
 #include <iostream>
 using namespace std;
 
-#include "queue2.h"
+#include "queueC.h"
 
 
 int main()
 {
 
- Queue* que = new Queue;
+ QueueC* que = new QueueC;
  for (int i = 0; i < 5; i++)
   que->Enqueue(i);
  que->Dequeue();
  que->Print();
 
- Queue* que1 = new Queue(que);
+ QueueC* que1 = new QueueC(que);
  que1->Print();
-
+ 
  delete que;
  delete que1;
- 
 }
