@@ -33,3 +33,14 @@ bool Calc::CheckParens()
 
 void Calc::DisplayInFix()
 {}
+
+void Calc::InFixToPostFix()
+{}
+
+void Calc::DisplayPostFix()
+{}
+
+int Calc::Evaluate()
+{
+ return 0;
+}

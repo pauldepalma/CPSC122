@@ -4,7 +4,7 @@ Name: Paul De Palma
 Class: CPSC 122, Section 1
 Date Submitted: February 25, 2021
 Assignment: N/A 
-Description: Part 2 of Calculator Assignment 
+Description: Part 1 of Calculator Assignment 
 To Compile: make
 To Execute: ./calc "(121+12)"
 */
@@ -21,12 +21,11 @@ class Calc
   /* 
   pre: argvIn is a pointer to the C-String entered at the command line
   post: 
-       functions invoked:
+       set-up functions invoked:
        CheckTokens
        MakeValueTbl
        Parse
        CheckParens
-       InFixToPostFix
 
        if a boolean function returns false, a relevant error is displayed. Execution
        is halted with this function: exit(EXIT_FAILURE) 
@@ -44,19 +43,6 @@ class Calc
   post: constructed infix expression is displayed
  */
   void DisplayInFix();
-
-  /*
-  pre: instance of Calc exists
-  post: postfix exression displayed
- */
-  void DisplayPostFix();
-
-  /*
-  pre: instance of Calc exists
-  post: value of expression input at the command line is computed and returned.
-        technique is that described in class.
- */
-  int Evaluate();
 
  private:
   /*
@@ -140,16 +126,8 @@ class Calc
          if parentheses are balanced, false otherwise
   */
   bool CheckParens();
-  /*
-  pre: instance of Calc exists.  All tokens are legal and parens are balanced.
-  post: postFix points to a dynamically declared array holding the postfix version
-        of the the input infix expression.
- */
-  void InFixToPostFix();
-
 
   char*  inFix;     //null-terminated string that holds infix expression 
-  char*  postFix;   //null-terminated string that holds postfix expression 
   int*  valueTbl;   //pointer to an array holding variable and expression values 
   int valueIdx;    //index of the next available position in valueTbl
   Stack* stk;
