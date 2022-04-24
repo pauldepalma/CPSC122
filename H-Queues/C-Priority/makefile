@@ -1,4 +1,4 @@
-#to run: make -f makefileP
+#to run: make
 pqueue: queuePTst.o queueP.o queueI.o list.o
 	g++ -o pqueue queuePTst.o queueP.o queueI.o list.o
 
