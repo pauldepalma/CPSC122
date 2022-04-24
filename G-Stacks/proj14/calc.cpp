@@ -17,6 +17,18 @@ Calc::~Calc()
 
 bool Calc::CheckTokens()
 {
+ /*
+ Here is some sample code to show how cstring functions might be used
+ char x = '(';
+ cout << x << endl;
+ if (!isdigit(x))
+  cout << x << endl;
+ char y = x + 25;
+ cout << y << endl;
+ if (isupper(y))
+  cout << y << endl;
+ */
+
  return true;
 }
 
