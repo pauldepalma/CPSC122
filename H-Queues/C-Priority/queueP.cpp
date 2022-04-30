@@ -2,13 +2,14 @@
 #include <iostream>
 using namespace std;
 #include "queueP.h"
+//note Queue is the queue implemented through inheritance or composition.  Find the files
+//under B-Inheritance.  
 
-PQueue::PQueue() : QueueI()
+PQueue::PQueue() : Queue()
 {
- cout << "constructor priority queue" << endl;
 }
 
-PQueue::PQueue(PQueue* q) : QueueI(q)
+PQueue::PQueue(PQueue* q) : Queue(q)
 {}
 
 void PQueue::Enqueue(itemType newItem)
