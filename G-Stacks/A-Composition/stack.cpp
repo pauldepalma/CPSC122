@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-#include "stack1.h"
+#include "stack.h"
 
 Stack::Stack()
 {
@@ -11,7 +11,6 @@ Stack::Stack()
 
 Stack::~Stack()
 {
- cout << "destructor in stack1" << endl;
  delete lst;
 }
 

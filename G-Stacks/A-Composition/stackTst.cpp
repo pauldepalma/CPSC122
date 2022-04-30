@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-#include "stack1.h"
+#include "stack.h"
 
 int main()
 {
