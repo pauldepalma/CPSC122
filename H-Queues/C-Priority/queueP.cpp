@@ -5,11 +5,11 @@ using namespace std;
 //note Queue is the queue implemented through inheritance or composition.  Find the files
 //under B-Inheritance.  
 
-PQueue::PQueue() : Queue()
+PQueue::PQueue() : QueueI()
 {
 }
 
-PQueue::PQueue(PQueue* q) : Queue(q)
+PQueue::PQueue(PQueue* q) : QueueI(q)
 {}
 
 void PQueue::Enqueue(itemType newItem)
