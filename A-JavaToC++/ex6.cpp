@@ -3,7 +3,7 @@ Name: Paul De Palma
 Class: CPSC 122, Section 1
 Date: January 9, 2022
 File Name: ex6.cpp
-Assignment Name: Example 7 
+Assignment Name: Example 6 
 Description: program illustrates ideas pracrices so far
 The program displays in columns the first n exponentiated ingters.  
 Input:: how many numbers, how many columns, exponent
