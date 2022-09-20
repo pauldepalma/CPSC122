@@ -1,36 +1,37 @@
 /*
 Name: Paul De Palma
 Class: CPSC 12
-Date Submitted: Feb 19, 2022
+Date Submitted: 9/19, 2022
 Assignment: N/A 
 Description: illustrates using an array as a dictionary of multiplicative inverses.
             if array[k] = 0, k has no MI mod 26
 	    if array[k] = m, m is the MI of k mod 26 
 */
 
-
-
 #include <iostream>
-#include <fstream>
+#include <cstdlib>
 
-void createDict(int[]);
-int getInv(int[], int); 
+int DICT[26] = {0,1,0,9,0,21,0,15,0,0,0,19,0,0,0,7,0,23,0,11,0,5,0,17,0,25};
 
+int getInv(int); 
 
 using namespace std;
 
 
 int main(int argc, char* argv[])
 {
-
- int num = atoi(argv[1]);
- int inv[26];
+  
  int mInv;
  int result;
+ int num = atoi(argv[1]);
  
- createDict(inv);
+ if (num < 0 || num > 25)
+  {
+   cout << "Input must be in this range: [0..25]" << endl;
+   exit(EXIT_FAILURE);
+  }
 
- mInv = getInv(inv,num);
+ mInv = getInv(num);
 
  if (mInv == 0)
   cout << num << " has no muliplicative inverse mod 26" << endl;
@@ -44,20 +45,8 @@ int main(int argc, char* argv[])
  return 0;
 }
 
-void createDict(int inv[])
+
+int getInv(int num)
 {
- ifstream fin;
- 
- fin.open("4-dictInv.txt");
-
- int idx = 0;
- 
- while(fin >> inv[idx++]);
-
- fin.close();
-}
-
-int getInv(int inv[], int num)
-{
- return inv[num];
+ return DICT[num];
 }
