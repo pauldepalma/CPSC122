@@ -33,7 +33,7 @@ char encrypt(char ch, int key)
 char decrypt(char ch, int key)
 {
  ch = ch - 'A';
- ch = (ch -  key + 26) % 26;
+ ch = (ch -  key) % 26;
  ch = ch + 'A';
  return ch;
 }
