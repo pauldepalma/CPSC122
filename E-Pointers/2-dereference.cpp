@@ -14,6 +14,8 @@ using namespace std;
 int main(int argc, char* argv[])
 {
  int var = atoi(argv[1]); 
+
+ //addrVar can hold an address
  int* addrVar;
 
  //assign the address of var to addrVar
