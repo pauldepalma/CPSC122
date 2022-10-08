@@ -1,0 +1,32 @@
+bubbleSort(array,numLines)
+{
+ pass = 0
+ bottom = numLines - 1
+
+ while(pass < numLines - 1)
+ { 
+  sink(array, bottom)
+  bottom--
+  pass++
+ }
+}
+
+sink(array,bottom)
+{
+ cur = 0
+ while(cur < bottom - 1)
+ {
+  if (array[cur] > array[cur+1])
+   shift(array,cur)
+  cur++;
+ }
+}
+
+shift(array,cur)
+{
+ tmp = array[cur];
+ array[cur] = array[cur+1]
+ array[cur+1] = tmp
+}
+
+
