@@ -1,0 +1,17 @@
+binSrch(array, size, target)
+{
+ top = 0
+ bottom = size - 1
+ 
+ while(top <= bottom)
+ {
+  m = (top + bottom)/2
+  if (stuff[m] == target)
+   return m
+  
+  if (target < stuff[m])
+   bottom = m - 1
+  else
+   top = m + 1
+ }
+}
