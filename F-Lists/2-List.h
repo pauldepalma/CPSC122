@@ -20,6 +20,8 @@ struct node
 class List
 {
  public:
+
+  //Class-related functions
    /*
    pre: None. This is the constructor function, invoked like this from the 
         the client program: 
@@ -39,18 +41,7 @@ class List
    */ 
    ~List();
 
-   /*
-   pre: an instance of List exists
-   post: returns true if list is empty, false otherwise
-   */ 
-   bool IsEmpty() const;
-
-   /*
-   pre: an instance of List exists
-   post: returns length of the list 
-   */
-   int GetLength() const;
-
+  //Head-related functions
    /*
    pre: an instance of List exists
    post: node containing itemIn is at the head of the list 
@@ -68,6 +59,20 @@ class List
    post: Node pointed to by head is deleted 
    */
    void DeleteItemH();
+   
+   //General operations on List,  starting with the easiest  
+   /*
+   pre: an instance of List exists
+   post: returns true if list is empty, false otherwise
+   */ 
+   bool IsEmpty() const;
+
+   /*
+   pre: an instance of List exists
+   post: returns length of the list 
+   */
+   int GetLength() const;
+
 
    /*
    pre: an instance of list exists and is not empty
