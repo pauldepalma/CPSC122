@@ -66,7 +66,8 @@ bool Queue::Peek(itemType& item)
 {
  if (IsEmpty())
    return false;
- int adjFront = (front + 1) % size;
+ int adjFront = (front + 1) % size; //because front is 1 position prior to actual
+                                    //front
  item = que[adjFront]; 
  return true;
 }

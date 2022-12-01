@@ -16,7 +16,7 @@ void prnt(char* str)
 { 
  if (*str == '\0')
   return; 
- cout << *str;
+ cout << *str; //str points to the first character in the string
  prnt(++str);
 } 
 

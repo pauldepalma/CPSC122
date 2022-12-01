@@ -19,8 +19,10 @@ int main(int argc, char* argv[])
 
 int gcd(int m, int n)
 {
- if (n == 0)
-  return m;
+ /*if (n == 0)
+  return m;*/
+ if (m%n == 0)
+  return n;
  return gcd(n, m%n);
 }  
 

@@ -54,8 +54,8 @@ class Queue
 
  private:
    itemType* que; //pointer to array holding the queue 
-   int front;     //index of front of queue
-   int back;      //index of back of queue
+   int front;     //always points to 1 position prior to the back
+   int back;      //except for empty queue, points to actual back of queue
    int length;    //num actual items in the queue;
    int size;      //num slots in queue
 };
