@@ -1,38 +1,39 @@
 #include <iostream>
 #include <cstdlib>
 using namespace std;
-//F(0) = F(1) = 1
+//F(0) = 0
+//F(1) = 1 
 //F(N) = F(N-2) + F(N-1) for N > 1
 
 int fib(int);
 
 int main(int argc, char* argv[])
 {
- int nth_in = atoi(argv[1]);
+ int nth = atoi(argv[1]);
 
- if (nth_in < 0)
+ if (nth < 0)
   {
-   cout << "The zeroth fibonacci number is 1"  << endl;
+   cout << "The zeroth fibonacci number is 0"  << endl;
    exit(1);
   }
 
- int nth = fib(nth_in);
+ int n = fib(nth);
 
- if (nth >= 0)
-   cout << "nth fibonacci number " << nth << endl;
+ if (n >= 0)
+   cout << "nth fibonacci number " << n << endl;
  else
-   cout << "fibonacci number " << nth_in << " is too large to compute" << endl; 
+   cout << "fibonacci number " << nth << " is too large to compute" << endl; 
  return 0;
 }
 
 int fib(int nth)
 {
  if (nth == 0 || nth == 1)
-   return 1; 
+   return nth; 
 
- int fn = 0;
+ int fn;
  //0th and 1st Fibonacci number 
- int fn_minus_2 = 1;
+ int fn_minus_2 = 0;
  int fn_minus_1 = 1;
  while (nth > 1)
  {
