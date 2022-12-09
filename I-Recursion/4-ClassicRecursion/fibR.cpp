@@ -5,18 +5,15 @@ using namespace std;
 //F(1) = 1
 //F(N) = F(N-2) + F(N-1) for N > 1
 int fib(int);
-int count = 0;
 int main(int argc, char* argv[])
 {
  int num = atoi(argv[1]);
- cout <<  fib(num) << endl;
- //cout << "calls " << count << endl;
+ cout << fib(num) << endl;
  return 0;
 }
 
 int fib(int num)
 {
- //count++;
  if (num == 0) 
   return 0;  
  if (num == 1) 
