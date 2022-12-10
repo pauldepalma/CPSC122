@@ -42,7 +42,11 @@ void List::DeleteItemH()
 //Write the following functions recursively or in such a way that they use
 //recursive functions.  
 
-List::~List()
+void List::Print( )
+{
+}
+
+void List::PrintRev( )
 {
 }
 
@@ -51,10 +55,6 @@ int List::GetLength()
  return 0;
 }
 
-void List::Print( )
-{
-}
-
-void List::PrintRev( )
+List::~List()
 {
 }
