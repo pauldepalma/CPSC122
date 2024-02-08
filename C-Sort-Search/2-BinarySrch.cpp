@@ -1,9 +1,11 @@
 /*
 Class: CPSC 122
 Name: Paul De Palma
-Date Submitted: February 3, 2021 
+Date Submitted: February 7, 2024 
 Program illustrates binary search, dynamic array declaration 
+Usage: ./a.out 100 8   //where 100 is the size of the array, 8 is the target
 */
+
 
 #include <iostream>
 using namespace std;
@@ -13,7 +15,7 @@ int binS(int*, int, int);
 int main(int argc, char* argv[])
 {
  int size = atoi(argv[1]); 
- int target = 37; 
+ int target = atoi(argv[2]); 
 
  int* arr = new int[size]; //dynamic declaration of array
 
@@ -34,7 +36,7 @@ int main(int argc, char* argv[])
 Description: Binary search
 Input: pointer to an array of integers, array size, item searched for
 Output: position of the of the item if found, -1 otherwise
-
+*/
 int binS(int* arr, int size, int target)
 {
  int top, middle, bottom;
