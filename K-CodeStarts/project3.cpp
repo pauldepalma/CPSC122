@@ -12,30 +12,28 @@ int main(int argc, char* argv[])
  int mode;
  string keyFile, input, output;
 
- if (argc != 2 || argc != 4)
-  {
+ if (argc != 3 && argc != 5) 
+ {
     cout << "Incorrect number of command line arguments" << endl;
     exit(1);
+ }
+
+ mode = atoi(argv[1]);
+ keyFile = argv[2];
+ 
+ if (argc == 3)
+  {
+   keyGen(keyFile);
+   return 0; 
   }
 
- if (argc == 2 || argc == 4)
-  {
-    mode = atoi(argv[1]);
-    keyFile = argv[2];
-  }
- 
- if (argc == 4)
+ if (argc == 5)
   {
    input = argv[3];
    output = argv[4];
+   control(mode, keyFile, input, output); 
   }
 
- if (mode == 0)
-   keyGen(keyFile);
-
- if (mode == 1 or mode == 2)
-   control(mode, keyFile, input, output); 
- 
  return 0;
 }
 
@@ -45,7 +43,9 @@ int main(int argc, char* argv[])
 --close file
 */
 void keyGen(string keyFile)
-{}
+{
+ cout << "in Keygen" << endl;
+}
 
 /*
 --open files
@@ -53,7 +53,9 @@ void keyGen(string keyFile)
 --loop over input, encrypting/decryptng,  then writing to output
 */
 void control(int mode, string keyFile, string input, string output)
-{}
+{
+ cout << "in Control" << endl;
+}
 
 //encrypt ch and return encrypted version
 char encrypt(char ch, int key)
