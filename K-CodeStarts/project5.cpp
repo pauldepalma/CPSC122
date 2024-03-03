@@ -71,8 +71,7 @@ Output: Writes encrypted/decrypted text to output file
 void control(int mode, string keyFile, string input, string output)
 {
  //this is the array of multiplicative indices mod 26
- int MI[26] = {0,1,0,9,0,21,0,15,0,0,0,19,0,0,0,7,0,23,0,11,0,5,0,17,0};
-
+ int MI[26] = {0,1,0,9,0,21,0,15,0,0,0,19,0,0,0,7,0,23,0,11,0,5,0,17,0,25};
 }
 
 
