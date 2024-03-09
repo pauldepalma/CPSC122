@@ -39,9 +39,9 @@ class List
    post: All dynamically declared memory, i.e., the memory for all nodes, has been
         returned to the heap.   
    */ 
-   ~List();
+   //   ~List();
 
-  //Head-related functions
+   //Head-related functions
    /*
    pre: an instance of List exists
    post: node containing itemIn is at the head of the list 
@@ -84,14 +84,14 @@ class List
    pre: an instance of List exists and is not empty
    post: returns the number of nodes in the list that stores target 
    */
-   int Find(const itemType target) const;
+   //int Find(const itemType target) const;
 
    /*
    pre:  an instance of List exists and is not empty 
    post: deletes all nodes that store target.  Returns
          the number of nodes deleted 
    */
-   int DeleteItem(const itemType target);
+   //int DeleteItem(const itemType target);
 
  private:
    int length;   //length of the list
