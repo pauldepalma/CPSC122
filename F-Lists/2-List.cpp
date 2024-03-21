@@ -10,10 +10,8 @@ List::List()
  length = 0;
  head = NULL;
 }
-
-
-//No need to write this function
-//List::~List()
+//
+List::~List();
 
 void List::PutItemH(itemType itemIn)
 {
@@ -33,4 +31,3 @@ void List::Print() const
    cur = cur->next;
   }
 }
-
