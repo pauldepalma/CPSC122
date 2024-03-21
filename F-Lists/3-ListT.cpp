@@ -21,7 +21,6 @@ void ListT::PutItemH(itemType item)
  if (length == 0)
   tail = tmp;  
  length++;
- tail = NULL;
 }
 
 void ListT::Print() const
