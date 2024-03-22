@@ -30,7 +30,6 @@ class ListT
    */ 
    ListT();
 
-
    /*
 
    pre: An instance of ListT exists.  This is the destructor function, automatically
@@ -66,6 +65,8 @@ class ListT
    itemType GetItemH() const;
 
    /*
+
+   /*
    pre: an instance of listT exists and is not empty
    post: Node pointed to by head is deleted 
    */
@@ -88,12 +89,15 @@ class ListT
    post: node at the tail of the list is deleted 
    */
    void DeleteItemT();
+   */
 
    /*
    pre: an instance of listT exists and is not empty
    post: contents of list nodes are displayed on subsequent lines, head to tail. 
    */
    void Print() const;
+
+   /*
   
    /*
    pre: an instance of ListT exists and is not empty
@@ -107,6 +111,7 @@ class ListT
          the number of nodes deleted 
    */
    int DeleteItem(const itemType target);
+   */
 
  private:
    /*
@@ -115,7 +120,7 @@ class ListT
    post: returns the address of the node just before the 
          node pointed to by the tail 
    */
-   node* PtrTo();
+   //node* PtrTo();
    int length;   //length of the list
    node* head;   //points to the first node on the list 
    node* tail;   //points to the last node on the list 
