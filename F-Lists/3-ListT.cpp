@@ -5,10 +5,15 @@ using namespace std;
 
 ListT::ListT()
 {
+ head = NULL;
+ tail = NULL;
+ length = 0;
 }
 
 ListT::~ListT()
-{}
+{
+ cout << "I'm in the desctructor" << endl;
+}
 
 void ListT::PutItemH(itemType item)
 {

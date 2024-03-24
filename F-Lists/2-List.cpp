@@ -10,8 +10,12 @@ List::List()
  length = 0;
  head = NULL;
 }
-//
-List::~List();
+//Destructor
+List::~List()
+{
+ cout << "I'm in the destructor" << endl;
+}
+
 
 void List::PutItemH(itemType itemIn)
 {

@@ -1,7 +1,7 @@
 /*
 Name: Paul De Palma
 Class: CPSC 122, Section 1
-Date Submitted: March, 2022
+Date Submitted: March 23, 2024 
 Assignment: N/A 
 Description: Program illustrates a linked list both head and tail pointers 
 */
@@ -64,7 +64,6 @@ class ListT
    */
    itemType GetItemH() const;
 
-   /*
 
    /*
    pre: an instance of listT exists and is not empty
@@ -89,7 +88,6 @@ class ListT
    post: node at the tail of the list is deleted 
    */
    void DeleteItemT();
-   */
 
    /*
    pre: an instance of listT exists and is not empty
@@ -97,7 +95,6 @@ class ListT
    */
    void Print() const;
 
-   /*
   
    /*
    pre: an instance of ListT exists and is not empty
@@ -111,7 +108,6 @@ class ListT
          the number of nodes deleted 
    */
    int DeleteItem(const itemType target);
-   */
 
  private:
    /*
@@ -120,7 +116,8 @@ class ListT
    post: returns the address of the node just before the 
          node pointed to by the tail 
    */
-   //node* PtrTo();
+   node* PtrTo();
+
    int length;   //length of the list
    node* head;   //points to the first node on the list 
    node* tail;   //points to the last node on the list 

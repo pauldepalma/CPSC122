@@ -39,7 +39,7 @@ class List
    post: All dynamically declared memory, i.e., the memory for all nodes, has been
         returned to the heap.   
    */ 
-   //   ~List();
+   ~List();
 
    //Head-related functions
    /*

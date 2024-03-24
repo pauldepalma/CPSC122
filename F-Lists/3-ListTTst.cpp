@@ -5,8 +5,10 @@ using namespace std;
 
 int main()
 {
- //Static list 
+ 
  ListT lst;
+ cout << "Test PutItemH and Print" << endl;
+ cout << "Correct if output is 4, 3, 2, 1, 0 on subsequent lines" << endl;
  for (int i = 0; i < 5; i++) 
    lst.PutItemH(i);
  lst.Print();
