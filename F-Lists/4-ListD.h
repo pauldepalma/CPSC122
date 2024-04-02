@@ -86,8 +86,10 @@ class ListD
    Comment: Used in conjunction with functions that insert and delete   
    pre:  ListD exists, pos is the position where the new node is to be
          inserted. pos is in the range [1..length+1].
-   Post: Returns insertion point A (see the implemention of insert)
-         used in inserting a node in a list 
+   Post: Returns insertion point A (see the implemention of insert), the node 
+         just before the insertion point. So, n the case of insertion, 
+	 if you wanted your new node to be in position 3, 
+         A would point to the node in position 2.
    */
    doubleNode* FindPosition(int pos);
 
