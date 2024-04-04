@@ -1,14 +1,14 @@
 stack_comp: stackTst.o stack.o list.o
 	g++ -o stack stackTst.o stack.o list.o
 
-stackTst: stackTst.cpp
+stackTst.o: stackTst.cpp
 	g++ -c stackTst.cpp 
 
-stack: stack.cpp
+stack.o: stack.cpp
 	g++ -c stack.cpp 
 
-list: list.cpp
+list1.o: list1.cpp
 	g++ -c list.cpp 
 
-clean: list.o stack.o stackTst.o 
+clean :
 	rm *.o

@@ -12,6 +12,7 @@ List::List()
 
 List::~List()
 {
+ cout << "destructor" << endl;
  while(length > 0)
   DeleteItemH();
 }

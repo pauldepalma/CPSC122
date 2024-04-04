@@ -8,7 +8,6 @@ Stack::Stack() : List()
 {
 }
 
-
 void Stack::Push(itemType newItem)
 { 
  PutItemH(newItem);
