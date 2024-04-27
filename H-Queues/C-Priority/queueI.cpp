@@ -1,4 +1,4 @@
-//QueueI using List and composition 
+//QueueI inherits from List 
 #include <iostream>
 using namespace std;
 #include "queueI.h"
