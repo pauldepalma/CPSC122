@@ -1,22 +1,23 @@
 /*
-Name: Paul De Palma
+Name: Your Name 
 Class: CPSC 122, Section 1
-Project Number: Test 3A 
-Header file for a simple linked list that adds and deletes at the head
+Project Number: Project 12 
+Header file for a linked list that adds and deletes at the head.
 The following functions are to be written recursively, either directly or indirectly:
 ~List()
 Print()
 PrintRev()
 GetLength()
 
-Notice that there are private member companion functions for all of these. These should 
-give you a hint as to how to proceed.  The structure of the the recursive C-String
-functions in .../github/pauldepalma/CPSC122/I-Recursion should help.
+Notice that there are private member companion functions for each of these among the private
+functions.  This should give you a hint as to how to proceed.  
+The the recursive C-String functions in .../github/pauldepalma/CPSC122/I-Recursion should help.
 
 Notice also that there is no length variable among the private member varialbles.  You 
 may not add one.
-*/
 
+You may not alter this file. 
+*/
 
 #ifndef LIST
 #define LIST
@@ -33,6 +34,11 @@ class List
 {
  public:
    List();
+
+   /*
+   The destructor function must make use one of the functions below accomplish its task
+   of returning memory to the heap. 
+   */
    ~List();
 
    /*
@@ -78,7 +84,6 @@ class List
    int GetLength();
   
  private:
-   //Utility functions to assist recursive traversals of list 
    int GetLength(node* cur);
    void Print(node* cur);
    void PrintRev(node* cur);

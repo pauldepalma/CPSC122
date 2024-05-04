@@ -3,8 +3,8 @@ using namespace std;
 
 #include "list.h"
 
-
-//Non-recursive functions. I have written them for you.
+//Non-recursive functions. 
+//I have written them for you.
 List::List()
 {
  head = NULL;
@@ -40,21 +40,30 @@ void List::DeleteItemH()
 }
 
 //Write the following functions recursively or in such a way that they use
-//recursive functions.  
+//recursive functions. There is a pattern in the pairing of the functions.  
 
 void List::Print( )
-{
-}
+{}
+
+void Print(node* cur)
+{}
 
 void List::PrintRev( )
-{
-}
+{}
+
+void PrintRev(node* cur)
+{}
 
 int List::GetLength()
-{
- return 0;
-}
+{ return 0;}
+
+int GetLength(node* cur)
+{ return 0;}
 
 List::~List()
+{}
+
+void Destructor(node* cur)
 {
+ cout << "Destructor is running" << endl;
 }
