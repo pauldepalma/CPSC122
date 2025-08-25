@@ -1,8 +1,7 @@
-
 /*
 Name: Paul De Palma
 Class: CPSC 122
-Date Submitted: January 17, 2021
+Date Submitted: 8/25/2025 
 Assignment: example 3 
 Description: i/o with integers 
 */

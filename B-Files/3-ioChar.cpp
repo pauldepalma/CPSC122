@@ -1,7 +1,7 @@
 /*
 Name: Paul De Palma
 Class: CPSC 122 01
-Date Submitted: January 17, 2021
+Date Submitted: 8/25/2025
 Assignment: example 3 
 Description: Program illustrates reading & writing characters 
 Usage: .\a.out inFile outFile

@@ -1,7 +1,7 @@
 /*
 Name: Paul De Palma
 Class: CPSC 122 01
-Date Submitted: January 17, 2021
+Date Submitted: 8/25/2021 
 Assignment: example 1 
 Description: Program illustrates command line arguments 
 */

@@ -1,7 +1,7 @@
 /*
 Name: Paul De Palma
 Class: CPSC 122, Section 1
-Date Submitted: January 17, 2021
+Date Submitted: 8/25/2025 
 Assignment: Example 0 
 Description: Program illustrates size of various data types
 */

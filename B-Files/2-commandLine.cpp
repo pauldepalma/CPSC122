@@ -1,7 +1,7 @@
 /*
 Name: Paul De Palma
 Class: CPSC 122
-Date Submitted: January 17, 2021
+Date Submitted: 8/25/2025 
 Assignment: example 2 
 Description: Program illustrates numerical command line arguments 
 */
@@ -17,6 +17,6 @@ int main(int argc, char* argv[])
  cout << "Number of command line arguments: "  << argc << endl << endl;
  cout << "Arg 0: " << argv[0] << endl << endl;
  cout << "1st arg times 2nd = " << num1 * num2 << endl << endl;
- cout << "4th argument is a string: " << str3 << endl;
+ cout << "3rd argument is a string: " << str3 << endl;
 }
 
