@@ -20,7 +20,11 @@ int main(int argc, char* argv[])
  int* arr = new int[size]; //dynamic declaration of array
 
  for (int i = 0; i < size; i++)
-   arr[i] = i;
+   {
+    cout << i << endl;
+    arr[i] = i;
+   }
+   cout << endl;
 
  int found = binS(arr,size,target);
 

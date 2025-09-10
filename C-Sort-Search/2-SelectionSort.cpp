@@ -2,7 +2,7 @@
 Paul De Palma
 Class: CPSC 122
 GU Username: depalma
-Date Submitted: February 2, 2021 
+Date Submitted: September 9, 2025 
 Assignment: N/A
 Description: Demonstrates selection sort
 */
