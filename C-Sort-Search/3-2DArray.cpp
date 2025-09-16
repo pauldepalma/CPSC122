@@ -1,7 +1,6 @@
 /*
-Name: Paul De Palma
 Class: CPSC 122, Section 1
-Date Submitted: January 17, 2021
+Date Submitted: September 15, 2025
 Assignment: N/A 
 Description: Program illustrates manipulating a 2-D array. 
 */
@@ -10,43 +9,61 @@ Description: Program illustrates manipulating a 2-D array.
 #include <iostream>
 using namespace std;
 
-void swap(int stuff[][2],int,int);
+const int LIMIT = 100;
+const int ROWS = 5;
+const int COLS = 5;
 
-int main()
+void swap(int stuff [ROWS][COLS], int rowA, int rowB);
+void load(int stuff [ROWS][COLS]);
+void display(int stuff [ROWS][COLS]);
+
+int main(int argc, char* argv[])
 {
- int stuff[5][2];
+ int stuff[ROWS][COLS];
 
- for (int i = 0; i < 5; i++)
-   {
-     stuff[i][0] = i;    
-     stuff[i][1] = 4 - i;
-   }
-
- //display array in 2 column format
- for (int i = 0; i < 5; i++)
-     cout << stuff[i][0] << " " << stuff[i][1] << endl;
-
- swap(stuff, 0, 4); //exchange the 0th and 4th rows
+ load(stuff);
+ display(stuff);
  cout << endl;
-      
- //display array in 2 column format
- for (int i = 0; i < 5; i++)
-     cout << stuff[i][0] << " " << stuff[i][1] << endl;
-
-
+ swap(stuff,0,4);
+ display(stuff);
+ 
  return 0;
 }
 
-void swap(int stuff[][2], int frst, int lst)
+void load(int stuff[ROWS][COLS])
 {
- int tmp[1][2];
-
- tmp[0][0] = stuff[0][0];
- tmp[0][1] = stuff[0][1];
-
- stuff[0][0] = stuff[4][0];
- stuff[0][1] = stuff[4][1];
-
- stuff[4][0] = tmp[0][0];
- stuff[4][1] = tmp[0][1];
+   unsigned seed = time(0);
+   srand(seed);
+   
+   for (int k = 0; k < ROWS; k++)
+      for (int l = 0; l < COLS; l++)
+         stuff[k][l] = rand() % (LIMIT + 1);
 }
+
+
+void display(int stuff[ROWS][COLS])
+{
+ int k = 0;
+ int l = 0;
+ for (k = 0; k < ROWS; k++)
+ {
+   for (l = 0; l < COLS; l++)
+      cout << stuff[k][l] << '\t';
+   if (l % COLS == 0)
+      cout << endl;
+ }
+}
+
+//beginnings of swap
+void swap(int stuff[ROWS][COLS], int rowA, int rowB)
+{
+ int *rA = stuff[rowA];
+ int *rB = stuff[rowB];
+ for (int i = 0; i < COLS; i++)
+ {
+   int temp = rA[i];
+   rA[i] = rB[i];
+   rB[i] = temp;
+ }
+}
+

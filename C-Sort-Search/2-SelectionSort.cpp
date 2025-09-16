@@ -2,7 +2,7 @@
 Paul De Palma
 Class: CPSC 122
 GU Username: depalma
-Date Submitted: September 9, 2025 
+Date Submitted: September 15, 2025 
 Assignment: N/A
 Description: Demonstrates selection sort
 */
@@ -17,7 +17,7 @@ void selection_sort(int[],int);
 int find_small(int, int[], int);
 void swap(int, int, int[]);
 
-const int LIMIT = 100;  //max size of random integer in table`
+const int LIMIT = 100;  //max size of random integer in table
 
 int main(int argc, char* argv[])
 {
@@ -97,6 +97,7 @@ int find_small(int start, int arr[], int length)
  while(next < length)         
  {
   if (arr[next] < arr[idx_small]) //we've found a new smallest integer
+  ##if (arr[next] > arr[idx_small]) //we've found a new largest integer
      idx_small = next;
   next++;                        //look at the next position whether or not
                                 //we've found a new smallest 
