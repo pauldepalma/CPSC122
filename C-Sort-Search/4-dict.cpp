@@ -1,7 +1,7 @@
 /*
 Name: Paul De Palma
 Class: CPSC 12
-Date Submitted: 9/19, 2022
+Date Submitted: 9/19, 2025 
 Assignment: N/A 
 Description: illustrates using an array as a dictionary of multiplicative inverses.
             if array[k] = 0, k has no MI mod 26
