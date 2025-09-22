@@ -1,20 +1,23 @@
 /*
 Name: Paul De Palma
 Class: CPSC 122, Section 1
-Date Submitted: February 18, 2021
+Date Submitted: 9/22/2025
 Assignment: N/A 
 Description: Program illustrates classes and 3 file compilation 
 */
 
-#include "3-class.h"
 #include <iostream>
 using namespace std;
+
+//Notice that only the header file is included
+#include "4-class.h"
 
 int main(int argc, char* argv[])
 {
  int widthIn = atoi(argv[1]);
  int lengthIn = atoi(argv[2]);
 
+ //This invokes the constructor function
  Rectangle box(widthIn, lengthIn);
 
  cout << "My area is: " << box.getArea() << endl;

@@ -3,7 +3,8 @@
 #include <iostream>
 using namespace std;
 
-#include "3-class.h"
+//Notice that the header file is included
+#include "4-class.h"
 
 Rectangle::Rectangle(int widthIn, int lengthIn)
 {
@@ -12,8 +13,8 @@ Rectangle::Rectangle(int widthIn, int lengthIn)
  cout << "I am a Rectangle" << endl;
  cout << "I know my width: " <<  width << endl;
  cout << "I know my length: " <<  length << endl;
- cout << "I have some accessors (setters): getWidth, getLength, getArea" << endl;
- cout << "I have some mutators (getters): setWidth, setLength, setArea" << endl;
+ cout << "I have some accessors (getters): getWidth, getLength, getArea" << endl;
+ cout << "I have some mutators (setters): setWidth, setLength, setArea" << endl;
 }
 
 void Rectangle::setWidth(double widthIn)

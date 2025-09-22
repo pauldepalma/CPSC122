@@ -6,6 +6,9 @@ class Rectangle
 {
  public:
    //What can I do?
+
+   //Member functions or methods
+   //called the Constructor
    Rectangle(int widthIn, int lengthIn); 
    void   setWidth(double widthIn);
    void   setLength(double lengthIn);
@@ -13,6 +16,7 @@ class Rectangle
    double getLength() const; 
    double getArea() const;
 
+ //Member variables
  private:
    //What do I know?
    double width;
