@@ -1,7 +1,7 @@
 /*
 Name: Paul De Palma
 Class: CPSC 122, Section 1
-Date Submitted: February 18, 2021
+Date Submitted: 9/22/2025 
 Assignment: N/A 
 Description: Program illustrates arrays as pointers 
 */
@@ -34,6 +34,5 @@ void passStuff(int* dataArray,int size)    //pointer notation
 {
  for (int i = 0; i < 5; i++)               //array notation
    dataArray[i] = dataArray[i] + 10;
-
 }
 

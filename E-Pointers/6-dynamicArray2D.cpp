@@ -2,7 +2,7 @@
 /*
 Name: Paul De Palma
 Class: CPSC 122, Section 1
-Date Submitted: February 18, 2021
+Date Submitted: 9/23/2025 
 Assignment: N/A 
 Description: Program illustrates dynamic declaration of 2-D arrays 
 */
@@ -19,7 +19,7 @@ void display(int**);
 
 int main()
 {
-
+ //Produces and RXC array
  int** example = new int* [R];   //declare an array of R pointers to int
  for (int i = 0; i < R; i++)     //R int arrays, each of size C 
      example[i] = new int[C];

@@ -7,14 +7,19 @@ using namespace std;
 //Constructor
 MyString::MyString(char const* strIn)
 {
- length = strlen(strIn);  //strlen function
+ int length = myStrLen(strIn);
  str = new char[length + 1];
- strcpy(str, strIn); //strlen function
+ int i = 0;
+ while(i < length)
+ {
+  str[i] = strIn[i];
+  i++;
+ }
+ str[i] = '\0';
 
 }
 
 //Destructor function
-//once you get the constructor working, remove the comments.
 MyString::~MyString()
 {
  delete []str; 

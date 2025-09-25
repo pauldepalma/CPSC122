@@ -21,6 +21,7 @@ int main()
  int x = 0 ;
  int y = 0 ;
 
+ //Guess the output
  x = 5;
  y = 10; 
  swap1(x,y);

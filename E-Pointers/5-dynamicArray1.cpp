@@ -1,9 +1,9 @@
 /*
 Name: Paul De Palma
 Class: CPSC 122, Section 1
-Date Submitted: February 18, 2021
+Date Submitted: 9/23/2025 
 Assignment: N/A 
-Description: Program illustrates other aspects of dynamic array declaration
+Description: Dynamically create an array in a function 
 */
 
 
@@ -15,9 +15,7 @@ int*  getData(int);
 
 int main(int argc, char* argv[])
 {
-
  int size = atoi(argv[1]);
-
   
  int* stuff = getData(size); 
 
@@ -27,13 +25,13 @@ int main(int argc, char* argv[])
  return 0;
 }
 
-//add 10 to each of the parameters
+//create an array.  Notice that it's not locals
 int* getData(int size)
 {
  int* arrayStuff = new int[size];
 
  for (int i = 0; i < size; i++)
-   arrayStuff[i] = i;
+   arrayStuff[i] = i + 10;
  return arrayStuff;
 }
 

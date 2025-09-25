@@ -91,7 +91,6 @@ class MyString
 
    char* str; //points to a dynamically declared null-terminated 
               //array of characters 
-   int length;//number of characters in the array pointed to by str 
 }; 
 #endif
 
