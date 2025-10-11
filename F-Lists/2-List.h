@@ -1,9 +1,11 @@
 /*
 Name: Paul De Palma
 Class: CPSC 122, Section 1
-Date Submitted: 9/29/2025 
+Date Submitted: 10/11/2025 
 Assignment: N/A 
-Description: Program illustrates a simple linked list  
+Description: Adds two new functions to 1-List.h
+   List(List* LstIn), the copy constructor 
+   int InsertItem(int pos,itemType), a function that inserts a node at a particular position 
 */
 
 #ifndef LIST_H
@@ -31,6 +33,12 @@ class List
    post: an instance of List exists
    */ 
    List();
+
+   /*
+   pre: lstIn points to a List 
+   post: Current list is a copy of lstIn 
+   */
+   List(List* lstIn);
 
    /*
    pre: An instance of List exists.  This is the destructor function, automatically
@@ -73,7 +81,6 @@ class List
    */
    int GetLength() const;
 
-
    /*
    pre: an instance of list exists and is not empty
    post: contents of list nodes are displayed on subsequent lines, head to tail. 
@@ -92,6 +99,18 @@ class List
          the number of nodes deleted 
    */
    int DeleteItem(const itemType target);
+
+   /*
+   pre:  an instance of List exists 
+   post: inserts a node anywhere in the list, along with its information, using this numbering scheme:
+         0 : Before the current head
+         1 : After the current head
+         2 : After the second node
+         ...
+         n : After the last node (where n is the number of the last node. If there are 4 nodes, n = 4) 
+         the number of nodes deleted 
+   */
+   void InsertItem(int pos,itemType);
 
  private:
    int length;   //length of the list

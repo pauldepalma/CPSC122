@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-#include "2-List.h"
+#include "1-List.h"
 
 int main()
 {
@@ -24,7 +24,7 @@ int main()
    lst2->PutItemH(i);
  lst2->Print();
 
-//Destructor must be invoked
+//Destructor must be invoked on dynamically declared lists
  delete lst2;
 
  cout << endl;

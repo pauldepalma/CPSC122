@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-#include "2-List.h"
+#include "1-List.h"
 
 
 //Constructor
@@ -16,7 +16,6 @@ List::~List()
  cout << "I'm in the destructor" << endl;
 }
 
-
 void List::PutItemH(itemType itemIn)
 {
  node* tmp = new node;
@@ -26,7 +25,7 @@ void List::PutItemH(itemType itemIn)
  length++;
 }
 
-void List::Print() const
+void List::Print() 
 {
  node* cur = head;
  while(cur != NULL)
