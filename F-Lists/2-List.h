@@ -1,11 +1,14 @@
+//A work in progress: 10/13
+
 /*
 Name: Paul De Palma
 Class: CPSC 122, Section 1
 Date Submitted: 10/11/2025 
 Assignment: N/A 
-Description: Adds two new functions to 1-List.h
+Description: Adds three new functions and a tail pointer to 1-list.h
    List(List* LstIn), the copy constructor 
    int InsertItem(int pos,itemType), a function that inserts a node at a particular position 
+   int DeleteItem(const itemType target), a function that deletes all items in a list
 */
 
 #ifndef LIST_H
@@ -54,13 +57,13 @@ class List
    pre: an instance of List exists
    post: node containing itemIn is at the head of the list 
    */
-   void PutItemH(const itemType itemIn);
+   void PutItemH(itemType itemIn);
 
    /*
    pre: an instance of List exists and is not empty
    post: Returns the contents pointed to by the head of the list 
    */
-   itemType GetItemH() const;
+   itemType GetItemH();
 
    /*
    pre: an instance of list exists and is not empty
@@ -73,32 +76,32 @@ class List
    pre: an instance of List exists
    post: returns true if list is empty, false otherwise
    */ 
-   bool IsEmpty() const;
+   bool IsEmpty();
 
    /*
    pre: an instance of List exists
    post: returns length of the list 
    */
-   int GetLength() const;
+   int GetLength();
 
    /*
    pre: an instance of list exists and is not empty
    post: contents of list nodes are displayed on subsequent lines, head to tail. 
    */
-   void Print() const;
+   void Print();
   
    /*
    pre: an instance of List exists and is not empty
    post: returns the number of nodes in the list that stores target 
    */
-   int Find(const itemType target) const;
+   int Find(itemType target) const;
 
    /*
    pre:  an instance of List exists and is not empty 
    post: deletes all nodes that store target.  Returns
          the number of nodes deleted 
    */
-   int DeleteItem(const itemType target);
+   int DeleteItem(itemType target);
 
    /*
    pre:  an instance of List exists 
@@ -115,6 +118,7 @@ class List
  private:
    int length;   //length of the list
    node* head;   //points to the first node on the list 
+   node* tail;   //points to the last node in the list
 };
 #endif
 

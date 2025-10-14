@@ -61,7 +61,7 @@ class List
    void DeleteItemH();
 
 
-   //A few easy general functiond  
+   //A few easy general functions  
    /*
    pre: an instance of List exists
    post: returns true if list is empty, false otherwise
@@ -106,21 +106,7 @@ class List
    */
    void DeleteItemT();
 
-   //A more interesting general function 
-   /*
-   pre:  an instance of List exists
-   post: inserts a node anywhere in the list, along with its information, 
-         using this numbering scheme:
-         0 : Before the current head
-         1 : After the current head
-         2 : After the second node
-         ...
-         n : After the last node (where n is the number of the last node. 
-             If there are 4 nodes, n = 4)
-   */
-   void InsertItem(int pos,itemType);
-
-
+   
  private:
    int length;   //length of the list
    node* head;   //points to the first node on the list 
