@@ -9,13 +9,20 @@ List::List()
 {       
  length = 0;
  head = NULL;
+ tail = NULL;
 }
 //Destructor
 List::~List()
 {
- cout << "I'm in the destructor" << endl;
 }
 
+
+bool List::IsEmpty()
+{
+  if (length == 0)
+    return true;
+  return false;
+}
 
 void List::PutItemH(itemType itemIn)
 {
@@ -23,10 +30,12 @@ void List::PutItemH(itemType itemIn)
  tmp->item = itemIn;
  tmp->next = head;
  head = tmp;
+ if (IsEmpty())
+   tail = tmp;
  length++;
 }
 
-void List::Print() const
+void List::Print()
 {
  node* cur = head;
  while(cur != NULL)

@@ -3,12 +3,22 @@
 /*
 Name: Paul De Palma
 Class: CPSC 122, Section 1
-Date Submitted: 10/11/2025 
+Date Submitted: 10/19/2025 
 Assignment: N/A 
-Description: Adds three new functions and a tail pointer to 1-list.h
-   List(List* LstIn), the copy constructor 
+Description: Adds three six functions and a tail pointer to 1-list.h
+   List(List &ListIn), the copy constructor. The new class is a copy of ListIn
    int InsertItem(int pos,itemType), a function that inserts a node at a particular position 
    int DeleteItem(const itemType target), a function that deletes all items in a list
+   
+   //These are done using the tail pointer.  List traversal is not necessary
+   void PutItemT(const itemType itemIn);
+   itemType GetItemT() const;
+   void DeleteItemT();
+   
+   Adds a tail pointer that is NULL if the list is empty, else  points to the last node in the list.
+   Notice that if the list is empty, PutItemT and PutItemH are identical, but the current PutItemH 
+   to be modified to account for the tail pointer
+   
 */
 
 #ifndef LIST_H
@@ -35,6 +45,17 @@ class List
 	List* lst1 = new List;
    post: an instance of List exists
    */ 
+   
+   
+   /*
+   Desc: A list is passed in by reference. The list being is a copy of that reference
+         list
+   pre: An instance of ListIn exists
+   post: List is created and is a copy of ListIn
+   */
+   List(List &LstIn);
+   
+
    List();
 
    /*
@@ -71,6 +92,29 @@ class List
    */
    void DeleteItemH();
    
+   //Tail-Related Functions
+    /*
+   Desc: Uses tail pointer to perform the insertion. List traversal not necessary. 
+   pre: an instance of listT exists
+   post: node containing itemIn is at the tail of the list 
+   */ 
+   void PutItemT(itemType itemIn);
+
+   /*
+   Desc: Uses tail pointer to perform the retrieval. List traversal not necessary. 
+   pre: an instance of list exists and is not empty
+   post: Returns the contents of the node at the tail of the list. 
+   */
+   itemType GetItemT();
+
+   /*
+   Desc: Uses tail pointer to perform the retrieval. List traversal not necessary. 
+   pre: an instance of list exists and is not empty
+   post: node at the tail of the list is deleted 
+   */
+   void DeleteItemT();
+   
+   
    //General operations on List,  starting with the easiest  
    /*
    pre: an instance of List exists
@@ -94,7 +138,7 @@ class List
    pre: an instance of List exists and is not empty
    post: returns the number of nodes in the list that stores target 
    */
-   int Find(itemType target) const;
+   int Find(itemType target);
 
    /*
    pre:  an instance of List exists and is not empty 
@@ -104,14 +148,9 @@ class List
    int DeleteItem(itemType target);
 
    /*
-   pre:  an instance of List exists 
-   post: inserts a node anywhere in the list, along with its information, using this numbering scheme:
-         0 : Before the current head
-         1 : After the current head
-         2 : After the second node
-         ...
-         n : After the last node (where n is the number of the last node. If there are 4 nodes, n = 4) 
-         the number of nodes deleted 
+   pre:  an instance of List exists. Pos indicates the position of the node after the insertion
+         So if pose = 1, insert befor the head of the list.  
+   post: inserts a node anywhere in the list
    */
    void InsertItem(int pos,itemType);
 

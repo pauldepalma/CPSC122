@@ -24,7 +24,7 @@ int main()
    lst2->PutItemH(i);
  lst2->Print();
 
-//Destructor must be invoked
+//Destructor must be invoked for dynamically declared classes
  delete lst2;
 
  cout << endl;
