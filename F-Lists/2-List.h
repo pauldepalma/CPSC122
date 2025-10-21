@@ -7,7 +7,8 @@ Date Submitted: 10/19/2025
 Assignment: N/A 
 Description: Adds three six functions and a tail pointer to 1-list.h
    List(List &ListIn), the copy constructor. The new class is a copy of ListIn
-   int InsertItem(int pos,itemType), a function that inserts a node at a particular position 
+   int InsertItem(int pos,itemType), a function that inserts a node at a 
+   particular position 
    int DeleteItem(const itemType target), a function that deletes all items in a list
    
    //These are done using the tail pointer.  List traversal is not necessary

@@ -12,12 +12,12 @@ List::List()
  tail = NULL;
 }
 
- List(List &LstIn)
+ List::List (List &LstIn)
 {
  //Hint: Traverse LstIn. For each node, keep track of the position and the item.
  //Use Inser (InsertItem(int pos,itemType itemIn) to add copy of what you've just read
  //to the list.  If you wrote Insert correctly, it should keep track of the tail pointer
-)
+}
 
 //Destructor
 List::~List()
