@@ -9,7 +9,6 @@ List::List()
 {       
  length = 0;
  head = NULL;
- tail = NULL;
 }
 
  List::List (List &LstIn)
