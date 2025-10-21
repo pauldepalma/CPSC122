@@ -92,7 +92,7 @@ class List
    pre: an instance of List exists
    post: node containing itemIn is at the tail of the list 
    */
-   void PutItemT(itemType item);
+   void PutItemT(itemType itemIn);
 
    /*
    pre: an instance of List exists and is not empty

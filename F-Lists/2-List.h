@@ -17,8 +17,10 @@ Description: Adds three six functions and a tail pointer to 1-list.h
    
    Adds a tail pointer that is NULL if the list is empty, else  points to the last node in the list.
    Notice that if the list is empty, PutItemT and PutItemH are identical, but the current PutItemH 
-   to be modified to account for the tail pointer
+   to be modified to account for the tail pointer.
    
+   Write the functions in this order:
+   GetItemT, PutItemT, DeleteItemT, InsertItemT, DeleteItem2, Copy constructor.
 */
 
 #ifndef LIST_H
@@ -152,7 +154,7 @@ class List
          So if pose = 1, insert befor the head of the list.  
    post: inserts a node anywhere in the list
    */
-   void InsertItem(int pos,itemType);
+   void InsertItem(int pos,itemType itemIn);
 
  private:
    int length;   //length of the list
