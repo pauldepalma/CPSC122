@@ -38,8 +38,6 @@ void List::PutItemH(itemType itemIn)
  tmp->item = itemIn;
  tmp->next = head;
  head = tmp;
- if (IsEmpty())
-   tail = tmp;
  length++;
 }
 
