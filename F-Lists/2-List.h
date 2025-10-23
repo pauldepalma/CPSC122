@@ -7,8 +7,7 @@ Date Submitted: 10/19/2025
 Assignment: N/A 
 Description: Adds three six functions and a tail pointer to 1-list.h
    List(List &ListIn), the copy constructor. The new class is a copy of ListIn
-   int InsertItem(int pos,itemType), a function that inserts a node at a 
-   particular position 
+   int InsertItem(int pos,itemType), a function that inserts a node at a particular position 
    int DeleteItem(const itemType target), a function that deletes all items in a list
    
    //These are done using the tail pointer.  List traversal is not necessary
@@ -112,6 +111,7 @@ class List
 
    /*
    Desc: Uses tail pointer to perform the retrieval. List traversal not necessary. 
+   See PtrTo among the private functions.  It will help you write this function. 
    pre: an instance of list exists and is not empty
    post: node at the tail of the list is deleted 
    */
@@ -144,6 +144,8 @@ class List
    int Find(itemType target);
 
    /*
+   Desc: See delNode among the private functions. It will help remove some of the complexity of this
+   function. 
    pre:  an instance of List exists and is not empty 
    post: deletes all nodes that store target.  Returns
          the number of nodes deleted 
@@ -158,6 +160,22 @@ class List
    void InsertItem(int pos,itemType itemIn);
 
  private:
+
+ /*
+   Desc: Helper function for DeleteItemT
+   pre: length of list > 1
+   post: returns the address of the node just before the
+         node pointed to by the tail
+   */
+   node* PtrTo();
+
+   /*
+   Desc: deletes the node pointed to by the argument. Helper function for DeleteItem
+   pre: argument points to the node to be deleted
+   post: node pointed to by the argument has been deleted
+   */
+   void delNode(node* delPtA);
+
    int length;   //length of the list
    node* head;   //points to the first node on the list 
    node* tail;   //points to the last node in the list
