@@ -1,16 +1,15 @@
-//A work in progress: 10/13
 
 /*
 Name: Paul De Palma
 Class: CPSC 122, Section 1
 Date Submitted: 10/19/2025 
-Assignment: N/A 
-Description: Adds three six functions and a tail pointer to 1-list.h
+Assignment: 7 
+Description: Adds six functions and a tail pointer to 1-list.h
    List(List &ListIn), the copy constructor. The new class is a copy of ListIn
    int InsertItem(int pos,itemType), a function that inserts a node at a particular position 
    int DeleteItem(const itemType target), a function that deletes all items in a list
    
-   //These are done using the tail pointer.  List traversal is not necessary
+   //These are done using the tail pointer.  
    void PutItemT(const itemType itemIn);
    itemType GetItemT() const;
    void DeleteItemT();
@@ -20,7 +19,7 @@ Description: Adds three six functions and a tail pointer to 1-list.h
    to be modified to account for the tail pointer.
    
    Write the functions in this order:
-   GetItemT, PutItemT, DeleteItemT, InsertItemT, DeleteItem2, Copy constructor.
+   GetItemT, PutItemT, DeleteItemT, InsertItemT, DeleteItemT, Copy constructor.
 */
 
 #ifndef LIST_H
@@ -40,32 +39,23 @@ class List
 
   //Class-related functions
    /*
-   pre: None. This is the constructor function, invoked like this from the 
+   pre: None. This is a constructor function, invoked like this from the 
         the client program: 
         List lst;
 	or
 	List* lst1 = new List;
    post: an instance of List exists
    */ 
-   
+   List();
    
    /*
-   Desc: A list is passed in by reference. The list being is a copy of that reference
-         list
+   Desc: This is an overloaded constructor function.  A list is passed in by reference. The list being 
+         constructed is a copy of that reference list.
    pre: An instance of ListIn exists
    post: List is created and is a copy of ListIn
    */
    List(List &LstIn);
    
-
-   List();
-
-   /*
-   pre: lstIn points to a List 
-   post: Current list is a copy of lstIn 
-   */
-   List(List* lstIn);
-
    /*
    pre: An instance of List exists.  This is the destructor function, automatically
         invoked in the case of a static declaration, explcitly invoked, using the delete
@@ -76,6 +66,7 @@ class List
    ~List();
 
    //Head-related functions
+ 
    /*
    pre: an instance of List exists
    post: node containing itemIn is at the head of the list 
