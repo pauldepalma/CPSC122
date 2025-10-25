@@ -17,6 +17,7 @@ int main()
  lst1.Print();
 
  cout << endl;
+ 
  cout << "Dynamic Declaration" << endl;
  cout << "Test PutItemH and Print" << endl;
  cout << "Correct if output is 4, 3, 2, 1, 0 on subsequent lines" << endl;
@@ -24,9 +25,8 @@ int main()
    lst2->PutItemH(i);
  lst2->Print();
 
-//Destructor must be invoked on dynamically declared lists
- delete lst2;
 
- cout << endl;
+ delete lst2; //destructor must be explicitly invoke on dynamically declared lists.
+
  return 0;
 }

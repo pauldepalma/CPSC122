@@ -17,6 +17,7 @@ int main()
  lst1.Print();
 
  cout << endl;
+ 
  cout << "Dynamic Declaration" << endl;
  cout << "Test PutItemH and Print" << endl;
  cout << "Correct if output is 4, 3, 2, 1, 0 on subsequent lines" << endl;
