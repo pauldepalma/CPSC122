@@ -2,7 +2,7 @@
 #include <climits>
 using namespace std;
 
-#include "4-ListD.h"
+#include "3-ListD.h"
 
 ListD::ListD()
 {
@@ -16,7 +16,6 @@ ListD::ListD(ListD* lst)
  doubleNode* cur = lst->FindPosition(2);
  for (int i = 1; i <= lst->length; i++)
  {
-  cout << cur->item << endl;
   Insert(cur->item,i);
   cur = cur->next;
  }
@@ -50,6 +49,9 @@ doubleNode* ListD::FindPosition(int pos)
 {
  //Inserting at the tail is a special case.  It can be made much more efficient than
  //this.
+ //You could also make this more efficient by choosing whether to search from the head or the
+ //the tail, depending on where pos is with respect to the middle of the list. 
+
  doubleNode* cur = head;
  int i = 0;  //begin at the dummy node
  while (i < pos - 1)

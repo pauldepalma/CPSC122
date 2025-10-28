@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-#include "4-ListD.h"
+#include "3-ListD.h"
 
 //All tests are controlled by a dedicated function
 void TestInsert();
@@ -9,7 +9,7 @@ void TestCopyConstructor();
 
 int main()
 {
- //TestInsert();
+// TestInsert();
  TestCopyConstructor();
 }
 
@@ -17,7 +17,6 @@ int main()
 
 void TestInsert()
 {
-
  ListD* lst = new ListD;
  for (int i = 1; i <= 5; i++)
   lst->Insert(i,i);
@@ -41,20 +40,20 @@ void TestInsert()
  
  cout << "test insert within the list" << endl; 
  lst->Insert(50,5);
- cout << "Passed Insert Test 4 if 50 appears in middle position" << endl; 
+ cout << "Passed Insert Test 4 if 50 appears in the fifth position" << endl; 
  lst->PrintForward();
  cout << endl;
- //delete lst;
+ delete lst;
 }
 
 void TestCopyConstructor()
 {
- ListD* lst1 = new ListD;
+ ListD* lst1 = new ListD();
  for (int i = 1; i <= 3; i++)
   lst1->Insert(i,i);
 
- ListD* lst2(lst1);
-
+ ListD* lst2 = new ListD(lst1);
+ 
  cout << "Test Copy Constructor" << endl; 
  cout << "Test passed if copy is indentical to initial list" << endl; 
  cout << "Traverse inital list" << endl;
@@ -63,6 +62,6 @@ void TestCopyConstructor()
  cout << "Traverse copy" << endl;
  lst2->PrintForward();
 
- //delete lst1;
- //delete lst2;
+ delete lst1;
+ delete lst2;
 }

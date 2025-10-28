@@ -1,7 +1,7 @@
 /*
 Name: Paul De Palma
-Class: CPSC 122, Section 1
-Date Submitted: March 27, 2024 
+Class: CPSC 122 
+Date Submitted: Oct. 27, 2025 
 Assignment: N/A 
 Description: header file for a doubly linked list with dummy nodes at head and tail
 */
@@ -77,7 +77,7 @@ class ListD
    pre:  ListD exists
    post: Nodes in the list are in ascending order.  The algorithm used
          to put nodes in order is selection sort. Use the functions
-	 found here: .../C-Search-Sort/1-selectionSort.cpp 
+	 found here: .../C-Search-Sort/2-selectionSort.cpp 
    */
    void Sort();
   
@@ -87,7 +87,7 @@ class ListD
    pre:  ListD exists, pos is the position where the new node is to be
          inserted. pos is in the range [1..length+1].
    Post: Returns insertion point A (see the implemention of insert), the node 
-         just before the insertion point. So, n the case of insertion, 
+         just before the insertion point. So, in the case of insertion, 
 	 if you wanted your new node to be in position 3, 
          A would point to the node in position 2.
    */
