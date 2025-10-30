@@ -1,7 +1,7 @@
 /*
 Name: Paul De Palma
 Class: CPSC 122, Section 1
-Date Submitted: February 25, 2021
+Date Submitted: 10/29/2025
 Assignment: N/A 
 Description: simple linked list using templates 
 */
@@ -28,13 +28,13 @@ class List
    pre: an instance of lists exists
    post: returns true if list is empty, false otherwise
    */ 
-   bool IsEmpty() const;
+   bool IsEmpty();
 
    /*
    pre: an instance of list exists
    post: returns length of the list 
    */
-   int GetLength() const;
+   int GetLength();
 
    /*
    pre: an instance of list exists
@@ -46,7 +46,7 @@ class List
    pre: an instance of list exists and is not empty
    post: Returns the contents of the head of the list. 
    */
-   T GetItemH() const;
+   T GetItemH();
 
    /*
    pre: an instance of list exists and is not empty
@@ -58,14 +58,14 @@ class List
    pre: an instance of list exists and is not empty
    post: contents of list nodes are displayed on subsequent lines 
    */
-   void Print() const;
+   void Print();
   
    /*
    pre:  an instance of List exists and contains n items, n >= 1.
    post: returns the position of item if item is in the list, -1 
          otherwise.  
    */
-   int Find(const T) const;
+   int Find(const T);
 
    /*
    pre:  an instance of List exists and contains n items, n >= 1; 
@@ -73,7 +73,7 @@ class List
 	 Notice you've alread written a function to handle the case 
          where n = 1. Make use of it here. 
    */
-   void DeleteItem(const int pos);
+   void DeleteItem(int pos);
 
  private:
    int length;   //length of the List

@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-#include "5-ListTmpl.h"
+#include "4-ListTmpl.h"
 
 template <typename T>
 List<T>::List()
@@ -17,7 +17,7 @@ List<T>::~List()
 }
 
 template <typename T>
-void List<T>::PutItemH(const T newItem)
+void List<T>::PutItemH(T newItem)
 {
  node<T>* tmp = new node<T>;
  tmp->item = newItem;
@@ -27,7 +27,7 @@ void List<T>::PutItemH(const T newItem)
 }
 
 template <typename T>
-bool List<T>::IsEmpty() const
+bool List<T>::IsEmpty()
 {
  if (length == 0)
   return true;
@@ -36,14 +36,14 @@ bool List<T>::IsEmpty() const
 
 
 template <typename T>
-int List<T>::GetLength() const
+int List<T>::GetLength()
 {
  return 0;
 }
 
 
 template <typename T>
-T List<T>::GetItemH() const
+T List<T>::GetItemH()
 {
  return head->item; 
 }
@@ -54,7 +54,7 @@ void List<T>::DeleteItemH()
 }
 
 template <typename T>
-void List<T>::Print() const
+void List<T>::Print()
 {
  node<T>* tmp = head;
  int ct = 0;
@@ -67,12 +67,12 @@ void List<T>::Print() const
 	
 }
 template <typename T>
-int List<T>::Find(const T item) const
+int List<T>::Find(T item)
 {
  return -1;
 }
 
 template <typename T>
-void List<T>:: DeleteItem(const int pos)
+void List<T>:: DeleteItem(int pos)
 {
 }
