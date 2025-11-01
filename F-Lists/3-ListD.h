@@ -76,7 +76,7 @@ class ListD
    /*
    pre:  ListD exists
    post: Nodes in the list are in ascending order.  The algorithm used
-         to put nodes in order is selection sort. Use the functions
+         to put nodes in order is selection sort. Use the functions, suitably altered, of course,
 	 found here: .../C-Search-Sort/2-selectionSort.cpp 
    */
    void Sort();
@@ -85,6 +85,7 @@ class ListD
    /*
    Comment: Used in conjunction with functions that insert and delete   
    pre:  ListD exists, pos is the position where the new node is to be
+
          inserted. pos is in the range [1..length+1].
    Post: Returns insertion point A (see the implemention of insert), the node 
          just before the insertion point. So, in the case of insertion, 
