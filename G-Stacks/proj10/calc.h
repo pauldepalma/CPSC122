@@ -2,9 +2,9 @@
 /*
 Name: Paul De Palma
 Class: CPSC 122, Section 1
-Date Submitted: February 25, 2021
+Date Submitted: April 24, 2022 
 Assignment: N/A 
-Description: Part 1 of Calculator Assignment 
+Description: Part 2 of Calculator Assignment 
 To Compile: make
 To Execute: ./calc "(121+12)"
 */
@@ -21,11 +21,12 @@ class Calc
   /* 
   pre: argvIn is a pointer to the C-String entered at the command line
   post: 
-       set-up functions invoked:
+       functions invoked:
        CheckTokens
        MakeValueTbl
        Parse
        CheckParens
+       InFixToPostFix
 
        if a boolean function returns false, a relevant error is displayed. Execution
        is halted with this function: exit(EXIT_FAILURE) 
@@ -34,7 +35,7 @@ class Calc
 
   /* 
   pre: an instance of Cals exists 
-  post: dynamically declared memory is deallocated 
+  post: dynamically declared memory is returned to the stack 
   */
   ~Calc();
 
@@ -44,8 +45,23 @@ class Calc
  */
   void DisplayInFix();
 
+  /*
+  pre: instance of Calc exists
+  post: postfix exression displayed
+ */
+  void DisplayPostFix();
+
+  /*
+  pre: instance of Calc exists
+  post: value of expression input at the command line is computed and returned.
+        technique is that described in class.
+ */
+  int Evaluate();
+
  private:
   /*
+  Note: Use C-string functions, like isalpha, isupper, isdigit 
+        Use charcter notation rather than ascii values, e.g., '(' rather than 40
   pre:  invoked from constructor 
   post: returns true if each character in argv[1] is:
         either: one of the four arithmetic operators
@@ -53,14 +69,13 @@ class Calc
         or: a character digit (0..9)
         or: a left or right parenthsis
         returns false otherwise	
-  */ 
+  */
   bool  CheckTokens();
 
   /*
   pre:  invoked from constructor 
   post: 26 position valueTbl is dyanically allocated and filled with zeroes  
         valueIdx is set to 0
-	(see the member variables)
   */
   void MakeValueTbl(); 
   
@@ -82,7 +97,7 @@ class Calc
 		    valueTbl[1] == 12
 
 		    The value table is used in evaluating expressions.  The 
-		    above inFix will ultimately (in the next project) 
+		    above inFix will ultimately (in project 13) 
 		    become this postfix expression:
 
 		    AB+C* 
@@ -100,14 +115,9 @@ class Calc
 
 		    The upper alhabetic character, corresponding to the position of 
 		    344, 'D', is pushed onto the stack.  valueIdx is incremented by
-		    1.  Notice 'D' - 'A' is the index of 334 in valueTbl
+		    1.
 
-	  The problem to be solved is to how to get the digits strings from the input
-	  into the value table.  I offer two solutions:
-	  1. Use a function I wrote for youL AddToValueTbl within 2-ExtractDigits.cpp,
-	     in the folder C-StrTok 
-          
-	  2.  Use FindLast defined below.
+	  This function invokes FindLast, below. 
           Imagine traversing argv[1] until you 
           see a digit.  You need to find the last digit in the sequence.  The 
           collection of such digits can be transformed to an integer and stored
@@ -132,8 +142,16 @@ class Calc
          if parentheses are balanced, false otherwise
   */
   bool CheckParens();
+  /*
+  pre: instance of Calc exists.  All tokens are legal and parens are balanced.
+  post: postFix points to a dynamically declared array holding the postfix version
+        of the the input infix expression.
+ */
+  void InFixToPostFix();
+
 
   char*  inFix;     //null-terminated string that holds infix expression 
+  char*  postFix;   //null-terminated string that holds postfix expression 
   int*  valueTbl;   //pointer to an array holding variable and expression values 
   int valueIdx;    //index of the next available position in valueTbl
   Stack* stk;

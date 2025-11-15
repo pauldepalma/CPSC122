@@ -2,9 +2,9 @@
 /*
 Name: Paul De Palma
 Class: CPSC 122, Section 1
-Date Submitted: April 24, 2022 
+Date Submitted: 11/15/2025 
 Assignment: N/A 
-Description: Part 2 of Calculator Assignment 
+Description: Part 1 of Calculator Assignment 
 To Compile: make
 To Execute: ./calc "(121+12)"
 */
@@ -13,7 +13,7 @@ To Execute: ./calc "(121+12)"
 #ifndef CALC
 #define CALC
 
-#include "stack2.h"
+#include "stack.h"
 
 class Calc 
 { 
@@ -21,12 +21,11 @@ class Calc
   /* 
   pre: argvIn is a pointer to the C-String entered at the command line
   post: 
-       functions invoked:
+       set-up functions invoked:
        CheckTokens
        MakeValueTbl
        Parse
        CheckParens
-       InFixToPostFix
 
        if a boolean function returns false, a relevant error is displayed. Execution
        is halted with this function: exit(EXIT_FAILURE) 
@@ -35,7 +34,7 @@ class Calc
 
   /* 
   pre: an instance of Cals exists 
-  post: dynamically declared memory is returned to the stack 
+  post: dynamically declared memory is deallocated 
   */
   ~Calc();
 
@@ -45,23 +44,8 @@ class Calc
  */
   void DisplayInFix();
 
-  /*
-  pre: instance of Calc exists
-  post: postfix exression displayed
- */
-  void DisplayPostFix();
-
-  /*
-  pre: instance of Calc exists
-  post: value of expression input at the command line is computed and returned.
-        technique is that described in class.
- */
-  int Evaluate();
-
  private:
   /*
-  Note: Use C-string functions, like isalpha, isupper, isdigit 
-        Use charcter notation rather than ascii values, e.g., '(' rather than 40
   pre:  invoked from constructor 
   post: returns true if each character in argv[1] is:
         either: one of the four arithmetic operators
@@ -69,13 +53,14 @@ class Calc
         or: a character digit (0..9)
         or: a left or right parenthsis
         returns false otherwise	
-  */
+  */ 
   bool  CheckTokens();
 
   /*
   pre:  invoked from constructor 
   post: 26 position valueTbl is dyanically allocated and filled with zeroes  
         valueIdx is set to 0
+	(see the member variables)
   */
   void MakeValueTbl(); 
   
@@ -84,7 +69,7 @@ class Calc
   post: 1. space for inFix expression is dynamically allocated 
 	2. inFix is a copy of argv[1] except:
            Beginning with 'A', upper case alphabetic characters are substituted for digit 
-	   strings. Numbers corresponding to digit strikngs are stored in valueTbl. 
+	   strings. Numbers corresponding to digit strings are stored in valueTbl. 
 	   valueIdx is appropriately incremented. 
 
            Example: ((322+12)*12) becomes ((A+B)*C)
@@ -96,9 +81,8 @@ class Calc
 		    So, for the second operand above, 'B' - 'A' = 1
 		    valueTbl[1] == 12
 
-		    The value table is used in evaluating expressions.  The 
-		    above inFix will ultimately (in project 13) 
-		    become this postfix expression:
+		    The value table will be used to evaluate expressions. The inFix example, above, 
+		    will become in the next project this postfix expression:
 
 		    AB+C* 
 
@@ -113,14 +97,18 @@ class Calc
                     
 	            [322 12 12 334 0 ... 0] 
 
-		    The upper alhabetic character, corresponding to the position of 
+		    The upper case alhabetic character, corresponding to the position of 
 		    344, 'D', is pushed onto the stack.  valueIdx is incremented by
-		    1.
+		    1.  Notice 'D' - 'A' is the index of 334 in valueTbl
 
-	  This function invokes FindLast, below. 
-          Imagine traversing argv[1] until you 
-          see a digit.  You need to find the last digit in the sequence.  The 
-          collection of such digits can be transformed to an integer and stored
+	  The problem to be solved at this point  is to how to get the digits strings from the input
+	  into the value table.  I offer two solutions:
+	  1. Use a function I wrote for youL AddToValueTbl within 2-ExtractDigits.cpp,
+	     in the folder C-StrTok 
+          
+	  2.  Use FindLast defined below.
+          Imagine traversing argv[1] until you see a digit. You must find the last digit in the  
+          sequence.  The collection of such digits can be transformed to an integer and stored
           in valueTable.  FindLast returns the index of the last digit in 
           the current digit string being examined.
   
@@ -142,16 +130,8 @@ class Calc
          if parentheses are balanced, false otherwise
   */
   bool CheckParens();
-  /*
-  pre: instance of Calc exists.  All tokens are legal and parens are balanced.
-  post: postFix points to a dynamically declared array holding the postfix version
-        of the the input infix expression.
- */
-  void InFixToPostFix();
-
 
   char*  inFix;     //null-terminated string that holds infix expression 
-  char*  postFix;   //null-terminated string that holds postfix expression 
   int*  valueTbl;   //pointer to an array holding variable and expression values 
   int valueIdx;    //index of the next available position in valueTbl
   Stack* stk;
