@@ -101,9 +101,9 @@ class Calc
 		    344, 'D', is pushed onto the stack.  valueIdx is incremented by
 		    1.  Notice 'D' - 'A' is the index of 334 in valueTbl
 
-	  The problem to be solved at this point  is to how to get the digits strings from the input
+	  The problem to be solved at this point is how to get the digits strings from the input
 	  into the value table.  I offer two solutions:
-	  1. Use a function I wrote for youL AddToValueTbl within 2-ExtractDigits.cpp,
+	  1. Use a function I wrote for you called  AddToValueTbl within 2-ExtractDigits.cpp,
 	     in the folder C-StrTok 
           
 	  2.  Use FindLast defined below.
@@ -113,7 +113,7 @@ class Calc
           the current digit string being examined.
   
           Example: (912+12)
-          Suppose current index = 1, meaning we are looking digit '9'.  FindLast,
+          Suppose current index = 1, meaning we are looking at digit '9'.  FindLast,
           below, returns, 3, meaning the last digit in the current digit string is 2.	  
   */
   void Parse();
