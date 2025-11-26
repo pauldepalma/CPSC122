@@ -2,7 +2,7 @@
 /*
 Name: Paul De Palma
 Class: CPSC 122, Section 1
-Date Submitted: April 24, 2022 
+Date Submitted: Nov. 25, 2025 
 Assignment: N/A 
 Description: Part 2 of Calculator Assignment 
 To Compile: make
@@ -13,7 +13,7 @@ To Execute: ./calc "(121+12)"
 #ifndef CALC
 #define CALC
 
-#include "stack2.h"
+#include "stack.h"
 
 class Calc 
 { 
