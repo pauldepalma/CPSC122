@@ -12,45 +12,39 @@ output: 12
 	 2
 */
 
-struct results
-{
- int* items;
- int len;
-};
-
-results* AddToValueTbl(char* expression);
+void AddToValueTbl(char*,int*);
 
 int main(int argc, char* argv[])
 {
- results* nums = AddToValueTbl(argv[1]);
- for (int i = 0; i < nums->len; i++)
-  cout << nums->items[i] << endl;
-
+ int valueTbl[26];
+ for (int i = 0; i< 26; i++)
+   valueTbl[i] = 0;
+ AddToValueTbl(argv[1],valueTbl);
+ int i = 0; 
+ while(valueTbl[i] != 0)
+ {
+   cout <<  valueTbl[i] << endl; 
+   i++;
+ }
 }
 
 /*
 pre: expression is a fully parenthsized arithmetic expression represented as C-String
-post: returns a struct containing a pointer to an array holding the integers plus
-      the length of the array
+post: Integers are stored in global array 
 */
-results* AddToValueTbl(char* expression)
+void AddToValueTbl(char* expression,int* valueTbl)
 {
  char* ptr;
  char* str = new char[strlen(expression) + 1];
  strcpy(str, expression);
- int* tokens = new int[26];
  char delimiters[] = " ()+_*/"; //tokens used in arithmetic expressions
 
  int i = 0;
  ptr = strtok(str,delimiters);
  while (ptr != NULL)
  {
-  tokens[i] = atoi(ptr); 
+  valueTbl[i] = atoi(ptr); 
   ptr = strtok(NULL,delimiters);
   i++;
  }
- results* nums = new results;
- nums->len = i;
- nums->items = tokens;
- return nums; 
 }
